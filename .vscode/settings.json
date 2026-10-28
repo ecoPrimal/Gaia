@@ -1,0 +1,22 @@
+{
+  "files.exclude": {
+    "node_modules": true,
+    "paintings": false,
+    "videos": false,
+    "plasmids": false,
+    "img_b64": true
+  },
+  "search.exclude": {
+    "node_modules": true,
+    "paintings": true,
+    "plasmids": true,
+    "img_b64": true,
+    "inject_paintings.js": true,
+    "inject_p1.js": true
+  },
+  "editor.wordWrap": "on",
+  "files.associations": {
+    "*.mdc": "markdown",
+    "Modelfile.*": "dockerfile"
+  }
+}
