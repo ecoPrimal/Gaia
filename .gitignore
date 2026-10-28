@@ -1,0 +1,85 @@
+# Node
+node_modules/
+package-lock.json
+
+# Big binary assets (tracked separately or via LFS)
+paintings/*.jpg
+paintings/*.png
+paintings/*.jpeg
+videos/*.mp4
+sounds/*.wav
+maps/*.jpg
+img_b64/*.txt
+inject_paintings.js
+inject_p1.js
+
+# Series galleries (paintings are in paintings/ already)
+escher-gallery/
+artisan-pi/
+collabs/
+chipmunk-day/
+newspapers/
+pointillist-sort/
+punk-sort/
+style-explosion/
+tmnt-renaissance/
+horror-series/
+sourdough-chain/
+dimensions/
+chain-of-command/
+anti-slapp/
+pi-range/
+shade-45pi/
+hard-pi/
+kevin/
+pins/
+cosmology/
+engine/
+sound/
+flood/
+identity/
+fossil/
+coat/
+time/
+pifilter/
+gallery/
+smell/
+backscan/
+lens/
+harmonics/
+gaiaU/*.jpg
+gaiaU/*.mp4
+solar-membrane/
+
+# Binaries
+BioMOS.exe
+*.exe
+
+# Logs & temp
+golgi-out*.txt
+golgi-err*.txt
+golgi-local-out.txt
+golgi-local-err.txt
+*.log
+
+# OS
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Plasmids are data (large)
+plasmids/*.json
+plasmids/*.txt
+
+# Keep the code, the mind, the structure
+# !gaia-systems.js
+# !golgi/
+# !serve_spine.js
+# !golgi-local.js
+# !vesicle.js
+# !manifest.json
+# !.cursor/
+# !models/
+# !email-worker/
+# !START-GAIA.bat
+# !golgi-membrane.bat
