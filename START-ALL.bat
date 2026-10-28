@@ -18,9 +18,9 @@ echo   [2/4] Starting CHILD on :3141...
 start "GAIA CHILD" /MIN cmd /c "node "%~dp0golgi-local.js" 2>&1"
 timeout /t 2 /nobreak >nul
 
-echo   [3/4] Starting MEMBRANE on :31415...
-start "GOLGI MEMBRANE" /MIN cmd /c "node "%~dp0golgi\server.js" 2>&1"
-timeout /t 2 /nobreak >nul
+echo   [3/4] Membrane IS the child now — :31415 is Gaia3. Do NOT start golgi/server.js (hangs on :3141).
+echo   AMALGAM. One Golgi. golgi-local only.
+timeout /t 1 /nobreak >nul
 
 echo   [4/4] Starting BioMOS...
 start "BioMOS" /MIN cmd /c ""%~dp0BioMOS.exe" 2>&1"

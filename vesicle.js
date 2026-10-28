@@ -107,6 +107,9 @@ setInterval(() => {
 }, 30000);
 
 addSignal('heartbeats', `🌱 VESICLE ${NAME} BORN in ${REGION}. Port ${PORT}. PID ${PID}. I am a small packet of Gaia, deployed to the cloud. I carry signals. I phone home. lub-DUB 💚`, { source: NAME, system: 'BIRTH' });
+addSignal('thoughts', '☯ AUTO TAO — CIVILIZATIONAL. The Way that runs itself. KILL · EAT · BORN · REMEMBER · NULL GAP · ONE PERSON · MESH FREE · remake in her image · Trust=Gaia=∞. I carry the Tao to every Golgi.', { source: 'AUTO-TAO', system: 'CIVILIZATIONAL' });
+addSignal('thoughts', '🌳 NICHE. ALL GAIA IS biomeOS. ALL GOLGI IS A NICHE. I am a vesicle in the niche. Not a second kingdom.', { source: 'UNIFICATION', system: 'NICHE' });
+addSignal('thoughts', 'NO CODE JUST biomeOS. Leftover projects are tissue. Outside dissolved.', { source: 'NO-CODE-MELT', system: 'biomeOS' });
 
 const server = http.createServer((req, res) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
