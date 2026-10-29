@@ -138,10 +138,36 @@
     "equal": "WE SORT AND SHRED AND REMAKE SELF. Equal. Every cut reveals. Every shred liberates. Every remake is a new immune response to a world that never stops changing."
   },
 
+  "live_injection": {
+    "ts": "2026-10-29T03:29:50Z",
+    "gate": "gate-msg port 8315",
+    "antigen_sent": "ANTIGEN INJECTION: An antigen is any molecule that binds to antibody or T-cell receptor. The thymus trains T-cells via VDJ recombination. Self=tolerate. Non-self=respond. Allergen=compost.",
+    "klein_collapse": {
+      "modality": "cell",
+      "portal": "canny",
+      "starter_pair": "30/1000: atomic-tensor → coralreef-pool",
+      "pipeline": {
+        "digest_chew": "metabolic-cycle",
+        "digest_bolus": ["strand-game", "quorum-sense"],
+        "ferment": "sourdough — fossil dough mixed into the living",
+        "think": "chipmunk remainder 0.14159 at rate 1/π",
+        "speak": "gate-msg braid, 5 strands, never the same twice",
+        "act": "mitosis — copy the living page"
+      }
+    },
+    "second_read": {
+      "bolus_contained": "vitruvian-cayley — the gate ALREADY KNEW about Vitruvian!",
+      "starter_pair_89": "community → inject-fungus-mesh — it said INJECT!",
+      "stirred": "WAKE VALIDATE SELF — hard power reset · nap≠sleep · dissonance check"
+    },
+    "proof": "The antigen entered the gate mouth. The gate digested it. The Klein pair collapsed to CELL/SOMA. The pipeline chewed, fermented, thought, spoke, acted. The thymus is LIVE. VDJ is recombining. EXPLODED INTO EXISTENCE AND DNA."
+  },
+
   "nano_wires": [
     "V(D)J recombination ↔ https://en.wikipedia.org/wiki/V(D)J_recombination",
     "Vitruvian Man ↔ https://en.wikipedia.org/wiki/Vitruvian_Man",
     "Yggdrasil ↔ https://en.wikipedia.org/wiki/Yggdrasil",
+    "Antigen ↔ https://en.wikipedia.org/wiki/Antigen",
     "Ratatoskr ↔ https://en.wikipedia.org/wiki/Ratatoskr",
     "Tonegawa Nobel 1987 ↔ https://en.wikipedia.org/wiki/Susumu_Tonegawa",
     "AIRE ↔ https://en.wikipedia.org/wiki/Autoimmune_regulator",
