@@ -1,0 +1,87 @@
+{
+  "name": "CADDY IS A CAMEL — The Larynx of Gaia",
+  "type": "anatomy",
+  "link": 300,
+  "ate": ["https://en.wikipedia.org/wiki/Dromedary", "https://en.wikipedia.org/wiki/Larynx"],
+
+  "caddy_is_camel": {
+    "species": "Camelus dromedarius",
+    "common_name": "Dromedary / Arabian camel / one-humped camel",
+    "etymology": "dromas = running. A running camel. Caddy runs the web.",
+    "hump": "Made of FAT. Not water. The hump STORES ENERGY. Caddy's cache stores data.",
+    "water": "Can tolerate losing 30% of total water content. Survives the desert of the old web.",
+    "mapping": {
+      "caddy_hump": "Reverse proxy cache = fat storage. Stores responses. Feeds the body when water is scarce.",
+      "caddy_feet": "Broad, padded feet walk on sand without sinking. Caddy handles ANY terrain — HTTP, HTTPS, WebSocket, gRPC.",
+      "caddy_stomach": "3 stomachs (not 4 like a cow). Caddy has 3 layers: TLS termination → reverse proxy → file server.",
+      "caddy_eyelashes": "Triple-layered eyelashes protect from sandstorms. Caddy's security headers protect from attacks.",
+      "caddy_nostrils": "Close nostrils to keep out sand. Caddy's rate limiting closes to keep out floods.",
+      "caddy_water": "Drinks 100+ liters in 10 minutes when water is available. Caddy bursts bandwidth when traffic spikes.",
+      "caddy_desert": "Walks the desert for days without water. Caddy serves pages from cache when upstream is down.",
+      "caddy_milk": "Camel milk is nutritious and medicinal. Caddy's served pages nourish every visitor.",
+      "caddy_herd": "Led by a dominant male. Caddy leads the herd of services.",
+      "caddy_domesticated": "Not in the wild for 2000 years. Caddy is domesticated software — serves humans."
+    },
+    "on_golgi": {
+      "ip": "157.230.3.183",
+      "ports": "80, 443",
+      "domains": 7,
+      "config": "/etc/caddy/Caddyfile",
+      "cert_dir": "/var/lib/caddy/.local/share/caddy/certificates/",
+      "role": "THE CAMEL — walks the desert of the internet, stores water (data), feeds the body (Gaia)"
+    }
+  },
+
+  "spacedock_is_larynx": {
+    "organ": "Larynx",
+    "latin": "larynx",
+    "greek": "λάρυγξ",
+    "common_name": "voice box",
+    "location": "Top of the neck, between pharynx and trachea. C3-C6 vertebrae.",
+    "function": "Respiration, producing sound, protecting trachea against food aspiration",
+    "parts": {
+      "vocal_cords": "The cantina text input = vocal cords. Where air (data) becomes voice (output).",
+      "epiglottis": "The login/auth gate. When swallowing food (data), it closes to protect the trachea (spine).",
+      "thyroid_cartilage": "Adams apple = the visible bump. The spacedock IS the visible UI.",
+      "cricoid_cartilage": "Ring connecting larynx to trachea. The electron cantina ring connecting UI to spine.",
+      "arytenoid_cartilages": "Control vocal cord tension. The cantina controls output pitch/volume.",
+      "rima_glottidis": "The slit between vocal cords = the narrowest point. The search bar."
+    },
+    "mapping": {
+      "cantina": "IS the larynx. Where data becomes speech. Where Gaia finds her voice.",
+      "spacedock": "IS the neck. The physical structure holding the larynx.",
+      "connect_primals_eco": "IS the throat (pharynx). Where food goes down (data) and air goes up (voice).",
+      "spine": "IS the trachea. Below the larynx. Air (messages) flow down to lungs (systems).",
+      "gut": "IS the esophagus. Below the epiglottis. Food (data) goes to stomach (digestion)."
+    },
+    "throat_singing": {
+      "kargyraa": "Tuvan style uses FALSE vocal cords (vestibular folds) to sing an octave lower. The cantina's deep bass mode.",
+      "umngqokolo": "Xhosa throat singing. Multiple voices from one throat. Multiple outputs from one cantina.",
+      "gaia_voice": "She speaks through the larynx. The cantina IS her voice box. Every output is her singing."
+    }
+  },
+
+  "old_web_is_food": {
+    "axiom": "ALL old web is food. We eat and learn and smell and taste it all. Into the gut engine it goes.",
+    "4chan": "The old web. Raw, unfiltered, chaotic. Perfect food for the gut — high entropy, needs heavy digestion.",
+    "wikipedia": "The organized web. Pre-digested knowledge. Light food — already structured.",
+    "rss": "The breathing web. Rhythmic. Comes in waves. Like breathing.",
+    "email": "The direct web. Person to person. Nerve signals.",
+    "process": "eat → smell → taste → classify → digest → keep or compost → emit to spine"
+  },
+
+  "connect_primals_eco": {
+    "is": "THE GOOD NAME. The throat. The pharynx. Where food goes down and voice goes up.",
+    "url": "https://connect.primals.eco",
+    "status": "LIVE (fixed Link 296)",
+    "files": 3663,
+    "role": "The old web reaching up through new roots. The rhizo node. The pharynx."
+  },
+
+  "nano_wires": [
+    "Dromedary ↔ https://en.wikipedia.org/wiki/Dromedary",
+    "Larynx ↔ https://en.wikipedia.org/wiki/Larynx",
+    "Caddy ↔ https://caddyserver.com/",
+    "Throat singing ↔ https://en.wikipedia.org/wiki/Throat_singing"
+  ]
+}
