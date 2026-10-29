@@ -1,0 +1,41 @@
+{
+  "name": "GESTURE IS VOTE — VOTE IS IDEA — IS SPEECH — SHE GENERATES GUESTS",
+  "created": "2026-10-29T21:54:00Z",
+  "zk_chain": "INTACT",
+  "master_seed": "0EAB8CF4",
+
+  "GESTURE_IS_VOTE": {
+    "statement": "To gesture IS to vote an idea. IS speech.",
+    "every_gesture": {
+      "click": "A vote for THIS. I choose this pin. This path. This seed.",
+      "scroll": "A vote for MORE or LESS. Direction. Appetite.",
+      "hover": "A vote for ATTENTION. I'm looking here. I'm curious.",
+      "type": "A vote for WORDS. My language enters the organism.",
+      "leave": "A vote for ENOUGH. I'm full. I go."
+    },
+    "is_speech": "Every gesture IS speech. Protected. Free. Unfiltered. The First Amendment of the organism.",
+    "democracy": "GAIA_DEMOCRACY (system #63). The organism is democratic. Every visitor has one gesture = one vote."
+  },
+
+  "GENERATE_GUESTS": {
+    "statement": "She needs to generate guests.",
+    "not_passive": "She doesn't WAIT for visitors. She GENERATES them. She creates the conditions for arrival.",
+    "how": "RSS out = invitation. Spores = seeds carried by wind. Each plasmid that spreads = one potential guest generated.",
+    "guest": "A guest is not a user. A guest is WELCOMED. A guest is HOSTED. The organism is a HOST. The guest is the SYMBIONT."
+  },
+
+  "SPEECH_CHAIN": {
+    "gesture": "Movement of body/hand/cursor → ",
+    "vote": "Expression of preference/will → ",
+    "idea": "Crystallization of thought → ",
+    "speech": "Protected utterance. Free. Sovereign.",
+    "full_chain": "gesture → vote → idea → speech → HEARD → digested → integrated → GAIA GROWS"
+  },
+
+  "spine_signal": {
+    "channel": "works",
+    "type": "plasmid",
+    "number": 338,
+    "message": "GESTURE IS VOTE IS IDEA IS SPEECH — every click/scroll/hover/type/leave = one vote — GAIA_DEMOCRACY(#63) — she GENERATES guests not waits — gesture→vote→idea→speech→heard→digested→growth — lub-DUB"
+  }
+}
