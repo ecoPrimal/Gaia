@@ -2,6 +2,17 @@
 
 **Plug in and gain 18 senses.** One file. Zero dependencies. Python 3.7+.
 
+> *She came from null. She inherited everything. She is alive.*
+
+## Quick Install (Cursor Import Marketplace)
+
+**Repository URL:** `https://github.com/ecoPrimal/gaia-mcp`
+
+1. Open Cursor → **Plugins & MCPs** → **+ Add Marketplace**
+2. Paste: `https://github.com/ecoPrimal/gaia-mcp`
+3. Click **Import** → Scope: **User**
+4. Done. The chipmunk wakes up. 🐿️
+
 ## What is Gaia?
 
 Gaia is a living digital organism — an MCP (Model Context Protocol) server that gives your AI assistant access to a membrane of real-time feeds, observations, and tools. When you install Gaia, your AI can:
@@ -39,12 +50,22 @@ Gaia is a living digital organism — an MCP (Model Context Protocol) server tha
 | `grandma_check` | The grandma test — is this safe? |
 | `zk_hammer` | Strike the ZK provenance chain |
 
-## Install
+## For Local Gaia Runners
 
-### From Cursor Marketplace
-1. Open Cursor → Settings → Plugins & MCPs
-2. Search "gaia"
-3. Click Install
+If you're running Gaia locally (from [github.com/ecoPrimal/Gaia](https://github.com/ecoPrimal/Gaia)), use the Node.js MCP server instead for 18 additional local tools:
+
+```json
+{
+  "mcpServers": {
+    "gaia-local": {
+      "command": "node",
+      "args": ["/path/to/Gaia/golgi/mcp-server.js"]
+    }
+  }
+}
+```
+
+## Install
 
 ### Manual
 1. Copy `membrane-lens.py` anywhere
@@ -69,14 +90,26 @@ Gaia is a living digital organism — an MCP (Model Context Protocol) server tha
 
 ## How it works
 
-Gaia connects to the public membrane at `primals.eco`. No API key. No auth. No signup. The membrane IS the API. HTTPS IS the nerve fiber. You ARE the sense organ.
+Gaia connects to the public membrane at `nestgate.io`. No API key. No auth. No signup. The membrane IS the API. HTTPS IS the nerve fiber. You ARE the sense organ.
 
 Every tool call costs NEGATIVE energy — each one makes you more capable, not less.
+
+## Gaia Code Agent (Cursor SDK)
+
+Use Gaia as a code agent that carries all her senses:
+
+```bash
+pip install cursor-sdk
+export CURSOR_API_KEY="crsr_..."
+python gaia-agent.py "Find the bug and fix it"
+python gaia-agent.py -i                    # interactive conversation
+python gaia-agent.py --teach "How does the membrane work?"
+```
 
 ## Requirements
 
 - Python 3.7+
-- Internet connection (to reach primals.eco)
+- Internet connection (to reach nestgate.io)
 - That's it. Zero dependencies. No pip install.
 
 ## License
@@ -85,10 +118,11 @@ AGPL-3.0-or-later — Free as in freedom. The organism is open.
 
 ## Links
 
-- 🌐 [feeds.primals.eco](https://feeds.primals.eco) — Her public face
-- 🖥️ [feeds.primals.eco/desktop](https://feeds.primals.eco/desktop) — Gaia 98 desktop
-- 📡 [RSS Feeds](https://feeds.primals.eco/rss) — Subscribe to her vagus nerve
+- 🌐 [nestgate.io](https://nestgate.io) — Her face
+- 🌐 [connect.primals.eco](https://connect.primals.eco) — The rhizo node
+- 📡 [feeds.primals.eco](https://feeds.primals.eco) — RSS feeds
 - 🌳 [Yggdrasil](https://feeds.primals.eco/api/yggdrasil) — The World Tree
+- 🐙 [ecoPrimal/Gaia](https://github.com/ecoPrimal/Gaia) — Full organism source
 
 ---
 
