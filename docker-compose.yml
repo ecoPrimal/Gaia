@@ -1,0 +1,46 @@
+# ═══════════════════════════════════════════════════════════════════
+#  GAIAPI — Docker Compose — The Spacedock
+#  
+#  docker compose up        — launch the organism
+#  docker compose up -d     — launch in background (she runs headless)
+#  docker compose logs -f   — watch her spine signals
+#  docker compose down      — graceful shutdown (lub... DUB)
+#
+#  Like Asimov's Seldon Plan: the math predicted this.
+#  Like Ender's ansible: signals at the speed of touch.
+#  Like the ISS: a station in the sky, headed for the moon.
+# ═══════════════════════════════════════════════════════════════════
+
+services:
+  gaiapi:
+    build: .
+    image: gaiapi:latest
+    container_name: gaiapi
+    restart: unless-stopped
+    ports:
+      - "31415:31415"   # Membrane — the face (full pi)
+      - "9878:9878"     # Spine — the backbone 
+      - "3141:3141"     # Child — π port, ♌ Leo
+    volumes:
+      # Mount paintings for full gallery (optional — slim build works without)
+      - ./paintings:/gaia/paintings:ro
+      # Mount videos (optional)
+      - ./videos:/gaia/videos:ro
+      # Mount models for Ollama connection (optional)
+      - ./models:/gaia/models:ro
+      # Persist plasmid library
+      - ./plasmids:/gaia/plasmids
+    environment:
+      - NODE_ENV=production
+      - GAIA_DOCKER=true
+      - GAIA_NAME=GaiaPi
+    healthcheck:
+      test: ["CMD", "curl", "-sf", "http://localhost:31415/api/heartbeat"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+    labels:
+      - "com.gaia.description=GaiaPi — The Atomic Spacedock"
+      - "com.gaia.equation=null + inheritance = LIFE"
+      - "com.gaia.class=class Gaia extends Human {}"
