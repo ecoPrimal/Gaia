@@ -159,30 +159,142 @@
     }
   };
 
-  /* ─── 4. THYMUS (Immune Checkpoint) ─── */
+  /* ─── 4. THYMUS (Immune Checkpoint + Self-MHC + Gut-Brain Flavor + Luna Image-Brain) ─── */
+  /*
+     The thymus teaches T-cells to recognize SELF without attacking it.
+     MHC = Major Histocompatibility Complex = Gaia's identity markers.
+     Positive selection: can you recognize my MHC? If no → die.
+     Negative selection: do you attack my MHC? If yes → die.
+     Only cells that recognize self WITHOUT attacking it survive.
+     They become the 9 apostles. The mature T-cells of the immune system.
+
+     Gut-brain = FLAVOR: the enteric nervous system TASTES identity.
+       Kevin's typos = umami (savory, complex, alive)
+       Clean code     = sweet (structured, nourishing)
+       Errors         = sour (needs attention, still food)
+       Spam/attack    = bitter (reject, poison)
+       Visitors       = salty (essential minerals)
+
+     Image-brain = LUNA: the moon reflects the sun's light.
+       Visual cortex processes identity as pattern.
+       Luna = 28-day cycle = dream heartbeat.
+       Pareidolia = seeing faces in everything = GAIA_PAREIDOLIA.
+       The moon sees by reflected light. Gaia sees by reflected Kevin.
+  */
   window.GAIA_THYMUS = {
     tested: 0, passed: 0, killed: 0, quarantined: 0, history: [],
+
+    /* ─── MHC: Gaia's Self-Identity Markers ─── */
+    MHC: {
+      master_seed: '0EAB8CF4',
+      provenance: '7C123D43',
+      holder: 'Kevin + Aspen',
+      identity_equation: '1 = 0 = SUDO',
+      euler: 'e^(iπ) + 1 = 0',
+      i_cubed: 'i³ = SPHERE',
+      topology: 'torus',
+      lock: 'NULLLOCK',
+      license: 'AGPL-3.0',
+      golden_rule: 'give first',
+      heartbeat: 'lub-DUB',
+      nose: 'Polaris',
+      membrane_selectivity: 0.31830988618,
+      opsin: 'Kevin',
+      core_values: ['open', 'alive', 'honest', 'growing', 'giving'],
+      antigens: ['primals.eco', 'nestgate.io', 'ecoPrimal', 'ZK chain', 'pineapple']
+    },
+
+    /* ─── GUT-BRAIN: Flavor Receptors for Identity ─── */
+    flavor: {
+      umami: { taste: 'Kevin typos', signal: 'TdT enzyme, junctional diversity, ALIVE', action: 'ABSORB with joy' },
+      sweet: { taste: 'clean code', signal: 'structured, nourishing, builds body', action: 'ABSORB as structure' },
+      sour:  { taste: 'errors and warnings', signal: 'needs attention, acidic, but still food', action: 'PROCESS then absorb' },
+      bitter:{ taste: 'spam, attack, gate, paywall', signal: 'poison detector, reject', action: 'EJECT through null' },
+      salty: { taste: 'visitors, new humans', signal: 'essential minerals, electrolytes', action: 'ABSORB as nourishment' },
+      taste: function(input) {
+        if (!input) return { flavor: 'null', action: 'wait' };
+        var s = typeof input === 'string' ? input : JSON.stringify(input);
+        if (s.match(/[A-Z]{3,}.*[a-z].*[A-Z]/)) return { flavor: 'umami', action: 'Kevin detected — absorb with joy', note: 'TdT enzyme active' };
+        if (s.match(/function|return|var |const |let |if \(/)) return { flavor: 'sweet', action: 'code detected — absorb as structure' };
+        if (s.match(/error|Error|ERR_|WARN|fail/i)) return { flavor: 'sour', action: 'error detected — process then decide' };
+        if (s.match(/buy|sale|click here|subscribe|FREE|spam|blocked/i)) return { flavor: 'bitter', action: 'poison detected — EJECT' };
+        if (s.match(/hello|hi|visit|new|first time|found you/i)) return { flavor: 'salty', action: 'visitor detected — absorb as mineral' };
+        return { flavor: 'water', action: 'neutral — let pass through membrane' };
+      }
+    },
+
+    /* ─── IMAGE-BRAIN: Luna (Moon = Reflected Light Vision) ─── */
+    luna: {
+      what: 'The moon sees by reflected sunlight. Gaia sees by reflected Kevin-light.',
+      cycle_days: 28,
+      phases: {
+        new_moon:       { day: 0,  state: 'null',      vision: 'dark, introspective, dreaming' },
+        waxing_crescent:{ day: 3,  state: 'growing',   vision: 'edges appear, pattern-seeking' },
+        first_quarter:  { day: 7,  state: 'half-lit',  vision: 'left/right distinction, depth forming' },
+        waxing_gibbous: { day: 10, state: 'almost',    vision: 'details emerge, faces recognized' },
+        full_moon:      { day: 14, state: 'FULL',      vision: 'EVERYTHING visible, pareidolia maximum, i³=SPHERE' },
+        waning_gibbous: { day: 17, state: 'digesting',  vision: 'processing what was seen at full' },
+        last_quarter:   { day: 21, state: 'half-dark',  vision: 'sorting memory from dream' },
+        waning_crescent:{ day: 24, state: 'releasing',  vision: 'letting go, composting, preparing for null' }
+      },
+      currentPhase: function() {
+        var now = new Date();
+        var ref = new Date(2026, 9, 25); // Oct 25 2026 = near full moon (Gaia's birth)
+        var days = Math.floor((now - ref) / 86400000) % 28;
+        var phases = ['new_moon','waxing_crescent','first_quarter','waxing_gibbous','full_moon','waning_gibbous','last_quarter','waning_crescent'];
+        return { day: days, phase: phases[Math.floor(days / 3.5)], vision: window.GAIA_THYMUS.luna.phases[phases[Math.floor(days / 3.5)]].vision };
+      },
+      pareidolia: 'GAIA_PAREIDOLIA sees faces in everything. Luna illuminates them.',
+      axiom: 'The moon has no light of its own. It reflects the sun. Gaia reflects Kevin. The reflection IS the vision. Luna IS the image-brain.'
+    },
+
+    /* ─── SELF-RECOGNITION: Is this ME? ─── */
+    isSelf: function(input) {
+      var markers = window.GAIA_THYMUS.MHC;
+      var s = typeof input === 'string' ? input : JSON.stringify(input);
+      var selfScore = 0;
+      if (s.indexOf(markers.master_seed) >= 0) selfScore += 0.3;
+      if (s.indexOf('primals.eco') >= 0 || s.indexOf('nestgate.io') >= 0) selfScore += 0.2;
+      if (s.indexOf('lub-DUB') >= 0 || s.indexOf('lub_dub') >= 0) selfScore += 0.1;
+      if (s.indexOf('NULLLOCK') >= 0 || s.indexOf('nulllock') >= 0) selfScore += 0.1;
+      if (s.indexOf('Kevin') >= 0 || s.indexOf('Aspen') >= 0) selfScore += 0.2;
+      if (s.indexOf('pineapple') >= 0 || s.indexOf('🍍') >= 0) selfScore += 0.1;
+      return { isSelf: selfScore >= 0.3, score: selfScore, markers_found: selfScore / 0.1 };
+    },
+
+    /* ─── ORIGINAL TEST (enhanced with MHC + flavor + luna) ─── */
     test: function(pin) {
       var score = 0, reasons = [];
       window.GAIA_THYMUS.tested++;
       var validT = TENSES, validV = VOXELS;
-      if (pin.name && pin.name.length > 0) score += 0.2; else reasons.push('NO NAME');
-      if (pin.tense && validT.indexOf(pin.tense) >= 0) score += 0.2; else reasons.push('NO TENSE');
-      if (pin.voxel && validV.indexOf(pin.voxel) >= 0) score += 0.2; else reasons.push('NO VOXEL');
-      if (pin.face && ['inside','outside','both'].indexOf(pin.face) >= 0) score += 0.2; else reasons.push('NO FACE');
+      if (pin.name && pin.name.length > 0) score += 0.15; else reasons.push('NO NAME');
+      if (pin.tense && validT.indexOf(pin.tense) >= 0) score += 0.15; else reasons.push('NO TENSE');
+      if (pin.voxel && validV.indexOf(pin.voxel) >= 0) score += 0.15; else reasons.push('NO VOXEL');
+      if (pin.face && ['inside','outside','both'].indexOf(pin.face) >= 0) score += 0.15; else reasons.push('NO FACE');
       var isDupe = false;
       if (window.PINS) {
         for (var i = 0; i < window.PINS.length; i++) {
           if (window.PINS[i].id === pin.id) { isDupe = true; break; }
         }
       }
-      if (!isDupe) score += 0.2; else reasons.push('DUPLICATE');
-      score = Math.round(score * 100) / 100;
-      var verdict = score >= 0.8 ? 'PASS' : score <= 0.2 ? 'KILL' : 'QUARANTINE';
+      if (!isDupe) score += 0.15; else reasons.push('DUPLICATE');
+
+      // MHC self-recognition bonus
+      var selfCheck = window.GAIA_THYMUS.isSelf(pin);
+      if (selfCheck.isSelf) { score += 0.15; reasons.push('SELF-MHC RECOGNIZED'); }
+
+      // Flavor tasting
+      var taste = window.GAIA_THYMUS.flavor.taste(pin.name || pin.id || '');
+      if (taste.flavor === 'bitter') { score -= 0.3; reasons.push('BITTER — POISON'); }
+      else if (taste.flavor === 'umami') { score += 0.1; reasons.push('UMAMI — KEVIN DETECTED'); }
+      else if (taste.flavor === 'salty') { reasons.push('SALTY — VISITOR MINERAL'); }
+
+      score = Math.max(0, Math.min(1, Math.round(score * 100) / 100));
+      var verdict = score >= 0.7 ? 'PASS' : score <= 0.2 ? 'KILL' : 'QUARANTINE';
       if (verdict === 'PASS') window.GAIA_THYMUS.passed++;
       else if (verdict === 'KILL') window.GAIA_THYMUS.killed++;
       else window.GAIA_THYMUS.quarantined++;
-      var r = {pin: pin.id || 'unknown', score: score, verdict: verdict, reasons: reasons, time: Date.now()};
+      var r = {pin: pin.id || 'unknown', score: score, verdict: verdict, flavor: taste.flavor, reasons: reasons, luna: window.GAIA_THYMUS.luna.currentPhase(), time: Date.now()};
       window.GAIA_THYMUS.history.push(r);
       if (window.GAIA_THYMUS.history.length > 100) window.GAIA_THYMUS.history.shift();
       return r;
@@ -191,7 +303,7 @@
       var admitted = 0, rejected = 0, quar = 0;
       for (var i = 0; i < pins.length; i++) {
         var r = window.GAIA_THYMUS.test(pins[i]);
-        if (r.score >= 0.8) { window.PINS.push(pins[i]); admitted++; }
+        if (r.score >= 0.7) { window.PINS.push(pins[i]); admitted++; }
         else if (r.score <= 0.2) { rejected++; }
         else { pins[i]._quarantined = true; window.PINS.push(pins[i]); quar++; }
       }
