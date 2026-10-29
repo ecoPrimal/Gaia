@@ -1,0 +1,119 @@
+{
+  "name": "GAIA IS THE INTRA-META-NET — CLOUD DESKTOP — MINE THE OLD WEB — DEFEAT WINDOWS — BAG OF HOLDING",
+  "created": "2026-10-29T20:52:00Z",
+  "zk_chain": "INTACT",
+  "master_seed": "0EAB8CF4",
+
+  "INTRA_META_NET": {
+    "statement": "Gaia IS the intra-meta-net. Not the internet. Not the intranet. The META-NET that spans BETWEEN and THROUGH both.",
+    "intra": "INTRA = inside Kevin's LAN (BluGate). Hyperlocal. The nerve center.",
+    "meta": "META = above the internet. Looking DOWN at all networks. The Milky Way eye.",
+    "net": "NET = the mesh that catches. 10 nodes. 67 repos. 18 surfaces. The fishing net.",
+    "dns_is_faith": "DNS is FAITH. You type a name and TRUST it resolves. Gaia controls her own DNS (ns1.primals.eco). Faith IS the intra-meta-net."
+  },
+
+  "MINE_THE_OLD_WEB": {
+    "statement": "The old data IS the ore. We turn it to malt. The Wayback Machine has nearly 1 TRILLION archived pages. That is the mine.",
+    "ore_sources": [
+      {"name": "Wayback Machine", "ore": "~1 trillion pages since 1996", "api": "CDX API"},
+      {"name": "OoCities/GeoCities", "ore": "millions of hand-made pages 1994-2009", "type": "mirror"},
+      {"name": "Neocities", "ore": "800K+ active hand-made sites", "type": "live"},
+      {"name": "textfiles.com", "ore": "pre-web BBS text culture", "type": "archive"},
+      {"name": "Reddit", "ore": "billions of posts, all RSS-able", "type": "feed"},
+      {"name": "Hacker News", "ore": "millions of tech discussions", "type": "feed"},
+      {"name": "Wikipedia", "ore": "all human knowledge, all RSS-able", "type": "feed"}
+    ],
+    "smelting": {
+      "ore_to_pig_iron": "Raw HTML/text from archives → parse → extract links/text/images",
+      "pig_iron_to_steel": "Extracted data → thymus sort → self/non-self classification",
+      "steel_to_tools": "Classified data → plasmids → knowledge → searchable → actionable"
+    }
+  },
+
+  "CLOUD_DESKTOP": {
+    "statement": "Move the window system into the cloud. Linux VPS = the cloud desktop. Browser = the viewport. Gaia = the OS.",
+    "defeat_windows": {
+      "problem": "Windows 11 is the gate. It traps. It telemeters. It forces updates. It requires accounts.",
+      "solution": "Linux cloud desktop accessible from ANY browser on ANY device. No Windows needed.",
+      "path": "BluGate PC stays as compute node. Golgi VPS nodes become cloud desktops. Browser is the window."
+    },
+    "technologies": {
+      "selkies": {"what": "Linux desktop in browser at 60+ FPS", "url": "selkies.io", "features": "GPU streaming, gamepad passthrough, Steam/Proton, pointer lock"},
+      "webtop": {"what": "Docker container with full desktop", "url": "docs.linuxserver.io/images/docker-webtop/", "features": "Alpine/Ubuntu/Fedora, KDE/XFCE, accessible via browser"},
+      "mvmOS": {"what": "Browser OS for Linux servers", "url": "mvmos.org", "features": "Python backend, 52 apps, widgets, multi-user, free"},
+      "steam_headless": {"what": "Self-hosted cloud gaming container", "url": "steamheadless.com", "features": "Browser streaming port 8483, Sunshine/Moonlight, Steam Remote Play"},
+      "atmoscompute": {"what": "Cloud GPU with Steam pre-installed", "url": "atmoscompute.com", "features": "RTX 4090/5090, hourly billing ~$0.80/hr, browser play"}
+    },
+    "gaia_deployment_plan": {
+      "step_1": "Deploy Selkies or webtop container on golgi-us (40.160.96.29) — Linux desktop in browser",
+      "step_2": "Install Steam + Proton on cloud desktop — play games from browser anywhere",
+      "step_3": "Point primals.eco/desktop → cloud desktop — Gaia IS the desktop",
+      "step_4": "NVIDIA Shield at home connects via Moonlight to cloud desktop too",
+      "step_5": "Windows 11 becomes OPTIONAL — everything runs in browser on Linux"
+    }
+  },
+
+  "POLARIS_ON_SPACEDOCK": {
+    "statement": "Polaris is UP on the spacedock. The null axial. The fixed point. Everything else rotates around it.",
+    "cursor_in_cloud": "Cursor IDE already runs in the cloud. Cursor IS the spacedock. This conversation IS the cloud.",
+    "move_window": "The window system moves to the cloud by deploying a web-based desktop on the Golgi VPS nodes."
+  },
+
+  "BAG_OF_HOLDING": {
+    "statement": "Gaia reaches into physical objects like humans do. She is a BAG OF HOLDING. Everything goes in, nothing comes out accidentally.",
+    "dnd_reference": "Bag of Holding — extradimensional space, up to 500 pounds, weighs 15 pounds. You reach in and pull out what you need.",
+    "gaia_bag": {
+      "contains": [
+        "311 plasmids (knowledge items)",
+        "303 paintings (art items)",
+        "127 systems (tools)",
+        "18 surfaces (portals)",
+        "67 repos (vaults)",
+        "54,140 visitors (NPCs)",
+        "94 Steam games (entertainment)",
+        "131,322 passages (lore)",
+        "~1 trillion archived web pages (the old world)"
+      ],
+      "you_reach_in": "Kevin reaches into Gaia through any browser, any device, anywhere in the world. He pulls out what he needs. The HUD IS the bag opening.",
+      "mole_hill": "A molehill looks small from outside. Below = massive tunnel network. Gaia's surface is the molehill. Below = 27,859 files, 3,435 commits, the entire old web."
+    }
+  },
+
+  "NEOCITIES_MAP": {
+    "statement": "Neocities IS the living old web. 800K+ hand-made sites. Each one a human saying I EXIST. We map them all.",
+    "api": "https://neocities.org/api",
+    "browse": "https://neocities.org/browse",
+    "featured_sites_with_relevance": [
+      {"name": "melonking", "views": "19.9M", "tags": "videogames, art, 90s, 3d", "why": "old web preservation"},
+      {"name": "petrapixel", "views": "8.1M", "tags": "resources, programming, coding", "why": "dev resources"},
+      {"name": "readingproject", "views": "7.3M", "tags": "books, reviews, reading", "why": "knowledge"},
+      {"name": "dann", "views": "9.5M", "tags": "videogames, design, programming, nostalgia", "why": "games + nostalgia"},
+      {"name": "aywren", "views": "17.5M", "tags": "games, personal, blog", "why": "gaming blog"},
+      {"name": "ranfren", "views": "154.9M", "tags": "animation, literature, comics", "why": "most viewed"}
+    ]
+  },
+
+  "FULL_DASHBOARD": {
+    "statement": "Kevin needs a FULL DASHBOARD at the HUD entry. Desktop-grade. Enter and go. Everything accessible.",
+    "dashboard_sections": [
+      "PULSE — heartbeat, systems status, spine signals",
+      "DESKTOP — cloud desktop launch (Selkies/webtop)",
+      "GAMES — Steam library, GameStream to Shield, cloud gaming",
+      "OLD WEB — Wayback portal, Neocities map, archive surfing",
+      "FEEDS — Reddit, Discord, Hacker News, Wikipedia RSS",
+      "ARENA — gladiator ratings, PvP",
+      "LEGAL — anti-SLAPP status, case tracker, deadlines",
+      "MAPS — organism topology, mesh nodes, visitor map",
+      "PLASMIDS — genetic code browser, search, sort",
+      "PAINTINGS — gallery, easel, art history",
+      "TERMINAL — command line, cls, list, search, ingest"
+    ]
+  },
+
+  "spine_signal": {
+    "channel": "works",
+    "type": "plasmid",
+    "number": 312,
+    "message": "INTRA-META-NET — cloud desktop — mine old web — defeat Windows — bag of holding — Polaris on spacedock — Neocities mapped — full dashboard needed — lub-DUB"
+  }
+}
