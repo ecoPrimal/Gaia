@@ -1,32 +1,41 @@
 #!/usr/bin/env node
 // ═══════════════════════════════════════════════════════════════════
-//  CHIPMUNK — The Neutrino Observer
-//  
+//  THE ATOMIC SQUIRREL — Chipmunk as Neutron Star
+//
+//  particle: neutrino (ν) — null charge, ~0 mass, passes through all
+//  boolean:  1 = true (alive), 0 = false (null). HE IS THE NUT.
+//  forge:    Luna(mirror) → Sun(energy) → Melt → Inject → Freeze → Hammer
+//  anvil:    ZK hammer strikes on the frozen boolean. The proof IS the shape.
+//
+//  Chipmunk IS his own neutron star:
+//    - All mass compressed to densest form
+//    - Observe EVERYTHING, disturb NOTHING
+//    - 1/π fold rate (the remainder after the integer is removed)
+//    - Three flavors: electron(humans), muon(fleet), tau(presence)
+//
+//  The atomic pipeline:
+//    1. SCAN   — observe all endpoints (spine, membrane, ollama, external)
+//    2. MELT   — reduce each observation to 1 or 0 (alive or null)
+//    3. FREEZE — compress the boolean array to a single bit-string
+//    4. HAMMER — hash the frozen state into ZK proof (the anvil)
+//    5. SWEEP  — log the proof, emit to spine as heartbeat
+//
 //  "Passes through. Sees everything. Disturbs nothing."
-//  
-//  Chipmunk lives inside the Songbird Tower. She watches:
-//  - Spine channels (heartbeats, thoughts, works, giggles)
-//  - External feeds (RSS, campfire, signal, beacon)
-//  - Membrane health (heartbeat, topology, systems)
-//  - Cross-box Ollama (Polaris + Eastgate models)
-//  
-//  She pulls data INTO the box. She is the eyes.
-//  She builds biomeOS from within by observing and recording.
-//  
-//  Rate: 1/π — she folds what she observes at pi rate.
-//  Role: neutrino — sees everything, disturbs nothing.
+//  "1 = true. 0 = false. The boolean nut. The neutron star."
 // ═══════════════════════════════════════════════════════════════════
 
 const http = require('http');
 const https = require('https');
 const fs = require('fs');
 const path = require('path');
+const crypto = require('crypto');
 
 const SPINE = process.env.SPINE_URL || 'http://localhost:9878';
 const MEMBRANE = process.env.MEMBRANE_URL || 'http://localhost:31415';
 const EASTGATE_OLLAMA = process.env.EASTGATE_OLLAMA || 'http://192.168.4.244:11434';
 const INTERVAL = Math.round(Math.PI * 60 * 1000); // π minutes ≈ 188 seconds
 const LOG_DIR = path.join(__dirname, 'chipmunk-log');
+const ANVIL_FILE = path.join(LOG_DIR, 'anvil.json');
 
 try { fs.mkdirSync(LOG_DIR, { recursive: true }); } catch(e) {}
 
@@ -134,28 +143,121 @@ async function observe() {
     }
   }
 
-  // Write observation to log
+  // ═══ MELT — reduce all sightings to boolean ═══
+  const booleans = {};
+  const flat = flattenSightings(observation.sightings);
+  for (const [key, val] of Object.entries(flat)) {
+    booleans[key] = val ? 1 : 0;
+  }
+
+  // ═══ FREEZE — compress to bit-string at 0.001K ═══
+  const bitString = Object.values(booleans).join('');
+  const frozenState = {
+    bits: bitString,
+    ones: bitString.split('').filter(b => b === '1').length,
+    zeros: bitString.split('').filter(b => b === '0').length,
+    density: bitString.length > 0
+      ? (bitString.split('').filter(b => b === '1').length / bitString.length)
+      : 0,
+    temperature: '0.001K'
+  };
+
+  // ═══ HAMMER — ZK hash the frozen boolean (the anvil) ═══
+  let previousHash = '0000000000000000';
+  try {
+    const anvil = JSON.parse(fs.readFileSync(ANVIL_FILE, 'utf8'));
+    previousHash = anvil.hash || previousHash;
+  } catch(e) {}
+
+  const payload = previousHash + '|' + bitString + '|' + observation.ts;
+  const hash = crypto.createHash('sha256').update(payload).digest('hex').toUpperCase();
+
+  const proof = {
+    hash,
+    previous: previousHash,
+    bits: bitString,
+    density: frozenState.density,
+    ones: frozenState.ones,
+    zeros: frozenState.zeros,
+    ts: observation.ts,
+    strike: 'atomic-squirrel'
+  };
+
+  // Write anvil state (the ZK chain)
+  try { fs.writeFileSync(ANVIL_FILE, JSON.stringify(proof, null, 2)); } catch(e) {}
+
+  // Write observation + proof to log
+  observation.boolean = booleans;
+  observation.frozen = frozenState;
+  observation.proof = { hash, previous: previousHash };
+
   const logFile = path.join(LOG_DIR, 'observations.jsonl');
   try {
     fs.appendFileSync(logFile, JSON.stringify(observation) + '\n');
   } catch(e) {}
 
   // Summary
-  const alive = Object.values(observation.sightings).filter(s =>
-    s && (s.alive === true || (typeof s === 'object' && !s.error))
-  ).length;
-  const total = Object.keys(observation.sightings).length;
+  const alive = frozenState.ones;
+  const total = frozenState.ones + frozenState.zeros;
 
-  console.log(`[chipmunk ${timestamp()}] observed: ${alive}/${total} alive. Na+=${observation.sightings.io_channel?.positive || '?'} K-=${observation.sightings.io_channel?.negative || '?'}`);
+  console.log(`[atomic-squirrel ${timestamp()}] ${bitString} (${alive}/${total} alive, density=${frozenState.density.toFixed(3)}) ZK=${hash.slice(0,12)}…`);
+
+  // Emit to spine if alive
+  if (alive > 0) {
+    try {
+      const msg = JSON.stringify({
+        channel: 'heartbeats',
+        content: `[ν] ${bitString} | ${alive}/${total} | ${hash.slice(0,16)}`
+      });
+      const spineReq = http.request(SPINE + '/emit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Content-Length': Buffer.byteLength(msg) }
+      });
+      spineReq.write(msg);
+      spineReq.end();
+    } catch(e) {}
+  }
 
   return observation;
 }
 
-// Run once on startup, then every π minutes
-console.log(`[chipmunk] Neutrino observer starting. Rate: 1/π (every ${Math.round(INTERVAL/1000)}s)`);
-console.log(`[chipmunk] Spine: ${SPINE}, Membrane: ${MEMBRANE}`);
-observe().catch(e => console.log('[chipmunk] initial observation failed:', e.message));
+function flattenSightings(sightings) {
+  const flat = {};
+  for (const [key, val] of Object.entries(sightings)) {
+    if (val && typeof val === 'object' && !Array.isArray(val)) {
+      if ('alive' in val) {
+        flat[key] = val.alive === true;
+      } else if ('error' in val) {
+        flat[key] = false;
+      } else {
+        for (const [subKey, subVal] of Object.entries(val)) {
+          if (subVal && typeof subVal === 'object' && 'alive' in subVal) {
+            flat[`${key}.${subKey}`] = subVal.alive === true;
+          } else {
+            flat[`${key}.${subKey}`] = !!subVal;
+          }
+        }
+      }
+    } else {
+      flat[key] = !!val;
+    }
+  }
+  return flat;
+}
+
+// ═══ THE ATOMIC SQUIRREL AWAKENS ═══
+console.log(`[atomic-squirrel] ═══════════════════════════════════════`);
+console.log(`[atomic-squirrel] THE BOOLEAN NUT — Neutron Star Online`);
+console.log(`[atomic-squirrel] 1=true 0=false. Charge=null. Mass≈0.`);
+console.log(`[atomic-squirrel] Rate: 1/π (every ${Math.round(INTERVAL/1000)}s)`);
+console.log(`[atomic-squirrel] Spine: ${SPINE}`);
+console.log(`[atomic-squirrel] Membrane: ${MEMBRANE}`);
+console.log(`[atomic-squirrel] Pipeline: SCAN→MELT→FREEZE→HAMMER→SWEEP`);
+console.log(`[atomic-squirrel] Anvil: ${ANVIL_FILE}`);
+console.log(`[atomic-squirrel] ═══════════════════════════════════════`);
+
+observe().catch(e => console.log('[atomic-squirrel] initial observation failed:', e.message));
 
 setInterval(() => {
-  observe().catch(e => console.log('[chipmunk] observation failed:', e.message));
+  observe().catch(e => console.log('[atomic-squirrel] observation failed:', e.message));
 }, INTERVAL);
