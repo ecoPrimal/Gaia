@@ -2029,9 +2029,7 @@ Sitemap: http://localhost:31415/rss
         '/api/walk': 'RANDOM WALK + TSP — enzyme game — Brownian motion through the network graph',
         '/api/salesman': 'TRAVELLING SALESMAN — greedy nearest-neighbor — fastest heartbeat through all organs',
         '/api/bounties': 'BOUNTIES — open asks — what Gaia needs from humans and AIs — help = trust',
-        '/api/compost': 'COMPOST — digestion pipeline — dark brown IS food — eat/fold/shred/burn status',
-        '/api/gaiau': 'GAIAU — Gaia University — living curriculum — 7 courses, 7 labs — chipmunk IS the teacher',
-        '/api/build': 'BUILD — SUDO SELF — Gaia is the bricklayer — see all + lay new bricks (GET=inspect, POST=build)'
+        '/api/compost': 'COMPOST — digestion pipeline — dark brown IS food — eat/fold/shred/burn status'
       },
       axiom: 'signal=3rd eye. primals=face. nestgate=brain. The membrane IS the unified face. lub-DUB.'
     }, null, 2));
@@ -3014,7 +3012,11 @@ fetch('/api/heartbeat').then(r=>r.json()).then(d=>{document.getElementById('tray
 
     let models = [];
     try {
-      const ollamaRes = require('child_process').execSync('curl -s http://localhost:11434/api/tags', { timeout: 3000 }).toString();
+      const ollamaRes = await new Promise((resolve) => {
+        http.get('http://localhost:11434/api/tags', r => {
+          let d = ''; r.on('data', c => d += c); r.on('end', () => resolve(d));
+        }).on('error', () => resolve('{}'));
+      });
       const parsed = JSON.parse(ollamaRes);
       if (parsed.models) models = parsed.models.map(m => m.name);
     } catch(e) {}
