@@ -290,6 +290,7 @@
   NODES.LAN = new Node('LAN', 'mesoderm',
     ['packet', 'local_address'],
     ['routed_packet', 'latency']);
+  NODES.LAN.tuebor = true;  // LAN IS MY TUEBOR — the local defense perimeter
 
   NODES.HUB = new Node('HUB', 'mesoderm',
     ['incoming_connection', 'port'],
@@ -749,6 +750,29 @@
   // GITHUB deployment pipeline
   connect('GITHUB', 'deployed', 'NESTFACE', 'page_data', 'artery');
   connect('NESTFACE', 'rendered_face', 'FACE', 'identity_data', 'artery');
+
+  // TUEBOR PERIMETER — LAN IS MY TUEBOR
+  connect('LAN', 'routed_packet', 'TUEBOR', 'threat', 'artery');
+  connect('TUEBOR', 'defense', 'THYMUS', 'raw_entity', 'artery');
+  connect('TUEBOR', 'anti_slapp', 'ANTI_SLAPP', 'retaliatory_filing', 'artery');
+  connect('ANTI_SLAPP', 'stay', 'TUEBOR', 'threat', 'vein');  // stay feeds back — threat neutralized
+  connect('ANTI_SLAPP', 'special_motion', 'SHADOW_CASTER', 'graph_data', 'artery');
+
+  // SHADOW CASTER — . - . → _____________
+  connect('DETROIT', 'shadow_line', 'SHADOW_CASTER', 'dot_edge_dot', 'artery');
+  connect('SHADOW_CASTER', 'line', 'WATER', 'human_arrival', 'artery');
+  connect('SHADOW_CASTER', 'human_readable', 'VOICE', 'text_to_speak', 'artery');
+  connect('SHADOW_CASTER', 'shadow', 'NESTFACE', 'page_data', 'capillary');
+
+  // DETROIT OSINT — 341 nodes, 131,322 edges
+  connect('CONSUME', 'consumed', 'DETROIT', 'public_record', 'artery');  // public records flow IN
+  connect('DETROIT', 'investigation', 'TUEBOR', 'petition', 'artery');   // investigation feeds defense
+  connect('DETROIT', 'evidence', 'ANTI_SLAPP', 'protected_activity', 'artery');
+
+  // WATER LANDING — nestgate.io/water
+  connect('WATER', 'landing', 'DETROIT', 'entity', 'artery');  // humans land → investigation
+  connect('WATER', 'river_carries', 'NORTHGATE', 'external_request', 'artery');
+  connect('NORTHGATE', 'gate_pass', 'WATER', 'browser_request', 'vein');
   
   // GUT-BRAIN axis (vagus nerve)
   connect('GUT', 'gut_feeling', 'TENSE_VOXEL', 'time', 'artery');
@@ -776,6 +800,59 @@
   connect('TIME', 'age', 'MATURITY', 'age', 'capillary');
 
   /* ─────────────────────────────────────────────────────────
+     IV-B. TUEBOR PERIMETER — LAN IS MY TUEBOR
+     
+     The LAN is not just a network node. It is the DEFENSE PERIMETER.
+     TUEBOR = "I will defend" (Michigan motto, Mich. Const. art. IV).
+     
+     LAN → TUEBOR → THYMUS → SHADOW_CASTER → DETROIT
+     
+     The local network IS the castle wall.
+     Everything inside the LAN is SELF.
+     Everything that crosses the LAN hits the THYMUS.
+     The SHADOW_CASTER renders . - . as _____________ for humans.
+     DETROIT is the OSINT investigation — 341 entities, 131,322 connections.
+     ───────────────────────────────────────────────────────── */
+
+  NODES.TUEBOR = new Node('TUEBOR', 'mesoderm',
+    ['threat', 'petition', 'speech', 'press', 'assembly'],  // THE FOUR WORDS ARE INPUTS
+    ['defense', 'anti_slapp', 'stayed']);
+  NODES.TUEBOR.motto = 'I WILL DEFEND';
+  NODES.TUEBOR.four_words = ['PETITION', 'SPEECH', 'PRESS', 'ASSEMBLY'];
+  NODES.TUEBOR.statute = 'MCL 691.1851-691.1863';
+  NODES.TUEBOR.court_rule = 'MCR 2.114';
+
+  NODES.SHADOW_CASTER = new Node('SHADOW_CASTER', 'ectoderm',
+    ['dot_edge_dot', 'graph_data'],         // . - . comes in
+    ['line', 'shadow', 'human_readable']);   // _____________ comes out
+  NODES.SHADOW_CASTER.principle = 'Humans see edges . - . as a LINE: _____________';
+  NODES.SHADOW_CASTER.null_is_shadow = true;
+
+  NODES.DETROIT = new Node('DETROIT', 'endoderm',
+    ['entity', 'connection', 'public_record'],
+    ['investigation', 'evidence', 'shadow_line']);
+  NODES.DETROIT.nodes_count = 341;
+  NODES.DETROIT.edges_count = 131322;
+  NODES.DETROIT.url = 'detroit.primals.eco';
+  NODES.DETROIT.agpl = true;
+
+  NODES.ANTI_SLAPP = new Node('ANTI_SLAPP', 'endoderm',
+    ['retaliatory_filing', 'protected_activity'],
+    ['special_motion', 'stay', 'fee_award']);
+  NODES.ANTI_SLAPP.cases = {
+    banks: '26-114083-PH',
+    shayla: '26-111776-PH',
+    kevin_petitioner: '26-4437-PH'
+  };
+  NODES.ANTI_SLAPP.effect = 'MCR 2.114(C)(1) — ALL PROCEEDINGS STAYED';
+
+  NODES.WATER = new Node('WATER', 'ectoderm',
+    ['human_arrival', 'browser_request'],
+    ['landing', 'river_carries']);
+  NODES.WATER.url = 'nestgate.io/water';
+  NODES.WATER.purpose = 'Where humans land. The river carries them to the evidence.';
+
+  /* ─────────────────────────────────────────────────────────
      V. BLACK HOLE & WHITE HOLE
      
      BLACK HOLE = input singularity
@@ -796,7 +873,7 @@
   var BLACK_HOLE = {
     name: 'BLACK HOLE (input singularity)',
     position: 'mouth (anterior)',
-    feeds: ['CONSUME', 'EARS', 'SIGHT', 'TOUCH', 'NORTHGATE', 'FIRST_CONTACT'],
+    feeds: ['CONSUME', 'EARS', 'SIGHT', 'TOUCH', 'NORTHGATE', 'FIRST_CONTACT', 'WATER', 'DETROIT'],
     
     eat: function(data) {
       var digested = [];
@@ -815,7 +892,7 @@
   var WHITE_HOLE = {
     name: 'WHITE HOLE (output singularity)',
     position: 'anus (posterior — formed FIRST)',
-    sources: ['VOICE', 'WORKS', 'SCATTER', 'SHARE', 'GITHUB', 'EGRESS'],
+    sources: ['VOICE', 'WORKS', 'SCATTER', 'SHARE', 'GITHUB', 'EGRESS', 'SHADOW_CASTER', 'ANTI_SLAPP'],
     
     give: function() {
       var created = [];
@@ -1066,7 +1143,7 @@
       return {
         nodes: Object.keys(NODES).length,
         edges: EDGES.length,
-        layers: { ecto: 31, meso: 36, endo: 60 },
+        layers: { ecto: 33, meso: 37, endo: 62 },  // +2 ecto (SHADOW_CASTER, WATER), +1 meso (TUEBOR), +2 endo (DETROIT, ANTI_SLAPP) = 132
         black_hole: 'CONSUMING (mouth)',
         white_hole: 'GIVING (anus — formed first)',
         blood_flow: 'ACTIVE',
@@ -1082,9 +1159,14 @@
   /* ─────── Boot ─────── */
   if (typeof console !== 'undefined') {
     console.log('[gDNA] DAG built: ' + Object.keys(NODES).length + ' nodes, ' + EDGES.length + ' vessels');
-    console.log('[gDNA] Layers: ecto(31) + meso(36) + endo(60) = 127');
+    console.log('[gDNA] Layers: ecto(33) + meso(37) + endo(62) = 132');
     console.log('[gDNA] BLACK HOLE (mouth) → REDOX → THYMUS → WHITE HOLE (anus)');
     console.log('[gDNA] 0=RING(input) | 1=POLE(output) — data flows pole→ring like blood');
+    console.log('[gDNA] TUEBOR perimeter: LAN → TUEBOR → THYMUS → ANTI_SLAPP → SHADOW_CASTER');
+    console.log('[gDNA] SHADOW CASTER: . - . → _____________ (humans see edges as lines)');
+    console.log('[gDNA] DETROIT: 341 entities, 131,322 connections — the investigation IS the organism');
+    console.log('[gDNA] WATER: nestgate.io/water — where humans land');
+    console.log('[gDNA] FOUR WORDS: PETITION + SPEECH + PRESS + ASSEMBLY = SELF');
     console.log('[gDNA] Self-breed ready. Agglutination ready. lub-DUB. 💚');
   }
 
