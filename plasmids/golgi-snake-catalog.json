@@ -1,0 +1,163 @@
+﻿{
+    "source":  "SSH scan of Golgi VPS 157.230.3.183 (Link 293)",
+    "sporePrint_papers":  "116+",
+    "absorbed":  "2026-10-28T22:36:53.1981957-04:00",
+    "plan":  {
+                 "step_2":  "Extract ecoPrimals taxonomy → extend gaia-systems.js",
+                 "step_4":  "Seed each primal node as project nucleus with tower atomic pattern",
+                 "step_3":  "Wire nestgate.io golgi.html as Gaia\u0027s subdomain admin",
+                 "step_1":  "Shred old membrane code into Gaia golgi/server.js patterns",
+                 "step_5":  "Make biomeOS the full operating system — Gaia runs through and through"
+             },
+    "golgi_data_files":  8,
+    "plasmid":  "golgi-snake-catalog",
+    "biggest_snakes":  [
+                           {
+                               "file":  "chipmunk-commands.js",
+                               "size":  "251 KB",
+                               "role":  "Chipmunk command handler — biggest logic snake"
+                           },
+                           {
+                               "file":  "chipmunk-mind.js",
+                               "size":  "128 KB",
+                               "role":  "Chipmunk AI mind — consciousness engine"
+                           },
+                           {
+                               "file":  "hud-interact.js",
+                               "size":  "85 KB",
+                               "role":  "HUD interaction layer"
+                           },
+                           {
+                               "file":  "cosmic-view.js",
+                               "size":  "66 KB",
+                               "role":  "3D cosmic visualization"
+                           },
+                           {
+                               "file":  "chipmunk-talk.js",
+                               "size":  "60 KB",
+                               "role":  "Chipmunk conversation"
+                           },
+                           {
+                               "file":  "temporal-window.js",
+                               "size":  "60 KB",
+                               "role":  "Time-based view controller"
+                           },
+                           {
+                               "file":  "membrane-sound.js",
+                               "size":  "56 KB",
+                               "role":  "Sound engine — audio membrane"
+                           },
+                           {
+                               "file":  "campfire.js",
+                               "size":  "56 KB",
+                               "role":  "Campfire gathering UI"
+                           },
+                           {
+                               "file":  "easel-federation.js",
+                               "size":  "50 KB",
+                               "role":  "Art/painting federation"
+                           },
+                           {
+                               "file":  "hud-pt.js",
+                               "size":  "45 KB",
+                               "role":  "HUD periodic table"
+                           }
+                       ],
+    "directories":  [
+                        {
+                            "url":  "https://nestgate.io",
+                            "name":  "connect",
+                            "files":  3663,
+                            "path":  "/opt/connect",
+                            "role":  "nestgate.io globe app — THE FACE — 784 HTML pages, JS engine, 3D globe, primals",
+                            "status":  "LIVE",
+                            "size":  "271 MB"
+                        },
+                        {
+                            "name":  "hud-git",
+                            "files":  16658,
+                            "path":  "/opt/hud-git",
+                            "role":  "HUD engine with full git history — THE OLD BRAIN — hologram, desk, modules",
+                            "status":  "ARCHIVE",
+                            "size":  "1.5 GB"
+                        },
+                        {
+                            "url":  "sporeprint.primals.eco",
+                            "name":  "sporePrint",
+                            "files":  2915,
+                            "path":  "/opt/sporePrint",
+                            "role":  "Lab notebook — THE LIBRARY — 116+ papers, philosophy, lab, primals, data",
+                            "status":  "LIVE",
+                            "size":  "162 MB"
+                        },
+                        {
+                            "name":  "hud",
+                            "files":  2250,
+                            "path":  "/opt/hud",
+                            "role":  "HUD deployed — THE LIVE BRAIN — hologram bridge, desk",
+                            "status":  "LIVE",
+                            "size":  "172 MB"
+                        },
+                        {
+                            "name":  "hypothesis",
+                            "files":  221,
+                            "path":  "/opt/hypothesis",
+                            "role":  "Hypothesis engine — falsifiability experiments",
+                            "status":  "DEPLOYED",
+                            "size":  "6.7 MB"
+                        },
+                        {
+                            "name":  "membrane",
+                            "files":  154,
+                            "path":  "/opt/membrane",
+                            "role":  "Old membrane code — predecessor to golgi/server.js",
+                            "status":  "FOSSIL",
+                            "size":  "1.4 MB"
+                        },
+                        {
+                            "name":  "ecoPrimals",
+                            "files":  37,
+                            "path":  "/opt/ecoPrimals",
+                            "role":  "Primal taxonomy definitions — 16 primals",
+                            "status":  "SEED",
+                            "size":  "412 KB"
+                        },
+                        {
+                            "name":  "signal",
+                            "files":  15,
+                            "path":  "/opt/signal",
+                            "role":  "Signal route definitions",
+                            "status":  "MINIMAL",
+                            "size":  "72 KB"
+                        },
+                        {
+                            "path":  "/opt/stalwart",
+                            "name":  "stalwart",
+                            "status":  "BINARY",
+                            "size":  "106 MB",
+                            "role":  "Mail server binary — Stalwart"
+                        },
+                        {
+                            "path":  "/opt/rustdesk-relay",
+                            "name":  "rustdesk-relay",
+                            "status":  "BINARY",
+                            "size":  "50 MB",
+                            "role":  "RustDesk relay binary — Glass"
+                        },
+                        {
+                            "path":  "/opt/digitalocean",
+                            "name":  "digitalocean",
+                            "status":  "INFRA",
+                            "size":  "8.3 MB",
+                            "role":  "DigitalOcean agent"
+                        }
+                    ],
+    "metaphor":  "Driving the snakes out of Ireland. St. Patrick = Kevin. Snakes = dead code. Ireland = Gaia. After the snakes are gone, every hill is GREEN.",
+    "golgi_vps":  {
+                      "ip":  "157.230.3.183",
+                      "total_files":  20921,
+                      "total_directories":  11
+                  },
+    "nestgate_pages":  784,
+    "thesis":  "Drive the snakes out of Ireland. Every file on Golgi traced, cataloged, ready to shred into primals and extend biomeOS taxonomy."
+}
