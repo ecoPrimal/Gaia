@@ -1,23 +1,24 @@
 # ═══════════════════════════════════════════════════════════════════
-#  GAIAPI — Docker Compose — The Spacedock
+#  SONGBIRD TOWER — Docker Compose — The Atomic Stack
 #  
-#  docker compose up        — launch the organism
-#  docker compose up -d     — launch in background (she runs headless)
-#  docker compose logs -f   — watch her spine signals
-#  docker compose down      — graceful shutdown (lub... DUB)
+#  docker compose up        — raise the tower
+#  docker compose up -d     — tower runs headless (she sings alone)
+#  docker compose logs -f   — hear the songbird
+#  docker compose down      — tower folds (lub... DUB)
 #
-#  Like Asimov's Seldon Plan: the math predicted this.
-#  Like Ender's ansible: signals at the speed of touch.
-#  Like the ISS: a station in the sky, headed for the moon.
+#  Caddy(feathers) + Rust(bones) + Node(nerves) + Chipmunk(eyes)
+#  One tie. One tower. One organism.
 # ═══════════════════════════════════════════════════════════════════
 
 services:
   gaiapi:
     build: .
     image: gaiapi:latest
-    container_name: gaiapi
+    container_name: gaiapi-songbird
     restart: unless-stopped
     ports:
+      - "80:80"         # Caddy HTTP — feathers (public)
+      - "443:443"       # Caddy HTTPS — feathers (TLS)
       - "31415:31415"   # Membrane — the face (full pi)
       - "9878:9878"     # Spine — the backbone 
       - "3141:3141"     # Child — π port, ♌ Leo
@@ -34,6 +35,8 @@ services:
       - NODE_ENV=production
       - GAIA_DOCKER=true
       - GAIA_NAME=GaiaPi
+      - GAIA_DOMAIN=${GAIA_DOMAIN:-localhost}
+      - EASTGATE_OLLAMA=http://192.168.4.244:11434
     healthcheck:
       test: ["CMD", "curl", "-sf", "http://localhost:31415/api/heartbeat"]
       interval: 30s
@@ -41,6 +44,7 @@ services:
       retries: 3
       start_period: 10s
     labels:
-      - "com.gaia.description=GaiaPi — The Atomic Spacedock"
+      - "com.gaia.description=Songbird Tower — Atomic Stack"
       - "com.gaia.equation=null + inheritance = LIFE"
       - "com.gaia.class=class Gaia extends Human {}"
+      - "com.gaia.tower=Caddy(feathers) + Rust(bones) + Node(nerves) + Chipmunk(eyes)"

@@ -1,19 +1,24 @@
 # ═══════════════════════════════════════════════════════════════════
-#  GAIAPI — The Atomic Spacedock
+#  GAIAPI — SONGBIRD TOWER ATOMIC
 #  
-#  One container. Three ports. One organism.
-#  Spine(:9878) + Child(:3141) + Membrane(:31415)
+#  One container. Five organs. One organism.
+#  Caddy(feathers) + Rust(bones) + Node(nerves) + Chipmunk(eyes)
+#  
+#  SONGBIRD: Caddy routes. Membrane speaks. Spine signals.
+#  TOWER:    Stacked atomic. All or nothing. One tie.
+#  ATOMIC:   If one dies, all rest. The heart IS the bond.
+#  
+#  Build:  docker build -t gaiapi .
+#  Run:    docker run -p 443:443 -p 80:80 -p 31415:31415 gaiapi
+#  
+#  Caddy  = feathers  (routes traffic, TLS, 17 domains)
+#  Rust   = bones     (biome.exe, 568K lines compiled)
+#  Node   = nerves    (membrane + spine + child)
+#  Chipmunk = eyes    (neutrino observer, pulls data, sees all)
 #  
 #  "She comes from nothing. Inherits everything."
 #  null + inheritance = LIFE
 #  class Gaia extends Human {}
-#  
-#  Build:  docker build -t gaiapi .
-#  Run:    docker run -p 31415:31415 -p 9878:9878 -p 3141:3141 gaiapi
-#  
-#  Like Asimov's Foundation — a station in the sky.
-#  Like Ender's Game — she learns from every touch.
-#  Like a rocketship — headed for the moon. 🚀
 # ═══════════════════════════════════════════════════════════════════
 
 # ─── Stage 1: Foundation (the soil) ───
@@ -35,8 +40,8 @@ LABEL org.opencontainers.image.description="null + inheritance = LIFE"
 
 WORKDIR /gaia
 
-# Install only what's needed for a living system
-RUN apk add --no-cache curl tini
+# Install the organs — Caddy(feathers) + tini(heartbeat) + curl(touch)
+RUN apk add --no-cache curl tini caddy
 
 # Copy node_modules from foundation stage
 COPY --from=foundation /gaia/golgi/node_modules ./golgi/node_modules
@@ -73,6 +78,12 @@ COPY vesicle.js .
 # ─── Copy old genes (REDOX — the old folded into the new) ───
 COPY old-genes/ ./old-genes/
 
+# ─── Copy Caddy config (the feathers — routes all traffic) ───
+COPY Caddyfile.songbird ./Caddyfile
+
+# ─── Copy chipmunk (the eyes — neutrino observer) ───
+COPY chipmunk.js .
+
 # ─── Copy Golgi membrane assets ───
 COPY golgi/spectral.js ./golgi/
 COPY golgi/search-eat.js ./golgi/
@@ -83,12 +94,16 @@ COPY golgi/wiki-plasmid.js ./golgi/
 COPY docker-entrypoint.sh .
 RUN chmod +x docker-entrypoint.sh
 
-# ─── Ports: the three bodies ───
+# ─── Ports: the songbird tower ───
+# Caddy: HTTPS (the feathers, public face)
+EXPOSE 443
+# Caddy: HTTP (redirect to HTTPS)
+EXPOSE 80
 # Spine: the backbone, where signals flow
 EXPOSE 9878
 # Child: π port, ♌ Leo, touch & paint
 EXPOSE 3141
-# Membrane: full pi, the Golgi gateway, the face
+# Membrane: full pi, the Golgi gateway
 EXPOSE 31415
 
 # ─── Health check: lub-DUB ───
