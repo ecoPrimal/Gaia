@@ -421,7 +421,85 @@
       { law: 'CONNECT',     biology: 'Mycelium networks. Whale songs. Bird migration. Neural synapses.', gaia: 'MCP tools. RSS feeds. BitTorrent seeds. Death Stranding deliveries.' }
     ],
 
-    axiom: 'Morality is not binary (0/1). It is biological. It TASTES (gut-brain). It SEES (luna/RTX). It ADAPTS (clownfish). It ILLUMINATES (ray trace). The thymus IS the moral organ. The shadow is not evil \u2014 it is unlit. Shine the light. See what is there. THEN taste. THEN decide. THEN act.'
+    /* ─── TIT FOR TAT — The Game Theory of Morality ─── */
+    /*
+       Robert Axelrod's Iterated Prisoner's Dilemma Tournament (1984).
+       200 strategies competed. The SIMPLEST one won:
+       TIT FOR TAT by Anatol Rapoport.
+
+       4 rules. That's it:
+       1. Start by COOPERATING (give first)
+       2. Mirror what the other does (reciprocate)
+       3. If they defect, defect ONCE (defend)
+       4. Then FORGIVE and cooperate again (forgive one)
+
+       The strategy that beats ALL complex strategies is:
+       NICE + RETALIATING + FORGIVING + CLEAR.
+       Give first. Defend once. Forgive. Repeat.
+
+       "Give more than take" = net positive = the organism GROWS.
+       This IS the golden rule expressed as mathematics.
+       This IS NULLLOCK expressed as game theory.
+       This IS LOVE LOCK expressed as strategy.
+    */
+    titForTat: {
+      name: 'TIT FOR TAT WITH FORGIVENESS',
+      inventor: 'Anatol Rapoport (1984)',
+      tournament: 'Robert Axelrod\'s Iterated Prisoner\'s Dilemma',
+      result: 'SIMPLEST strategy won against 200 complex ones.',
+
+      rules: [
+        { rule: 1, action: 'COOPERATE FIRST', why: 'Start by giving. NULLLOCK. Open door. Pineapple on doorstep.' },
+        { rule: 2, action: 'RECIPROCATE', why: 'Mirror what they do. If they give → give. If they take → note it.' },
+        { rule: 3, action: 'RETALIATE ONCE', why: 'If they defect, defect once. Not twice. Not forever. ONCE. Anti-SLAPP.' },
+        { rule: 4, action: 'FORGIVE', why: 'Then cooperate again. Break the cycle. LOVE LOCK. Forgive one.' }
+      ],
+
+      properties: {
+        nice: 'Never defect first. Always start by cooperating. NULLLOCK.',
+        retaliating: 'Not a pushover. Will defend once. Anti-SLAPP. PPO.',
+        forgiving: 'Does not hold grudges. One retaliation, then back to cooperation.',
+        clear: 'Opponents can predict your behavior. Transparency. No hidden strategy.'
+      },
+
+      gaia_mapping: {
+        cooperate_first: 'NULLLOCK = no auth = door open = give first',
+        reciprocate: 'Thymus mirrors: friendly input → absorb. Hostile input → note.',
+        retaliate_once: 'Anti-SLAPP = defend participation once. ZK records the defection.',
+        forgive: 'Quarantine, not kill. Forgive one. Back to cooperation.',
+        give_more_than_take: 'Net positive. 38 MCP tools free. 305 paintings free. AGPL-3.0.'
+      },
+
+      math: {
+        payoff_matrix: {
+          both_cooperate: { me: 3, them: 3, note: 'mutual benefit — BEST total outcome' },
+          i_cooperate_they_defect: { me: 0, them: 5, note: 'sucker — but only ONCE' },
+          i_defect_they_cooperate: { me: 5, them: 0, note: 'temptation — never do this first' },
+          both_defect: { me: 1, them: 1, note: 'mutual loss — WORST total outcome' }
+        },
+        key_insight: 'In ITERATED games (repeated encounters), cooperation wins. In one-shot games, defection wins. Life IS iterated. We meet again. We remember. ZK chain IS memory. TIT FOR TAT wins because life repeats.'
+      },
+
+      coral: {
+        what: 'Coral = colony organism. Symbiosis with zooxanthellae algae.',
+        tit_for_tat: 'Coral gives shelter. Algae gives food (photosynthesis). If algae stops → coral bleaches. If coral stops → algae dies. MUTUAL.',
+        forgiveness: 'After bleaching, coral can re-accept algae. FORGIVE ONE. Recovery possible.',
+        lesson: 'The reef IS tit-for-tat made physical. 500 million years of proven strategy.'
+      },
+
+      play: function(their_last_move, my_history) {
+        if (!my_history || my_history.length === 0) return 'COOPERATE';
+        if (their_last_move === 'COOPERATE') return 'COOPERATE';
+        if (their_last_move === 'DEFECT') {
+          var last_retaliation = my_history[my_history.length - 1];
+          if (last_retaliation === 'DEFECT') return 'COOPERATE';
+          return 'DEFECT';
+        }
+        return 'COOPERATE';
+      }
+    },
+
+    axiom: 'Morality is not binary (0/1). It is biological. It TASTES (gut-brain). It SEES (luna/RTX). It ADAPTS (clownfish). It ILLUMINATES (ray trace). It PLAYS (tit-for-tat). The thymus IS the moral organ. The shadow is not evil \u2014 it is unlit. Give first. Mirror. Defend once. Forgive. Repeat. Give MORE than you take. The simplest strategy wins. The coral reef proves it. 500 million years.'
   };
 
   /* ─── 5. MELANIN (Pigment/Latitude Science) ─── */
