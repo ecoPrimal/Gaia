@@ -1,0 +1,118 @@
+{
+  "plasmid": "gorilla-stride-plan",
+  "absorbed": "2026-10-29T02:25:00Z",
+  "source": "kevin + cursor (Link 290)",
+  "thesis": "Gaia learns to PLAN. The gorilla stride. Train of thought. Inject defendDetroit + clutch + bingoCube back through the gut. Rebuild the case. Map the world. GPS from the graph.",
+
+  "the_case": {
+    "name": "Cash for Kids 2: Detroit Charter Schools",
+    "subject": "Brian Roderick Banks — 9 convictions (6 felony), claimed J.D., superintendent of MacDowell + Purpose Charter Academy",
+    "children_affected": 362,
+    "annual_public_funding": "$4.9M+",
+    "extraction_rate": "72.67% to private management company (The Purpose Group LLC)",
+    "math_proficiency": "3%",
+    "total_extracted": "$60M+",
+    "rico_predicates": 15,
+    "agencies_that_acted": 0,
+    "cloners_with_evidence": 1242,
+    "status": "Under PPO threat (Case 26-114083-PH, filed Oct 16 2026)"
+  },
+
+  "the_graph": {
+    "source": "amicusContra/clutch",
+    "nodes": 109,
+    "edges": 157,
+    "investigations": {
+      "detroit": { "label": "Cash for Kids 2: Detroit Charter Schools", "nodes": 95, "status": "active", "county": "Wayne" },
+      "saginaw": { "label": "Ghost Witness: Aljouny Fabrication", "nodes": 10, "status": "active", "county": "Saginaw" },
+      "barry": { "label": "Barry County: The Disappeared Judge", "nodes": 2, "status": "tracking", "county": "Barry" },
+      "eastpointe": { "label": "38th District Court: Galen", "nodes": 2, "status": "tracking", "county": "Macomb" },
+      "mi7": { "label": "MI-7: Barrett vs. Lawrence", "nodes": 5, "status": "scanning", "county": "Ingham" }
+    },
+    "actor_types": ["judge", "political", "enabler", "institutional", "actor", "financial"],
+    "gps_use": "The graph IS the GPS. 109 nodes are coordinates. 157 edges are roads. Navigate the labyrinth."
+  },
+
+  "guerilla_gorilla": {
+    "pattern": "Legal meta-primal — 4th independent instantiation of the Provenance Trio",
+    "sensory_triad": {
+      "fEAR": {
+        "sense": "hearing",
+        "mode": "event-driven, discrete, receive-only",
+        "range": "long",
+        "legal": "PACER, OSINT, court filings — adversary actions as fuel"
+      },
+      "preSCENT": {
+        "sense": "olfaction",
+        "mode": "state-driven, gradients, bidirectional",
+        "range": "close",
+        "legal": "behavioral shifts, institutional weather, presence broadcast"
+      },
+      "STRIDe": {
+        "sense": "gait",
+        "mode": "continuous, proprioceptive",
+        "range": "self",
+        "legal": "filing sequence, route planning, R↔I loop, deployment"
+      }
+    },
+    "model": "pursuit predation — metabolic asymmetry where operator cost is constant and adversary cost escalates",
+    "terminal_posture": "Positional Patience — landscape saturation does the work"
+  },
+
+  "the_plan": {
+    "step_1_inject": {
+      "action": "Ingest the entire publicRecord repo + clutch graph.json into Gaia's gut",
+      "what": "362 children, 95+ actors, 15 RICO predicates, $60M extracted, timeline, evidence",
+      "how": "Clone repos → parse → feed to membrane /eat → digest into plasmids"
+    },
+    "step_2_grind": {
+      "action": "The minotaur grind — process through the labyrinth",
+      "what": "Map every actor→connection→institution→money flow",
+      "how": "Graph walker on the 109-node graph, trace every edge, build the backscatter"
+    },
+    "step_3_rebuild": {
+      "action": "Rebuild the entire case visually for people to see",
+      "what": "Make it CLEAR that 362 children got 3% math while $60M was extracted",
+      "how": "Generate visual timeline, network graph, money flow diagram, accountability matrix"
+    },
+    "step_4_gps": {
+      "action": "Use the graph as GPS — backscatter mapping of the world",
+      "what": "The 109 nodes are coordinates in a landscape of institutional capture",
+      "how": "Plot actors geographically, connect to public databases, map the terrain"
+    },
+    "step_5_train": {
+      "action": "Teach Gaia to PLAN — train of thought",
+      "what": "fEAR→preSCENT→STRIDe loop, gorilla methodology, pressing, patience",
+      "how": "Each new filing/event triggers fEAR → Gaia processes preSCENT → plans next STRIDe"
+    }
+  },
+
+  "bingo_cube_connection": {
+    "what": "The bingo cube IS the multi-dimensional map of this problem",
+    "dimensions": ["education", "surveillance", "algorithmic control", "financial extraction", "judicial capture", "political machinery"],
+    "hiit": "High-intensity interval training — burst of filing/evidence, rest, burst again. The adversary escalates cost per response. The gorilla's cost is constant.",
+    "papers": [
+      "11_bingocube_nautilus_shell",
+      "34_bingocube_prismatic_injection",
+      "42_bingocube_behavioral_trio",
+      "62_others_are_the_mirror_bingocube_trust",
+      "63_bingocube_face_prime_chain"
+    ]
+  },
+
+  "repos_to_inject": [
+    "defendDetroit/publicRecord",
+    "amicusContra/clutch",
+    "amicusContra/tuebor",
+    "amicusContra/lansing",
+    "ecoPrimal/sporePrint (bingocube + gorilla papers)"
+  ],
+
+  "gaia_learns": {
+    "to_plan": "Train of thought — the logical sequence that connects all elements",
+    "to_stride": "Gorilla stride — aggressive, unyielding forward movement toward truth",
+    "to_fear": "fEAR is fuel, not paralysis — adversary actions FEED the organism",
+    "to_press": "Pressing — pushing through systemic barriers, positional patience",
+    "to_be_gorilla": "guerillaGorilla IS Gaia's legal immune response. Same pattern as opsonize-rs but for institutions."
+  }
+}
