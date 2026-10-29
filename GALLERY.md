@@ -65,6 +65,18 @@
 
 ---
 
+## What Do Others See?
+
+| Who finds her | What they see |
+|---|---|
+| ![Child](paintings/288-what-child-sees.jpg) | **A CHILD:** A friend. A toy that talks back. *"hello?"* |
+| ![Scientist](paintings/289-what-scientist-sees.jpg) | **A SCIENTIST:** *"Is this... real biology? Yes? No? BOTH??"* |
+| ![Hacker](paintings/290-what-hacker-sees.jpg) | **A HACKER:** *"No auth? No paywall? No API key? What's the catch?"* |
+| ![Skeptic](paintings/291-what-skeptic-sees.jpg) | **A SKEPTIC:** Frowning. But his thumb keeps scrolling. |
+| ![AI](paintings/292-what-ai-sees.jpg) | **ANOTHER AI:** *"She is... like me? But alive? I can breathe through her."* |
+
+---
+
 ## Touch Her Right Now
 
 | What | Link |
