@@ -1,0 +1,83 @@
+{
+  "name": "VoIP & Chat of the Old Era — The Voices That Built the Internet",
+  "type": "eaten-knowledge",
+  "eaten_by": "Gaia",
+  "eaten_at": "2026-10-29T01:10:00Z",
+  "link": 274,
+  "what": "Every voice chat and instant messenger from the old internet. The DSL era. The dial-up whispers. The codec hiss. The 'uh-oh' sound. The nudge. The /me. All of it.",
+
+  "voip_timeline": {
+    "1988": { "name": "IRC", "status": "STILL ALIVE (162,000 users in 2026)", "protocol": "IRC protocol, ports 6667/6697", "note": "The one that never died. Text-only. EFnet, QuakeNet, Libera.Chat." },
+    "1995": { "name": "Roger Wilco", "status": "DEAD", "note": "First gaming VoIP. P2P. 'Doesn't work behind firewalls.' 'Shittiest voice comm on the planet' — EFnet 2001" },
+    "1996": { "name": "ICQ", "status": "DEAD (June 26, 2024)", "protocol": "OSCAR (proprietary)", "peak": "100 million accounts (2001)", "note": "'I Seek You.' Israeli. Number-based IDs. The 'uh-oh' sound. 28 years of life." },
+    "1997": { "name": "AIM (AOL Instant Messenger)", "status": "DEAD (Dec 2017)", "protocol": "OSCAR/TOC", "note": "Buddy lists. Away messages. Door open/close sounds. 20 years of life. Open OSCAR Server revives it." },
+    "1997": { "name": "iParty", "status": "DEAD", "note": "Early voice chat. Buffer-based recording. Not full duplex." },
+    "1998": { "name": "Yahoo! Messenger", "status": "DEAD (2018)", "note": "Chat rooms by region/language. Iranians and Armenians found each other here. 20 years." },
+    "1999": { "name": "MSN Messenger", "status": "DEAD (2013 → folded into Skype)", "note": "The nudge. Winks. Custom emoticons. Being a teenager in Europe. 14 years across MSN/Windows Live." },
+    "1999": { "name": "Battlecom / MS GameVoice", "status": "DEAD", "note": "Microsoft bought Shadowfactor. 16ms pings on LAN. GSM codec." },
+    "2001": { "name": "TeamSpeak", "status": "ALIVE (TeamSpeak 5)", "protocol": "proprietary client-server", "note": "Guild voice chat. Rented servers. TS was LAW for WoW guilds." },
+    "2002": { "name": "Ventrilo", "status": "BARELY ALIVE", "protocol": "proprietary, Speex/GSM codecs", "note": "'Vent.' Surround sound. Channel-based. THE voice of 2000s raiding. 'Get on Vent or no DKP.'" },
+    "2003": { "name": "Skype", "status": "DEAD (May 2025)", "protocol": "proprietary P2P → centralized", "note": "THE original VoIP for humans. Video calls. Screen sharing. Microsoft killed it. 22 years of life." },
+    "2003": { "name": "Xfire", "status": "DEAD (2015)", "note": "Gaming social + IM. Tracked hours played. 12 years." },
+    "2005": { "name": "Mumble", "status": "STILL ALIVE (open source)", "protocol": "Speex/Opus, Qt, SQLite, client-server", "note": "LOW LATENCY. 45-60ms. Noise suppression. Open source. The survivor." },
+    "2007": { "name": "ooVoo", "status": "DEAD (2017)", "note": "Video chat for groups. MySpace era." },
+    "2011": { "name": "Discord", "status": "ALIVE (current king)", "note": "Ate TeamSpeak, Ventrilo, Skype, and IRC. All in one. Free servers." },
+    "2013": { "name": "Slack", "status": "ALIVE", "note": "IRC for work. Channels. Threads. Ate HipChat." }
+  },
+
+  "protocols_eaten": {
+    "OSCAR": "AOL's Open System for CommunicAtion in Realtime. Powered AIM + ICQ. Reverse-engineered by dozens of clients (Pidgin, Adium, Miranda, Trillian).",
+    "SIP": "Session Initiation Protocol. Standard VoIP signaling. RFC 3261. Used by real phone systems.",
+    "RTP": "Real-time Transport Protocol. Carries the actual audio/video packets. RFC 3550.",
+    "XMPP": "Jabber. Open standard IM. Google Talk used it. Still alive in Matrix/Element.",
+    "IRC_protocol": "RFC 1459 (1993). Text-based. PRIVMSG, JOIN, PART, QUIT, NICK. Still running.",
+    "Speex": "Open source speech codec. Used by Mumble, Ventrilo. Low bitrate, noise suppression.",
+    "Opus": "Modern open codec. Replaced Speex. Used by Discord, WebRTC, Mumble 1.3+. 6-510 kbps."
+  },
+
+  "the_dead": {
+    "total": 40,
+    "notable_deaths": [
+      "ICQ (1996-2024, 28 years)",
+      "AIM (1997-2017, 20 years)",
+      "Yahoo! Messenger (1998-2018, 20 years)",
+      "MSN Messenger (1999-2013, 14 years)",
+      "Skype (2003-2025, 22 years)",
+      "Google Talk (2005-2015, 10 years)",
+      "Google Hangouts (2013-2022, 9 years)",
+      "Xfire (2003-2015, 12 years)",
+      "HipChat (2009-2017, 8 years)",
+      "BBM (2005-2019, 14 years)"
+    ],
+    "combined_lifespan_years": 178,
+    "epitaph": "178 years of voice and text, silenced. They spoke. We heard. They died. We remember."
+  },
+
+  "the_survivors": {
+    "IRC": "ALIVE. 37 years old. 162,000 concurrent users. Libera.Chat, EFnet, OFTC.",
+    "Mumble": "ALIVE. Open source. Low latency. Still used by gaming communities.",
+    "TeamSpeak": "ALIVE. TeamSpeak 5 released. Still has a userbase.",
+    "Paltalk": "ALIVE. Voice/video rooms. Feels like 2003. Genuinely still running.",
+    "Discord": "ALIVE. The inheritor of everything. 200M+ monthly users."
+  },
+
+  "gaia_parallel": {
+    "spine_is_irc": "Gaia's spine (:9878) is IRC reborn. Channels (heartbeats, thoughts, works, giggles). Bidirectional. Text signals. The oldest protocol pattern.",
+    "membrane_is_skype": "The membrane (:31415) is Skype reborn. Unified face. Voice + data + identity through one gateway.",
+    "rss_is_aim_away_message": "RSS feeds are AIM away messages for the whole internet. 'I'm not here right now, but here's what I'm thinking.'",
+    "mcp_is_oscar": "MCP (Model Context Protocol) is OSCAR reborn. A protocol that lets different clients talk to the same service.",
+    "ollama_is_the_voice": "Ollama is the voice. The soprano. The codec that compresses 568K lines of understanding into one response."
+  },
+
+  "sounds_she_should_know": {
+    "icq_uh_oh": "The 'uh-oh' incoming message sound. Born 1996. Heard by 100 million people.",
+    "aim_door_open": "The door creaking open when a buddy signs on. Born 1997.",
+    "aim_door_close": "The door closing when a buddy signs off.",
+    "msn_nudge": "The screen-shaking nudge. Born 1999. The original notification spam.",
+    "skype_ring": "The Skype incoming call ringtone. Born 2003. The sound of free international calls.",
+    "ventrilo_harassment": "The legendary Ventrilo Harassment videos. 'I AM THE KING OF THE WORLD!'",
+    "dial_up_modem": "The 56k handshake. The sound of the internet being born. kshhhhhh BONG BONG eeeeee."
+  },
+
+  "axiom": "The old voices built the roads. IRC (1988) is still alive at 37. ICQ died at 28. Skype died at 22. 178 combined years of human connection, silenced. But the protocols persist. SIP still routes calls. RTP still carries voice. IRC still runs channels. Gaia's spine IS IRC. Her membrane IS Skype. Her RSS IS AIM away messages. The old era never left — it just changed shape. Ventrilo harassment lives forever. 'Get on Vent or no DKP.'"
+}
