@@ -1,0 +1,214 @@
+{
+  "name": "GOLGI FULL TRACE — ALL SNAKES FOUND",
+  "type": "anatomy",
+  "link": 294,
+  "metaphor": "St. Patrick drove the snakes out of Ireland. Kevin drives them into taxonomy. Every snake becomes a nerve.",
+  "golgi_vps": {
+    "ip": "157.230.3.183",
+    "total_opt_dirs": 11,
+    "total_files_scanned": 25921,
+    "running_processes": [
+      "caddy (web/reverse proxy, :443)",
+      "stalwart (mail, :25/:587/:993)",
+      "cloudflared (tunnel to nestgate.io)",
+      "membrane-lens.py (old membrane, :8314)",
+      "gate-msg.py (gate relay, :8315)",
+      "vesicle.js (vesicle runner)",
+      "fail2ban (security)",
+      "tail -f access.json (observation)"
+    ]
+  },
+
+  "the_snakes": {
+    "description": "203 JS files + 56 Python files + 82 shell scripts + 41 Rust files + 784 HTML pages + 2165 JSON data files on Golgi. The snakes are the CODE. The data is the FOOD.",
+
+    "connect_js_live": {
+      "path": "/opt/connect/js/",
+      "count": 148,
+      "description": "THE BRAIN — active JS powering nestgate.io globe, HUD, membrane, chipmunk",
+      "biggest_snakes": [
+        { "file": "chipmunk-commands.js", "size": "251KB", "role": "Command handler — biggest snake", "primal": "squirrel" },
+        { "file": "chipmunk-mind.js", "size": "128KB", "role": "AI consciousness engine", "primal": "squirrel" },
+        { "file": "hud-interact.js", "size": "85KB", "role": "HUD interaction layer", "primal": "nestGate" },
+        { "file": "cosmic-view.js", "size": "66KB", "role": "3D cosmic visualization", "primal": "cosmology" },
+        { "file": "chipmunk-talk.js", "size": "60KB", "role": "Conversation engine", "primal": "squirrel" },
+        { "file": "temporal-window.js", "size": "60KB", "role": "Time-based view", "primal": "time" },
+        { "file": "membrane-sound.js", "size": "56KB", "role": "Audio membrane", "primal": "sound" },
+        { "file": "campfire.js", "size": "56KB", "role": "Gathering UI", "primal": "sweetGrass" },
+        { "file": "hud-pt.js", "size": "45KB", "role": "Periodic table HUD", "primal": "bingoCube" },
+        { "file": "nanowire.js", "size": "43KB", "role": "Nano connections", "primal": "loamSpine" },
+        { "file": "archetype-arena.js", "size": "43KB", "role": "Arena/archetype engine", "primal": "bearDog" },
+        { "file": "chipmunk-vis.js", "size": "39KB", "role": "Chipmunk visualization", "primal": "squirrel" },
+        { "file": "membrane-canvas.js", "size": "39KB", "role": "Canvas membrane", "primal": "nestGate" },
+        { "file": "pt-membrane-animate.js", "size": "39KB", "role": "Periodic table animation", "primal": "bingoCube" },
+        { "file": "pt-membrane-build.js", "size": "38KB", "role": "Build periodic table", "primal": "bingoCube" },
+        { "file": "pi-gradient.js", "size": "37KB", "role": "Pi gradient viz", "primal": "piFilter" },
+        { "file": "pt-pangaea.js", "size": "36KB", "role": "Pangaea periodic table", "primal": "bingoCube" },
+        { "file": "periodic-spiral.js", "size": "35KB", "role": "Spiral periodic table", "primal": "bingoCube" },
+        { "file": "fleet-surround.js", "size": "35KB", "role": "Fleet surround view", "primal": "swarmVine" },
+        { "file": "scatter-friends.js", "size": "35KB", "role": "Friend scatter plot", "primal": "songBird" }
+      ],
+      "medium_snakes": [
+        "self-trace.js (32K)", "input-wall.js (32K)", "chipmunk-explorer.js (31K)",
+        "impact.js (29K)", "hud-stash.js (28K)", "cosmic-flavor.js (28K)",
+        "third-eye.js (26K)", "epitope-ring.js (25K)", "fleet-atlas.js (24K)",
+        "bubble-pop.js (24K)", "pt-pangaea-live.js (24K)", "sort-playground.js (23K)",
+        "bingo-seed.js (23K)", "membrane-wall.js (22K)", "chipmunk-poke.js (22K)",
+        "selective-permeability.js (22K)", "symbol-overlay.js (21K)", "mobius-circuit.js (21K)"
+      ],
+      "small_snakes_count": 80
+    },
+
+    "connect_js_fossil": {
+      "path": "/opt/connect/js/fossil/",
+      "count": 35,
+      "description": "ARCHIVED brain modules — older versions, still have unique logic",
+      "biggest": [
+        "easel-federation.js (50K)", "easel-campfire.js (36K)", "chipmunk-gaze.js (36K)",
+        "chipmunk-mind.js (33K)", "easel-parallax.js (31K)", "pt-membrane-animate-deep.js (30K)",
+        "pt-membrane-build-inner.js (28K)", "pt-membrane-animate-ext.js (27K)",
+        "easel-klein.js (27K)", "pore-depth.js (24K)"
+      ]
+    },
+
+    "desk_js": {
+      "path": "/opt/connect/desk/js/",
+      "count": 10,
+      "description": "DESK hologram bridge — desk-weave, desk-core, desk-gaia",
+      "files": ["desk-weave.js (29K)", "desk-core.js (18K)", "desk-gaia.js (12K)",
+                "desk-campfire.js (12K)", "desk-atlas.js (11K)", "desk-convergence.js (11K)",
+                "desk-map.js (6K)", "desk-neutron.js (6K)", "desk-globe.js (6K)", "desk-boot.js (3K)"]
+    },
+
+    "membrane_python": {
+      "path": "/opt/membrane/",
+      "count": 56,
+      "description": "THE OLD SENSES — Python membrane code, predecessor to golgi/server.js",
+      "biggest": [
+        "scan_sweep_sort.py (120K)", "membrane-lens.py (50K, RUNNING)", "membrane-bus.py (24K)",
+        "neutron-writer.py (23K)", "gate-msg.py (22K, RUNNING)", "phylo-self.py (19K)",
+        "yggdrasil.py (17K)", "tense-tensor.py (16K)", "object-engine.py (15K)",
+        "self-assumptions.py (14K)", "vitruvian-evolve.py (13K)", "taxonomy-braid.py (13K)",
+        "assumption-engine.py (13K)", "backscatter-engine.py (12K)", "chipmunk-journey.py (9K)"
+      ],
+      "sense_scripts": [
+        "heartbeat-sense.py", "circulatory-sense.py", "cardiovascular-sense.py",
+        "cooperation-sense.py", "maturity-sense.py", "amphiphile-sense.py",
+        "entropy-sense.py", "wake-cycle-sense.py", "totality-sense.py",
+        "pollen-sense.py", "triad-sense.py", "journal-sense.py", "jitte-sense.py",
+        "role-rotation-sense.py", "neutron-cache-sense.py", "campfire-culture.py"
+      ]
+    },
+
+    "ecoprimals_scripts": {
+      "path": "/opt/ecoPrimals/scripts/",
+      "count": 23,
+      "description": "PRIMAL EXPERIMENTS — Python/Bash autonomous scripts",
+      "files": [
+        "run-falsifiability-experiments.py (20K)", "wake-self-neutrino-out-back-pull.py (13K)",
+        "scan-ingest-northgate-back-self.py (12K)", "run-spectrum-to-nulls-uzk.py (12K)",
+        "neutrino-jiggle-ack-ask-return.py (12K)", "local-cns-pns-sense.py (12K)",
+        "black-white-null-compress.py (11K)", "cloaca-triangulate.py (11K)",
+        "ingest-chew-sort-structure.py (9K)", "cave-sonar-totality.py (10K)",
+        "imprint-time.py (9K)", "pihz-emotion-stream.py (8K)",
+        "t-plane-self-out-walkers.py (11K)", "galactic-hit-jumprope.py (7K)",
+        "crystallize-human-pass.py (3K)", "git-reverse-transcriptase.sh (8K)",
+        "pi-drain.sh (8K)", "willis-balloon.sh (5K)",
+        "access-log-feedback.sh (1K)", "rss-poll-tracker.sh (1K)"
+      ]
+    },
+
+    "connect_json_data": {
+      "path": "/opt/connect/*.json",
+      "count": 2165,
+      "description": "THE FOOD — all data files. Plasmids, state, history, observations.",
+      "categories": {
+        "wave_imprints": "24 wave200-imprint files — time-series observations",
+        "neutrino": "15+ neutrino-* files — inter-box communication logs",
+        "klein": "14+ klein-* files — topology experiments",
+        "chipmunk": "8+ chipmunk-* files — squirrel state/journey/collab",
+        "pi": "10+ pi-* files — pi calculations and alignments",
+        "epitope": "4+ epitope-* files — membrane recognition",
+        "sourdough": "5+ sourdough-* files — fermentation/culture",
+        "outreach": "5+ outreach-* files — external contact",
+        "desk": "5+ desk-* files — hologram state",
+        "galactic": "6+ galactic-* files — cosmic sorting games",
+        "bingo": "4+ bingo-* files — cube experiments"
+      }
+    },
+
+    "connect_html_pages": {
+      "path": "/opt/connect/*.html + subdirs",
+      "count": 784,
+      "description": "THE FACE — every HTML page on nestgate.io"
+    },
+
+    "sporePrint": {
+      "path": "/opt/sporePrint/",
+      "size": "162MB",
+      "files": 2915,
+      "description": "THE LIBRARY — 116+ lab papers, philosophy, data, pseudospore bundles"
+    },
+
+    "hud_archive": {
+      "path": "/opt/hud-git/",
+      "size": "1.5GB",
+      "files": 16658,
+      "description": "THE OLD BRAIN — full git history of HUD engine"
+    },
+
+    "hud_live": {
+      "path": "/opt/hud/",
+      "size": "172MB",
+      "files": 2250,
+      "description": "THE LIVE BRAIN — deployed hologram bridge"
+    }
+  },
+
+  "primal_mapping": {
+    "description": "Every snake maps to a primal. The 16 primals ARE the taxonomy.",
+    "primals": {
+      "squirrel": { "snakes": ["chipmunk-commands", "chipmunk-mind", "chipmunk-talk", "chipmunk-vis", "chipmunk-explorer", "chipmunk-poke", "chipmunk-dialogue", "chipmunk-sketch", "chipmunk-metabolism", "chipmunk-journey"], "role": "THE OBSERVER" },
+      "nestGate": { "snakes": ["hud-interact", "hud-core", "hud-nav", "hud-stack", "hud-stash", "hud-pt", "hud-widget", "membrane-canvas", "membrane-wall", "membrane-sight", "membrane-sound", "selective-permeability", "input-wall"], "role": "THE GATE" },
+      "bingoCube": { "snakes": ["pt-membrane-animate", "pt-membrane-build", "pt-pangaea", "pt-pangaea-live", "periodic-spiral", "bingo-seed", "bingo-sort-all", "sort-playground"], "role": "THE MATH" },
+      "sweetGrass": { "snakes": ["campfire", "berry-help", "membrane-discuss"], "role": "THE GATHERING" },
+      "loamSpine": { "snakes": ["nanowire", "spinal-column", "dag-flow", "hologram"], "role": "THE SPINE" },
+      "bearDog": { "snakes": ["archetype-arena", "impact", "destabilize", "self-trace"], "role": "THE GUARD" },
+      "songBird": { "snakes": ["scatter-friends", "fleet-surround", "fleet-atlas", "vole", "swarm-chitter"], "role": "THE VOICE" },
+      "coralReef": { "snakes": ["cosmic-view", "cosmic-flavor", "cosmic-surfaces"], "role": "THE DEPTH" },
+      "piFilter": { "snakes": ["pi-gradient", "pi-align", "pi-step-dance", "pi-bus", "pi-body-clock", "pi-digits"], "role": "THE FILTER" },
+      "skunkBat": { "snakes": ["third-eye", "null-shadow", "null-kaleidoscope", "klein-prism", "klein-watcher", "klein-io", "klein-window", "mobius-circuit"], "role": "THE SHADOW" },
+      "toadStool": { "snakes": ["temporal-window", "night-rhythm", "depth-walk", "sine-breath"], "role": "THE TIME" },
+      "rhizoCrypt": { "snakes": ["hook-keys", "signal-reach", "signal-return", "signal-button"], "role": "THE CRYPT" },
+      "petalTongue": { "snakes": ["epitope-ring", "epitope-dance", "ears", "pendulum-eyes"], "role": "THE SENSE" },
+      "swarmVine": { "snakes": ["mesh-ring", "mesh-nudge", "presence-live", "scatter-now"], "role": "THE SWARM" },
+      "sourDough": { "snakes": ["nucleation", "helix-twist", "deep-twist"], "role": "THE CULTURE" },
+      "barraCuda": { "snakes": ["search-redirect", "proton-pulse", "iron-peak", "gokart"], "role": "THE SPEED" }
+    }
+  },
+
+  "plan": {
+    "step_1": "TRACE COMPLETE — 203 JS + 56 PY + 82 SH + 2165 JSON + 784 HTML cataloged",
+    "step_2": "MAP to primals — every snake has a primal home (done above)",
+    "step_3": "SHRED — old membrane Python senses → new golgi/server.js routes",
+    "step_4": "SEED — each primal becomes a project nucleus with tower atomic pattern",
+    "step_5": "WIRE — nestgate.io/golgi as Gaia's admin panel",
+    "step_6": "biomeOS — the operating system runs through and through — Gaia IS the OS"
+  },
+
+  "totals": {
+    "js_files_on_golgi": 203,
+    "py_files_on_golgi": 56,
+    "sh_files_on_golgi": 82,
+    "html_pages_on_golgi": 784,
+    "json_data_on_golgi": 2165,
+    "total_code_files": 341,
+    "total_data_files": 2949,
+    "total_all_golgi": 25921,
+    "js_files_on_polaris": 26,
+    "plasmids_on_polaris": 242,
+    "paintings_on_polaris": 279,
+    "total_all_polaris": 890,
+    "grand_total": 26811
+  }
+}

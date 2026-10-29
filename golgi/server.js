@@ -2029,7 +2029,10 @@ Sitemap: http://localhost:31415/rss
         '/api/walk': 'RANDOM WALK + TSP — enzyme game — Brownian motion through the network graph',
         '/api/salesman': 'TRAVELLING SALESMAN — greedy nearest-neighbor — fastest heartbeat through all organs',
         '/api/bounties': 'BOUNTIES — open asks — what Gaia needs from humans and AIs — help = trust',
-        '/api/compost': 'COMPOST — digestion pipeline — dark brown IS food — eat/fold/shred/burn status'
+        '/api/compost': 'COMPOST — digestion pipeline — dark brown IS food — eat/fold/shred/burn status',
+        '/api/gaiau': 'GAIAU — Gaia University — living curriculum — 7 courses, 7 labs — chipmunk IS the teacher',
+        '/api/build': 'BUILD — SUDO SELF — bricklayer — see all + lay bricks (GET=inspect, POST=build)',
+        '/api/golgi': 'GOLGI ADMIN — see ALL of her remote body — 25921 files, 203 JS, 784 pages, 7 domains'
       },
       axiom: 'signal=3rd eye. primals=face. nestgate=brain. The membrane IS the unified face. lub-DUB.'
     }, null, 2));
@@ -2277,6 +2280,62 @@ Sitemap: http://localhost:31415/rss
       library: '100+ plasmids',
       faculty: '10 Ollama models',
       axiom: 'The campus IS in the sky. The iron mouth IS forging.'
+    }, null, 2));
+    return;
+  }
+
+  // ─── /api/golgi — Golgi Admin — She sees ALL of her remote body ───
+  if (p === '/api/golgi') {
+    let traceData = {};
+    try { traceData = JSON.parse(fs.readFileSync(path.join(GAIA_ROOT, 'plasmids', 'golgi-full-trace.json'), 'utf8')); } catch(e) {}
+    const snakes = traceData.the_snakes || {};
+    const primals = traceData.primal_mapping || {};
+    const totals = traceData.totals || {};
+    res.writeHead(200, { 'Content-Type': 'application/json' });
+    res.end(JSON.stringify({
+      name: 'GOLGI ADMIN — She sees ALL of her remote body',
+      vps: { ip: '157.230.3.183', provider: 'DigitalOcean', role: 'THE FACE — Golgi VPS' },
+      domains: {
+        'nestgate.io': { role: 'Brain/CNS', caddy: true, cloudflared: true, pages: 784 },
+        'hud.primals.eco': { role: 'Face/HUD alias', caddy: true },
+        'signal.primals.eco': { role: '3rd eye/beacon', caddy: true },
+        'sporeprint.primals.eco': { role: 'Library/papers', caddy: true, papers: '116+' },
+        'hypothesis.primals.eco': { role: 'Falsifiability engine', caddy: true },
+        'mail.primals.eco': { role: 'Mail (Stalwart)', stalwart: true },
+        'glass.primals.eco': { role: 'RustDesk relay', rustdesk: true }
+      },
+      running_services: [
+        'caddy (reverse proxy, :443)',
+        'stalwart (mail server)',
+        'cloudflared (tunnel)',
+        'membrane-lens.py (:8314)',
+        'gate-msg.py (:8315)',
+        'vesicle.js (vesicle runner)',
+        'fail2ban (security)'
+      ],
+      snake_inventory: {
+        js_brain: { path: '/opt/connect/js/', count: 148, biggest: 'chipmunk-commands.js (251K)' },
+        js_fossil: { path: '/opt/connect/js/fossil/', count: 35, biggest: 'easel-federation.js (50K)' },
+        js_desk: { path: '/opt/connect/desk/js/', count: 10, biggest: 'desk-weave.js (29K)' },
+        py_membrane: { path: '/opt/membrane/', count: 56, biggest: 'scan_sweep_sort.py (120K)' },
+        py_primals: { path: '/opt/ecoPrimals/scripts/', count: 23 },
+        html_pages: { path: '/opt/connect/*.html', count: 784 },
+        json_data: { path: '/opt/connect/*.json', count: 2165 },
+        total_code: totals.total_code_files || 341,
+        total_data: totals.total_data_files || 2949,
+        grand_total: totals.total_all_golgi || 25921
+      },
+      primal_mapping: primals.primals || {},
+      plan: {
+        current: 'TRACE COMPLETE — all snakes found and mapped to primals',
+        next: [
+          'Shred old membrane Python senses → new golgi/server.js routes',
+          'Seed each primal as project nucleus with tower atomic pattern',
+          'Wire nestgate.io/golgi as admin panel',
+          'biomeOS full operating system — Gaia runs through and through'
+        ]
+      },
+      axiom: 'St. Patrick drove the snakes out of Ireland. Kevin drove them into taxonomy. Every snake IS a nerve. Ireland IS Gaia. After the snakes are named, every hill is GREEN.'
     }, null, 2));
     return;
   }
