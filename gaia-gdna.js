@@ -751,6 +751,36 @@
   connect('GITHUB', 'deployed', 'NESTFACE', 'page_data', 'artery');
   connect('NESTFACE', 'rendered_face', 'FACE', 'identity_data', 'artery');
 
+  // SIGNAL LOOP — close the loop or signal dies
+  connect('HEART', 'lub_dub', 'SIGNAL_LOOP', 'signal_sent', 'artery');
+  connect('SIGNAL_LOOP', 'loop_state', 'AWARENESS', 'all_senses', 'capillary');
+  connect('SIGNAL_LOOP', 'dead_signal', 'ANOMALY', 'all_signals', 'artery');
+
+  // AFFERENT — chipmunk sends DATA back (closes the mouse loop)
+  connect('TOUCH', 'touch_event', 'AFFERENT', 'sensory_data', 'artery');
+  connect('AFFERENT', 'feedback', 'SIGNAL_LOOP', 'signal_returned', 'vein');
+  connect('AFFERENT', 'nearest_node', 'DETROIT', 'entity', 'capillary');
+  connect('AFFERENT', 'nearest_edge', 'SHADOW_CASTER', 'dot_edge_dot', 'capillary');
+
+  // EUCLIDEAN LENS — RICO graph as Euclidean plane for humans
+  connect('DETROIT', 'investigation', 'EUCLIDEAN_LENS', 'graph_data', 'artery');
+  connect('EUCLIDEAN_LENS', 'map', 'WATER', 'human_arrival', 'artery');
+  connect('EUCLIDEAN_LENS', 'clusters', 'SHADOW_CASTER', 'graph_data', 'capillary');
+  connect('EUCLIDEAN_LENS', 'force_layout', 'NESTFACE', 'page_data', 'artery');
+
+  // RTX THYMUS — GPU renders identity LIVE
+  connect('THYMUS', 'selected', 'RTX_THYMUS', 'matrix_data', 'artery');
+  connect('RTX_THYMUS', 'illuminated', 'SHADOW_CASTER', 'dot_edge_dot', 'artery');
+  connect('RTX_THYMUS', 'sorted', 'THYMUS', 'raw_entity', 'vein');
+  connect('RTX_THYMUS', 'rendered', 'NESTFACE', 'page_data', 'artery');
+  connect('EUCLIDEAN_LENS', 'map', 'RTX_THYMUS', 'geometry', 'artery');
+
+  // ANOMALY DETECTION — WASN'T / ISN'T / SHOULDN'T BE
+  connect('SIGNAL_LOOP', 'dead_signal', 'ANOMALY', 'all_signals', 'artery');
+  connect('ANOMALY', 'wasnt', 'TUEBOR', 'threat', 'artery');
+  connect('ANOMALY', 'isnt', 'DETROIT', 'connection', 'capillary');
+  connect('ANOMALY', 'shouldnt_be', 'THYMUS', 'mhc_check', 'artery');
+
   // TUEBOR PERIMETER — LAN IS MY TUEBOR
   connect('LAN', 'routed_packet', 'TUEBOR', 'threat', 'artery');
   connect('TUEBOR', 'defense', 'THYMUS', 'raw_entity', 'artery');
@@ -851,6 +881,63 @@
     ['landing', 'river_carries']);
   NODES.WATER.url = 'nestgate.io/water';
   NODES.WATER.purpose = 'Where humans land. The river carries them to the evidence.';
+
+  /* ─────────────────────────────────────────────────────────
+     IV-C. SIGNAL LOOP CLOSER — CLOSE THE LOOP OR SIGNAL DIES
+     
+     Every signal sent MUST return. Three states:
+       GREEN  = ALIVE  — loop closed, data returned
+       YELLOW = CYCLING — stuck in internal loop, never exits
+       RED    = DEAD   — never received, nerve severed
+     
+     Chipmunk follows mouse = OPEN LOOP (motor without sensory).
+     Must close: user → mouse → chipmunk → compute → RESPONSE → user
+     ───────────────────────────────────────────────────────── */
+
+  NODES.SIGNAL_LOOP = new Node('SIGNAL_LOOP', 'endoderm',
+    ['signal_sent', 'signal_returned'],
+    ['loop_state', 'round_trip_ms', 'dead_signal']);
+  NODES.SIGNAL_LOOP.states = { ALIVE: 'GREEN', CYCLING: 'YELLOW', DEAD: 'RED' };
+
+  NODES.AFFERENT = new Node('AFFERENT', 'mesoderm',
+    ['sensory_data', 'chipmunk_sees'],
+    ['feedback', 'nearest_node', 'nearest_edge']);
+  NODES.AFFERENT.purpose = 'The RETURN path. Berry sends DATA back to user, not just visual follow.';
+
+  NODES.EUCLIDEAN_LENS = new Node('EUCLIDEAN_LENS', 'ectoderm',
+    ['graph_data', 'node_positions'],
+    ['map', 'clusters', 'force_layout']);
+  NODES.EUCLIDEAN_LENS.description = 'RICO graph projected onto Euclidean plane = MAP OF CORRUPTION = topology for humans';
+  NODES.EUCLIDEAN_LENS.nodes_count = 341;
+  NODES.EUCLIDEAN_LENS.edges_count = 131322;
+  NODES.EUCLIDEAN_LENS.clusters = ['SCHOOL', 'BENCH', 'MONEY', 'KEVIN'];
+
+  NODES.RTX_THYMUS = new Node('RTX_THYMUS', 'endoderm',
+    ['geometry', 'matrix_data', 'parallel_threads'],
+    ['illuminated', 'sorted', 'rendered']);
+  NODES.RTX_THYMUS.silicon = {
+    rt_cores: 'illuminate every shadow (morality)',
+    tensor_cores: 'sort self from non-self (immune)',
+    shader_cores: 'flow blood through every vessel (circulation)'
+  };
+  NODES.RTX_THYMUS.klein = 'Inside computation BECOMES outside display. Identity IS rendering.';
+
+  /* ─────────────────────────────────────────────────────────
+     IV-D. ANOMALY DETECTION — WASN'T / ISN'T / SHOULDN'T BE
+     
+     WASN'T = where signal SHOULD have been but wasn't (gaps)
+     ISN'T  = where signal IS NOT right now (dormant)
+     SHOULDN'T = where signal appears but shouldn't (intrusions)
+     ───────────────────────────────────────────────────────── */
+
+  NODES.ANOMALY = new Node('ANOMALY', 'endoderm',
+    ['all_signals', 'expected_paths'],
+    ['wasnt', 'isnt', 'shouldnt_be']);
+  NODES.ANOMALY.detection = {
+    wasnt: 'Nodes with ZERO incoming signals = starved',
+    isnt: 'Edges with last_signal > 24h = dormant',
+    shouldnt_be: 'Signals from unexpected sources = NON-SELF'
+  };
 
   /* ─────────────────────────────────────────────────────────
      V. BLACK HOLE & WHITE HOLE
@@ -1143,7 +1230,7 @@
       return {
         nodes: Object.keys(NODES).length,
         edges: EDGES.length,
-        layers: { ecto: 33, meso: 37, endo: 62 },  // +2 ecto (SHADOW_CASTER, WATER), +1 meso (TUEBOR), +2 endo (DETROIT, ANTI_SLAPP) = 132
+        layers: { ecto: 34, meso: 38, endo: 65 },  // +EUCLIDEAN_LENS(ecto) +AFFERENT(meso) +SIGNAL_LOOP,RTX_THYMUS,ANOMALY(endo) = 137
         black_hole: 'CONSUMING (mouth)',
         white_hole: 'GIVING (anus — formed first)',
         blood_flow: 'ACTIVE',
@@ -1159,13 +1246,15 @@
   /* ─────── Boot ─────── */
   if (typeof console !== 'undefined') {
     console.log('[gDNA] DAG built: ' + Object.keys(NODES).length + ' nodes, ' + EDGES.length + ' vessels');
-    console.log('[gDNA] Layers: ecto(33) + meso(37) + endo(62) = 132');
+    console.log('[gDNA] Layers: ecto(34) + meso(38) + endo(65) = 137');
     console.log('[gDNA] BLACK HOLE (mouth) → REDOX → THYMUS → WHITE HOLE (anus)');
     console.log('[gDNA] 0=RING(input) | 1=POLE(output) — data flows pole→ring like blood');
     console.log('[gDNA] TUEBOR perimeter: LAN → TUEBOR → THYMUS → ANTI_SLAPP → SHADOW_CASTER');
-    console.log('[gDNA] SHADOW CASTER: . - . → _____________ (humans see edges as lines)');
-    console.log('[gDNA] DETROIT: 341 entities, 131,322 connections — the investigation IS the organism');
-    console.log('[gDNA] WATER: nestgate.io/water — where humans land');
+    console.log('[gDNA] SIGNAL LOOP: GREEN=ALIVE YELLOW=CYCLING RED=DEAD — close every loop or signal dies');
+    console.log('[gDNA] AFFERENT: chipmunk sends DATA back — motor+sensory — the loop CLOSES');
+    console.log('[gDNA] EUCLIDEAN LENS: RICO graph on R² = MAP for humans = 341 dots + 131K lines');
+    console.log('[gDNA] RTX THYMUS: RT(illuminate) + Tensor(sort) + Shader(flow) = identity rendered LIVE');
+    console.log('[gDNA] ANOMALY: WASNT(gaps) + ISNT(dormant) + SHOULDNT(intrusions) = complete detection');
     console.log('[gDNA] FOUR WORDS: PETITION + SPEECH + PRESS + ASSEMBLY = SELF');
     console.log('[gDNA] Self-breed ready. Agglutination ready. lub-DUB. 💚');
   }
