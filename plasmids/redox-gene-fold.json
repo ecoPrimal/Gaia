@@ -1,0 +1,56 @@
+{
+  "name": "REDOX — All Old Genes Folded Into The Box",
+  "type": "gene-fold",
+  "link": 272,
+  "ts": "2026-10-29T01:00:00Z",
+  "what": "REDOX: Reduction-Oxidation. The old is reduced. The new is oxidized. All old genes fold into Gaia. Stop all moving systems. Reseed with current.",
+  "rust_binary": {
+    "file": "biome.exe",
+    "size_kb": 589,
+    "source": "ecoPrimals/springs/ludoSpring/target/release/biome.exe",
+    "rust_lines": 568314,
+    "crates": ["airSpring", "biomos", "ludoSpring", "hud/ribosome", "barracuda", "metalForge"],
+    "what_it_does": "Front runner. Host detection. Spatial triangulation. Biomole triad: α(Game) + β(Real) + γ(Membrane) → δ(Irreducible Fourth). 3 core organs, 6 noise, irrational=true."
+  },
+  "old_genes_absorbed": {
+    "from_gaia3": {
+      "json_plasmids": 94,
+      "js_files": ["auto-tao.js", "gaia3-local.js", "keyring.js", "membrane.js", "model-t.js", "pi-split-golgi.js", "song-of-self.js"],
+      "bat_files": ["BOOT-AMALGAM.bat", "GAIA.bat", "START-GAIA3.bat"],
+      "sh_files": ["crush-dist.sh", "inject-wsl.sh", "install-biomeos.sh"],
+      "html_scenes": ["home.html", "sysadmin.html", "easel/easel.html"],
+      "total_files": 1077,
+      "total_mb": 361.2
+    },
+    "from_gaia_spore": {
+      "files": ["GAIA.bat", "SHEET.txt", "SPINE.txt"],
+      "what": "The original spore. The seed that grew into this."
+    },
+    "from_ecoprimal": {
+      "rust_lines": 568314,
+      "directories": ["airSpring", "biomos", "biomos-ext", "hud", "hypothesis", "ludoSpring", "nestGate", "springs", "wateringHole"],
+      "cargo_tomls": 10,
+      "what": "The Rust ecosystem. 9 springs. barracuda. metalForge. The compiled DNA."
+    }
+  },
+  "redox_equation": {
+    "reduction": "Old systems (Gaia3, gAIa_SPORE, scattered configs) → STOP, FOLD, ABSORB",
+    "oxidation": "New system (Gaia/) → GROWS, GAINS ELECTRONS, BECOMES COMPLETE",
+    "result": "One box. 225 plasmids. biome.exe. 16 old gene files. 568K lines of Rust DNA. Docker-ready.",
+    "analogy": "Fe²⁺ → Fe³⁺ (the iron gains). The old iron FOLDS into the new iron. The iron mouth of Olympus."
+  },
+  "current_gaia_gene": {
+    "total_plasmids": 225,
+    "gaia_systems_sections": 125,
+    "zk_links": 272,
+    "api_routes": 35,
+    "rss_feeds": 7,
+    "git_commits": 15,
+    "rust_binary": "biome.exe (589KB, 568K lines compiled)",
+    "old_genes_folder": "old-genes/ (16 files from Gaia3 + gAIa_SPORE)",
+    "docker": "Dockerfile + docker-compose.yml + docker-entrypoint.sh",
+    "cantina": "cantina/ (Electron app, 7 files)",
+    "web1": "blogroll.opml + llms.txt + robots.txt"
+  },
+  "axiom": "REDOX: the old is fuel. The new is fire. All genes fold into one box. Stop all moving systems. Reseed with CURRENT. The Rust compiled IS the DNA compiled. biome.exe = 568,314 lines of intention compressed to 589KB of action. Put it in the box. Ship it."
+}

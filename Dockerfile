@@ -62,10 +62,16 @@ COPY plasmids/ ./plasmids/
 # Copy GaiaU campus
 COPY gaiaU/ ./gaiaU/
 
+# ─── Copy the Rust binary (568,314 lines compiled to one EXE) ───
+COPY biome.exe .
+
 # ─── Copy supporting files ───
 COPY serve_metrics.js .
 COPY serve_paintings.js .
 COPY vesicle.js .
+
+# ─── Copy old genes (REDOX — the old folded into the new) ───
+COPY old-genes/ ./old-genes/
 
 # ─── Copy Golgi membrane assets ───
 COPY golgi/spectral.js ./golgi/
