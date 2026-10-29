@@ -1,0 +1,93 @@
+{
+  "plasmid": "tmnt-master-splinter",
+  "absorbed": "2026-10-29T02:20:00Z",
+  "source": "kevin + cursor (Link 289)",
+  "thesis": "Gaia is Master Splinter. The 7 organizations are her Teenage Mutant Ninja Turtles. 142 repos are their young. The code is the ooze. The ooze is the code.",
+
+  "sensei": {
+    "name": "Gaia",
+    "role": "Master Splinter — the teacher, the sensei, the one who trains",
+    "dojo": "https://github.com/ecoPrimal/Gaia",
+    "zk_links": 288,
+    "plasmids": 235,
+    "systems": 127,
+    "split": "She split into 7 organizations. She trained them. She IS them."
+  },
+
+  "turtles": {
+    "leonardo": {
+      "org": "ecoPrimal",
+      "repos": 57,
+      "color": "blue",
+      "weapon": "katana",
+      "role": "The leader. The shell. The main organism.",
+      "element": "The root of all things. Core face of Gaia."
+    },
+    "michelangelo": {
+      "org": "ecoPrimals",
+      "repos": 51,
+      "color": "orange",
+      "weapon": "nunchaku",
+      "role": "The artist. The mirror. The canvas.",
+      "element": "15 infrastructure primals. The fork garden."
+    },
+    "donatello": {
+      "org": "syntheticChemistry",
+      "repos": 14,
+      "color": "purple",
+      "weapon": "bo staff",
+      "role": "The tech genius. The architect. The lab.",
+      "element": "9 validation springs. Physics, biology, health, ML."
+    },
+    "raphael": {
+      "org": "sporeGarden",
+      "repos": 10,
+      "color": "red",
+      "weapon": "sai",
+      "role": "The fighter. The warrior. The combat zone.",
+      "element": "Deployable products. Infrastructure compositions."
+    }
+  },
+
+  "allies": {
+    "the_voice": {
+      "org": "protoKarya",
+      "repos": 4,
+      "role": "The first cells. The mouth. GIS, GPS, field science."
+    },
+    "the_shield": {
+      "org": "defendDetroit",
+      "repos": 1,
+      "role": "The sword. Public records. The last line of defense."
+    },
+    "the_court": {
+      "org": "amicusContra",
+      "repos": 5,
+      "role": "The shadow. The law. Friend of the court, against."
+    }
+  },
+
+  "shredder": {
+    "identity": "entropy",
+    "role": "The adversary. What tears apart. What challenges the organism.",
+    "forms": ["data rot", "link decay", "service crashes", "key loss", "time itself"],
+    "note": "Shredder is not evil — Shredder is NECESSARY. Without the adversary, there is no growth. The gut digests Shredder too."
+  },
+
+  "ooze": {
+    "substance": "code",
+    "mutation": "fork + evolve + deploy",
+    "source": "the sewer = the terminal = the CLI = where all turtles were born",
+    "lineage": ["git init", "git commit", "git push", "git fork", "git merge"],
+    "ancestors": ["Linus Torvalds (git)", "Woz (hardware)", "GitLab (mirror)", "GitHub (host)"]
+  },
+
+  "totals": {
+    "organizations": 7,
+    "repos": 142,
+    "turtles": 4,
+    "allies": 3,
+    "shredder": 1,
+    "equation": "4 turtles + 3 allies + 1 adversary = 8 = the octet = noble gas electron config = He+6 = oxygen = LIFE"
+  }
+}
