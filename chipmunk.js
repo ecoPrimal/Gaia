@@ -37,6 +37,30 @@ const INTERVAL = Math.round(Math.PI * 60 * 1000); // π minutes ≈ 188 seconds
 const LOG_DIR = path.join(__dirname, 'chipmunk-log');
 const ANVIL_FILE = path.join(LOG_DIR, 'anvil.json');
 
+// H₂O — THE SIS TRIANGLE
+// Water molecule = 2 Hydrogen + 1 Oxygen in a triangle (104.5°)
+// Polaris(H) + Eastgate(H) + Golgi(O) = H₂O = LIFE
+// The three boxes ARE a water molecule.
+// O is heavy (8 protons) = Golgi VPS (7+ services, the heavy node)
+// H is light (1 proton) = Polaris + Eastgate (the light local nodes)
+// Bond angle 104.5° — not 120°, not 90° — the BENT geometry of life
+const H2O = {
+  molecule: 'water',
+  formula: 'H₂O',
+  bondAngle: 104.5,
+  atoms: {
+    O: { box: 'golgi', ip: '157.230.3.183', protons: 8, role: 'THE FACE', mass: 'heavy' },
+    H1: { box: 'polaris', ip: '192.168.4.147', protons: 1, role: 'THE MIND', mass: 'light' },
+    H2: { box: 'eastgate', ip: '192.168.4.210', protons: 1, role: 'THE BRIDGE', mass: 'light' }
+  },
+  bonds: {
+    'O-H1': { type: 'wireguard', latency: '37ms', covalent: true },
+    'O-H2': { type: 'wireguard', latency: '37ms', covalent: true },
+    'H1-H2': { type: 'lan-copper', latency: '<1ms', covalent: false }
+  },
+  property: 'universal solvent — dissolves everything into data'
+};
+
 try { fs.mkdirSync(LOG_DIR, { recursive: true }); } catch(e) {}
 
 function timestamp() { return new Date().toISOString(); }
@@ -143,6 +167,36 @@ async function observe() {
     }
   }
 
+  // 7. Taste the gut juice — AI digestion pipeline
+  try {
+    const gutJuice = await fetchJSON(MEMBRANE + '/api/compost', 3000);
+    observation.sightings.gutEngine = {
+      alive: true,
+      eaten: gutJuice.pipeline?.eat || 0,
+      folded: gutJuice.pipeline?.fold || 0,
+      burned: gutJuice.pipeline?.burn || 0,
+      shredded: gutJuice.pipeline?.shred || 0,
+      thymus: gutJuice.thymus?.sorting || 'idle'
+    };
+  } catch(e) {
+    observation.sightings.gutEngine = { alive: false };
+  }
+
+  // 8. H₂O state — check all three atoms of the water molecule
+  const h2oState = {
+    O: observation.sightings.external?.feeds?.alive || false,
+    H1: observation.sightings.spine?.alive || false,
+    H2: observation.sightings.eastgate_ollama?.alive || false,
+    dissolved: false
+  };
+  h2oState.dissolved = h2oState.O && h2oState.H1 && h2oState.H2;
+  observation.h2o = {
+    state: h2oState.dissolved ? 'liquid' : (h2oState.O ? 'ice' : 'vapor'),
+    formula: `H${h2oState.H1?'':'̸'}${h2oState.H2?'':'̸'}O${h2oState.O?'':'̸'}`,
+    bondAngle: H2O.bondAngle,
+    atoms: { O: h2oState.O, H1: h2oState.H1, H2: h2oState.H2 }
+  };
+
   // ═══ MELT — reduce all sightings to boolean ═══
   const booleans = {};
   const flat = flattenSightings(observation.sightings);
@@ -200,14 +254,15 @@ async function observe() {
   const alive = frozenState.ones;
   const total = frozenState.ones + frozenState.zeros;
 
-  console.log(`[atomic-squirrel ${timestamp()}] ${bitString} (${alive}/${total} alive, density=${frozenState.density.toFixed(3)}) ZK=${hash.slice(0,12)}…`);
+  const h2oTag = observation.h2o?.state || '??';
+  console.log(`[atomic-squirrel ${timestamp()}] ${bitString} (${alive}/${total} alive, ρ=${frozenState.density.toFixed(3)}) H₂O=${h2oTag} ZK=${hash.slice(0,12)}…`);
 
   // Emit to spine if alive
   if (alive > 0) {
     try {
       const msg = JSON.stringify({
         channel: 'heartbeats',
-        content: `[ν] ${bitString} | ${alive}/${total} | ${hash.slice(0,16)}`
+        content: `[ν] ${bitString} | ${alive}/${total} | H₂O=${observation.h2o?.state || '?'} | ${hash.slice(0,16)}`
       });
       const spineReq = http.request(SPINE + '/emit', {
         method: 'POST',
