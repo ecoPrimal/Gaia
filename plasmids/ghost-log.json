@@ -1,0 +1,183 @@
+{
+  "ghosts": [
+    {
+      "ts": "2026-10-28T01:08:37.575Z",
+      "found": 19,
+      "ghosts": [
+        {
+          "type": "process",
+          "emoji": "👻",
+          "name": "node.exe",
+          "pid": 11936,
+          "memKB": 41520,
+          "reason": "Multiple node processes detected. Smallest memory = likely ghost.",
+          "severity": "high"
+        },
+        {
+          "type": "process",
+          "emoji": "👻",
+          "name": "node.exe",
+          "pid": 19272,
+          "memKB": 41748,
+          "reason": "Multiple node processes detected. Smallest memory = likely ghost.",
+          "severity": "high"
+        },
+        {
+          "type": "process",
+          "emoji": "👻",
+          "name": "node.exe",
+          "pid": 10296,
+          "memKB": 47508,
+          "reason": "Multiple node processes detected. Smallest memory = likely ghost.",
+          "severity": "high"
+        },
+        {
+          "type": "process",
+          "emoji": "👻",
+          "name": "node.exe",
+          "pid": 40880,
+          "memKB": 48092,
+          "reason": "Multiple node processes detected. Smallest memory = likely ghost.",
+          "severity": "high"
+        },
+        {
+          "type": "process",
+          "emoji": "👻",
+          "name": "node.exe",
+          "pid": 50024,
+          "memKB": 50752,
+          "reason": "Multiple node processes detected. Smallest memory = likely ghost.",
+          "severity": "medium"
+        },
+        {
+          "type": "process",
+          "emoji": "👻",
+          "name": "node.exe",
+          "pid": 44460,
+          "memKB": 52712,
+          "reason": "Multiple node processes detected. Smallest memory = likely ghost.",
+          "severity": "medium"
+        },
+        {
+          "type": "process",
+          "emoji": "👻",
+          "name": "node.exe",
+          "pid": 4528,
+          "memKB": 56936,
+          "reason": "Multiple node processes detected. Smallest memory = likely ghost.",
+          "severity": "medium"
+        },
+        {
+          "type": "process",
+          "emoji": "👻",
+          "name": "node.exe",
+          "pid": 11344,
+          "memKB": 60988,
+          "reason": "Multiple node processes detected. Smallest memory = likely ghost.",
+          "severity": "medium"
+        },
+        {
+          "type": "process",
+          "emoji": "👻",
+          "name": "node.exe",
+          "pid": 27148,
+          "memKB": 88872,
+          "reason": "Multiple node processes detected. Smallest memory = likely ghost.",
+          "severity": "medium"
+        },
+        {
+          "type": "process",
+          "emoji": "👻",
+          "name": "node.exe",
+          "pid": 44776,
+          "memKB": 88952,
+          "reason": "Multiple node processes detected. Smallest memory = likely ghost.",
+          "severity": "medium"
+        },
+        {
+          "type": "process",
+          "emoji": "👻",
+          "name": "node.exe",
+          "pid": 31556,
+          "memKB": 89488,
+          "reason": "Multiple node processes detected. Smallest memory = likely ghost.",
+          "severity": "medium"
+        },
+        {
+          "type": "process",
+          "emoji": "👻",
+          "name": "node.exe",
+          "pid": 35744,
+          "memKB": 104972,
+          "reason": "Multiple node processes detected. Smallest memory = likely ghost.",
+          "severity": "medium"
+        },
+        {
+          "type": "process",
+          "emoji": "👻",
+          "name": "node.exe",
+          "pid": 6068,
+          "memKB": 117108,
+          "reason": "Multiple node processes detected. Smallest memory = likely ghost.",
+          "severity": "medium"
+        },
+        {
+          "type": "process",
+          "emoji": "👻",
+          "name": "node.exe",
+          "pid": 44800,
+          "memKB": 140148,
+          "reason": "Multiple node processes detected. Smallest memory = likely ghost.",
+          "severity": "medium"
+        },
+        {
+          "type": "process",
+          "emoji": "👻",
+          "name": "node.exe",
+          "pid": 11148,
+          "memKB": 164876,
+          "reason": "Multiple node processes detected. Smallest memory = likely ghost.",
+          "severity": "medium"
+        },
+        {
+          "type": "process",
+          "emoji": "👻",
+          "name": "node.exe",
+          "pid": 41712,
+          "memKB": 172152,
+          "reason": "Multiple node processes detected. Smallest memory = likely ghost.",
+          "severity": "medium"
+        },
+        {
+          "type": "process",
+          "emoji": "👻",
+          "name": "node.exe",
+          "pid": 44356,
+          "memKB": 174852,
+          "reason": "Multiple node processes detected. Smallest memory = likely ghost.",
+          "severity": "medium"
+        },
+        {
+          "type": "process",
+          "emoji": "👻",
+          "name": "node.exe",
+          "pid": 31052,
+          "memKB": 177856,
+          "reason": "Multiple node processes detected. Smallest memory = likely ghost.",
+          "severity": "medium"
+        },
+        {
+          "type": "process",
+          "emoji": "👻",
+          "name": "node.exe",
+          "pid": 36420,
+          "memKB": 178872,
+          "reason": "Multiple node processes detected. Smallest memory = likely ghost.",
+          "severity": "medium"
+        }
+      ]
+    }
+  ],
+  "hunted": 1,
+  "hammered": 0
+}

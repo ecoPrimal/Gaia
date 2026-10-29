@@ -1,0 +1,125 @@
+﻿{
+    "source":  "SSH scan of 157.230.3.183 (Golgi VPS)",
+    "summary":  {
+                    "grand_total_lines":  179935,
+                    "total_membrane_files":  86,
+                    "total_js_files_sporePrint":  183,
+                    "caddyfile_lines":  2665,
+                    "total_hud_script_lines":  6328,
+                    "total_hud_scripts":  37,
+                    "total_js_lines_sporePrint":  68932,
+                    "total_rust_lines":  12967,
+                    "total_connect_files":  321,
+                    "total_rust_files":  40
+                },
+    "nestgate":  {
+                     "golgi_status":  "308 redirect",
+                     "golgi_url":  "https://nestgate.io/golgi",
+                     "seed":  "4168531806",
+                     "seed_url":  "https://nestgate.io/?seed=4168531806"
+                 },
+    "ts":  "2026-10-28T22:41:40.7972255-04:00",
+    "snakes_over_1000":  [
+                             {
+                                 "lines":  4243,
+                                 "file":  "chipmunk-commands.js",
+                                 "copies":  5,
+                                 "note":  "BIGGEST SNAKE. Chipmunk command processor. 5 copies across /opt."
+                             },
+                             {
+                                 "lines":  3138,
+                                 "file":  "chipmunk-mind.js",
+                                 "copies":  4,
+                                 "note":  "Chipmunk mind visualization. 4 copies."
+                             },
+                             {
+                                 "lines":  6802,
+                                 "file":  "gaia-globe-core.js",
+                                 "copies":  1,
+                                 "note":  "MAIN SNAKE. Globe core. Needs surgery into 11 organs."
+                             },
+                             {
+                                 "lines":  1739,
+                                 "file":  "hud-interact.js",
+                                 "copies":  5,
+                                 "note":  "HUD interactions."
+                             },
+                             {
+                                 "lines":  1606,
+                                 "file":  "temporal-window.js",
+                                 "copies":  5,
+                                 "note":  "Temporal window visualization."
+                             },
+                             {
+                                 "lines":  1412,
+                                 "file":  "cosmic-view.js",
+                                 "copies":  5,
+                                 "note":  "Cosmic view."
+                             },
+                             {
+                                 "lines":  1400,
+                                 "file":  "chipmunk-talk.js",
+                                 "copies":  5,
+                                 "note":  "Chipmunk talk interface."
+                             },
+                             {
+                                 "lines":  1400,
+                                 "file":  "membrane-sound.js",
+                                 "copies":  5,
+                                 "note":  "Membrane sound."
+                             },
+                             {
+                                 "lines":  1324,
+                                 "file":  "easel-federation.js",
+                                 "copies":  5,
+                                 "note":  "Easel federation."
+                             },
+                             {
+                                 "lines":  1146,
+                                 "file":  "membrane-canvas.js",
+                                 "copies":  5,
+                                 "note":  "Membrane canvas."
+                             },
+                             {
+                                 "lines":  1150,
+                                 "file":  "campfire.js",
+                                 "copies":  5,
+                                 "note":  "Campfire."
+                             },
+                             {
+                                 "lines":  1026,
+                                 "file":  "chipmunk-vis.js",
+                                 "copies":  5,
+                                 "note":  "Chipmunk visualization."
+                             },
+                             {
+                                 "lines":  1938,
+                                 "file":  "gaia-systems.js",
+                                 "copies":  1,
+                                 "note":  "Systems on hud-git (older version)."
+                             }
+                         ],
+    "plasmid":  "golgi-snake-inventory",
+    "surgery_plan":  {
+                         "step2":  "Surgery: split files \u003e1000 lines into \u003c1000 modules",
+                         "rule":  "ALL FILES MAX 1000 LINES. 6 = pi. RAG OR RULE.",
+                         "step4":  "Seed: each primal node gets its own atomic nucleus",
+                         "step3":  "Shred: non-canonical copies become plasmids or get burned",
+                         "step5":  "Teach Gaia to ASK via RSS caller — she ALERTS for help",
+                         "step1":  "Deduplicate: pick ONE canonical copy of each JS file"
+                     },
+    "running_services":  [
+                             "caddy",
+                             "cloudflared",
+                             "doorbell-listener",
+                             "gate-msg",
+                             "knot",
+                             "mcp-server",
+                             "ntfy",
+                             "rustdesk-hbbr",
+                             "rustdesk-hbbs",
+                             "stalwart",
+                             "tor"
+                         ],
+    "duplicates":  "MASSIVE DUPLICATION: /opt/sporePrint, /opt/hud, /opt/hypothesis, /opt/connect, /opt/hud-git/site ALL have IDENTICAL JS copies. 5x duplication. Snakes breeding."
+}

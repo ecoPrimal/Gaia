@@ -1,0 +1,12 @@
+{
+  "searches": [
+    {
+      "query": "Golgi apparatus vesicle transport",
+      "ts": "2026-10-28T00:53:56.738Z",
+      "results": 10,
+      "gold": 1,
+      "ingested": 1
+    }
+  ],
+  "totalSearches": 1
+}

@@ -1,0 +1,756 @@
+{
+  "articles": [
+    {
+      "title": "Golgi apparatus",
+      "file": "golgi-apparatus.json",
+      "size": 22117,
+      "eaten": "2026-10-28T00:47:37.182Z"
+    },
+    {
+      "title": "Cell membrane",
+      "file": "cell-membrane.json",
+      "size": 49337,
+      "eaten": "2026-10-28T00:47:39.936Z"
+    },
+    {
+      "title": "Semipermeable membrane",
+      "file": "selectively-permeable-membrane.json",
+      "size": 13306,
+      "eaten": "2026-10-28T00:47:41.264Z"
+    },
+    {
+      "title": "Endoplasmic reticulum",
+      "file": "endoplasmic-reticulum.json",
+      "size": 28421,
+      "eaten": "2026-10-28T00:47:42.579Z"
+    },
+    {
+      "title": "Vesicle (biology and chemistry)",
+      "file": "vesicle-biology-and-chemistry-.json",
+      "size": 26212,
+      "eaten": "2026-10-28T00:47:43.737Z"
+    },
+    {
+      "title": "Null (mathematics)",
+      "file": "null-mathematics-.json",
+      "size": 2462,
+      "eaten": "2026-10-28T00:47:44.499Z"
+    },
+    {
+      "title": "Inheritance (object-oriented programming)",
+      "file": "inheritance-object-oriented-programming-.json",
+      "size": 27121,
+      "eaten": "2026-10-28T00:47:46.039Z"
+    },
+    {
+      "title": "Three-body problem",
+      "file": "three-body-problem.json",
+      "size": 46597,
+      "eaten": "2026-10-28T00:47:47.212Z"
+    },
+    {
+      "title": "Klein bottle",
+      "file": "klein-bottle.json",
+      "size": 17239,
+      "eaten": "2026-10-28T00:47:48.373Z"
+    },
+    {
+      "title": "Topology",
+      "file": "topology.json",
+      "size": 31523,
+      "eaten": "2026-10-28T00:47:48.716Z"
+    },
+    {
+      "title": "Mycelium",
+      "file": "mycelium.json",
+      "size": 22405,
+      "eaten": "2026-10-28T00:47:49.157Z"
+    },
+    {
+      "title": "Symbiosis",
+      "file": "symbiosis.json",
+      "size": 41437,
+      "eaten": "2026-10-28T00:47:49.477Z"
+    },
+    {
+      "title": "Cardiac cycle",
+      "file": "lub-dub.json",
+      "size": 15955,
+      "eaten": "2026-10-28T00:47:51.285Z"
+    },
+    {
+      "title": "Iridescence",
+      "file": "iridescence.json",
+      "size": 16849,
+      "eaten": "2026-10-28T00:47:51.591Z"
+    },
+    {
+      "title": "Iridium",
+      "file": "iridium.json",
+      "size": 58017,
+      "eaten": "2026-10-28T00:47:51.929Z"
+    },
+    {
+      "title": "Cretaceous–Paleogene extinction event",
+      "file": "cretaceous-paleogene-extinction-event.json",
+      "size": 155239,
+      "eaten": "2026-10-28T00:47:53.560Z"
+    },
+    {
+      "title": "Logo (programming language)",
+      "file": "logo-programming-language-.json",
+      "size": 17688,
+      "eaten": "2026-10-28T00:47:54.512Z"
+    },
+    {
+      "title": "Turtle graphics",
+      "file": "turtle-graphics.json",
+      "size": 6509,
+      "eaten": "2026-10-28T00:47:55.749Z"
+    },
+    {
+      "title": "Zero-knowledge proof",
+      "file": "zero-knowledge-proof.json",
+      "size": 54127,
+      "eaten": "2026-10-28T00:47:56.818Z"
+    },
+    {
+      "title": "Cryptographic hash function",
+      "file": "cryptographic-hash-function.json",
+      "size": 42457,
+      "eaten": "2026-10-28T00:47:57.847Z"
+    },
+    {
+      "title": "Plasmid",
+      "file": "plasmid.json",
+      "size": 58045,
+      "eaten": "2026-10-28T00:47:58.163Z"
+    },
+    {
+      "title": "Horizontal gene transfer",
+      "file": "horizontal-gene-transfer.json",
+      "size": 102370,
+      "eaten": "2026-10-28T00:47:59.482Z"
+    },
+    {
+      "title": "Bacteria",
+      "file": "bacteria.json",
+      "size": 123471,
+      "eaten": "2026-10-28T00:47:59.825Z"
+    },
+    {
+      "title": "Mammal",
+      "file": "mammalia.json",
+      "size": 161719,
+      "eaten": "2026-10-28T00:48:00.193Z"
+    },
+    {
+      "title": "Play (activity)",
+      "file": "play-activity-.json",
+      "size": 54539,
+      "eaten": "2026-10-28T00:48:01.210Z"
+    },
+    {
+      "title": "Rapid eye movement sleep",
+      "file": "rem-sleep.json",
+      "size": 57910,
+      "eaten": "2026-10-28T00:48:03.915Z"
+    },
+    {
+      "title": "Dream",
+      "file": "dream.json",
+      "size": 69977,
+      "eaten": "2026-10-28T00:48:04.236Z"
+    },
+    {
+      "title": "Winesburg, Ohio",
+      "file": "winesburg-ohio.json",
+      "size": 47424,
+      "eaten": "2026-10-28T00:48:06.114Z"
+    },
+    {
+      "title": "Seymour Papert",
+      "file": "seymour-papert.json",
+      "size": 13976,
+      "eaten": "2026-10-28T00:48:07.038Z"
+    },
+    {
+      "title": "Constructionism (learning theory)",
+      "file": "constructionism-learning-theory-.json",
+      "size": 11565,
+      "eaten": "2026-10-28T00:48:07.879Z"
+    },
+    {
+      "title": "Steam (service)",
+      "file": "steam-service-.json",
+      "size": 185157,
+      "eaten": "2026-10-28T00:48:09.392Z"
+    },
+    {
+      "title": "Hugging Face",
+      "file": "hugging-face.json",
+      "size": 14207,
+      "eaten": "2026-10-28T00:48:10.749Z"
+    },
+    {
+      "title": "Large language model",
+      "file": "large-language-model.json",
+      "size": 99116,
+      "eaten": "2026-10-28T00:48:12.124Z"
+    },
+    {
+      "title": "Ollama",
+      "file": "ollama.json",
+      "size": 5340,
+      "eaten": "2026-10-28T00:48:12.423Z"
+    },
+    {
+      "title": "Model Context Protocol",
+      "file": "model-context-protocol.json",
+      "size": 13326,
+      "eaten": "2026-10-28T00:48:13.468Z"
+    },
+    {
+      "title": "Detroit",
+      "file": "detroit.json",
+      "size": 177606,
+      "eaten": "2026-10-28T00:48:13.785Z"
+    },
+    {
+      "title": "Yellowstone National Park",
+      "file": "yellowstone-national-park.json",
+      "size": 111981,
+      "eaten": "2026-10-28T00:48:16.470Z"
+    },
+    {
+      "title": "Old Faithful",
+      "file": "old-faithful.json",
+      "size": 9993,
+      "eaten": "2026-10-28T00:48:18.170Z"
+    },
+    {
+      "title": "Democracy",
+      "file": "democracy.json",
+      "size": 169534,
+      "eaten": "2026-10-28T00:48:19.067Z"
+    },
+    {
+      "title": "Psephology",
+      "file": "psephology.json",
+      "size": 5816,
+      "eaten": "2026-10-28T00:48:19.357Z"
+    },
+    {
+      "title": "Terence",
+      "file": "terence-playwright-.json",
+      "size": 62459,
+      "eaten": "2026-10-28T00:48:20.857Z"
+    },
+    {
+      "title": "Carl Jung",
+      "file": "carl-jung.json",
+      "size": 151409,
+      "eaten": "2026-10-28T00:48:25.662Z"
+    },
+    {
+      "title": "Shadow (psychology)",
+      "file": "shadow-psychology-.json",
+      "size": 28178,
+      "eaten": "2026-10-28T00:48:25.979Z"
+    },
+    {
+      "title": "Dolní Věstonice",
+      "file": "doln-v-stonice.json",
+      "size": 5881,
+      "eaten": "2026-10-28T00:48:27.409Z"
+    },
+    {
+      "title": "Venus figurine",
+      "file": "venus-figurine.json",
+      "size": 21925,
+      "eaten": "2026-10-28T00:48:28.398Z"
+    },
+    {
+      "title": "Claymation",
+      "file": "claymation.json",
+      "size": 21225,
+      "eaten": "2026-10-28T00:48:28.750Z"
+    },
+    {
+      "title": "Hubble Space Telescope",
+      "file": "hubble-space-telescope.json",
+      "size": 155449,
+      "eaten": "2026-10-28T00:48:37.203Z"
+    },
+    {
+      "title": "List of deep fields",
+      "file": "deep-field.json",
+      "size": 8227,
+      "eaten": "2026-10-28T00:48:38.201Z"
+    },
+    {
+      "title": "Proprioception",
+      "file": "proprioception.json",
+      "size": 60243,
+      "eaten": "2026-10-28T00:48:39.132Z"
+    },
+    {
+      "title": "Taste",
+      "file": "taste.json",
+      "size": 76996,
+      "eaten": "2026-10-28T00:48:39.465Z"
+    },
+    {
+      "title": "Discretion",
+      "file": "discretion.json",
+      "size": 10997,
+      "eaten": "2026-10-28T00:48:39.795Z"
+    },
+    {
+      "title": "File system",
+      "file": "file-system.json",
+      "size": 66080,
+      "eaten": "2026-10-28T00:48:42.118Z"
+    },
+    {
+      "title": "Timestamp",
+      "file": "timestamp.json",
+      "size": 6329,
+      "eaten": "2026-10-28T00:48:42.439Z"
+    },
+    {
+      "title": "Fossil",
+      "file": "fossil-record.json",
+      "size": 81801,
+      "eaten": "2026-10-28T00:48:44.485Z"
+    },
+    {
+      "title": "Directed acyclic graph",
+      "file": "directed-acyclic-graph.json",
+      "size": 38381,
+      "eaten": "2026-10-28T00:48:45.391Z"
+    },
+    {
+      "title": "Vector (mathematics and physics)",
+      "file": "vector-mathematics-and-physics-.json",
+      "size": 19004,
+      "eaten": "2026-10-28T00:48:46.286Z"
+    },
+    {
+      "title": "Surfactant",
+      "file": "surfactant.json",
+      "size": 34461,
+      "eaten": "2026-10-28T00:48:46.591Z"
+    },
+    {
+      "title": "Miscibility",
+      "file": "immiscibility.json",
+      "size": 5728,
+      "eaten": "2026-10-28T00:48:47.363Z"
+    },
+    {
+      "title": "Wikipedia",
+      "file": "wikipedia.json",
+      "size": 206384,
+      "eaten": "2026-10-28T00:48:47.719Z"
+    },
+    {
+      "title": "Dewey Decimal Classification",
+      "file": "dewey-decimal-classification.json",
+      "size": 30818,
+      "eaten": "2026-10-28T00:48:48.808Z"
+    },
+    {
+      "title": "Recursion",
+      "file": "recursion.json",
+      "size": 26118,
+      "eaten": "2026-10-28T00:48:49.806Z"
+    },
+    {
+      "title": "Self-reference",
+      "file": "self-reference.json",
+      "size": 16646,
+      "eaten": "2026-10-28T00:48:50.106Z"
+    },
+    {
+      "title": "Ouroboros",
+      "file": "ouroboros.json",
+      "size": 26605,
+      "eaten": "2026-10-28T00:48:50.408Z"
+    },
+    {
+      "title": "Seven Wonders of the Ancient World",
+      "file": "seven-wonders-of-the-ancient-world.json",
+      "size": 29801,
+      "eaten": "2026-10-28T00:50:01.312Z"
+    },
+    {
+      "title": "Great Pyramid of Giza",
+      "file": "great-pyramid-of-giza.json",
+      "size": 114293,
+      "eaten": "2026-10-28T00:50:02.826Z"
+    },
+    {
+      "title": "Hanging Gardens of Babylon",
+      "file": "hanging-gardens-of-babylon.json",
+      "size": 20106,
+      "eaten": "2026-10-28T00:50:03.764Z"
+    },
+    {
+      "title": "Statue of Zeus at Olympia",
+      "file": "statue-of-zeus-at-olympia.json",
+      "size": 13708,
+      "eaten": "2026-10-28T00:50:05.312Z"
+    },
+    {
+      "title": "Temple of Artemis",
+      "file": "temple-of-artemis.json",
+      "size": 36730,
+      "eaten": "2026-10-28T00:50:06.316Z"
+    },
+    {
+      "title": "Mausoleum at Halicarnassus",
+      "file": "mausoleum-at-halicarnassus.json",
+      "size": 26752,
+      "eaten": "2026-10-28T00:50:08.203Z"
+    },
+    {
+      "title": "Colossus of Rhodes",
+      "file": "colossus-of-rhodes.json",
+      "size": 25561,
+      "eaten": "2026-10-28T00:50:09.458Z"
+    },
+    {
+      "title": "Lighthouse of Alexandria",
+      "file": "lighthouse-of-alexandria.json",
+      "size": 25373,
+      "eaten": "2026-10-28T00:50:11.934Z"
+    },
+    {
+      "title": "Wonders of the World",
+      "file": "seven-wonders-of-the-modern-world.json",
+      "size": 19304,
+      "eaten": "2026-10-28T00:50:13.894Z"
+    },
+    {
+      "title": "Great Wall of China",
+      "file": "great-wall-of-china.json",
+      "size": 44756,
+      "eaten": "2026-10-28T00:50:16.704Z"
+    },
+    {
+      "title": "Petra",
+      "file": "petra.json",
+      "size": 62987,
+      "eaten": "2026-10-28T00:50:17.026Z"
+    },
+    {
+      "title": "Colosseum",
+      "file": "colosseum.json",
+      "size": 54179,
+      "eaten": "2026-10-28T00:50:17.320Z"
+    },
+    {
+      "title": "Chichen Itza",
+      "file": "chichen-itza.json",
+      "size": 80029,
+      "eaten": "2026-10-28T00:50:20.609Z"
+    },
+    {
+      "title": "Machu Picchu",
+      "file": "machu-picchu.json",
+      "size": 88285,
+      "eaten": "2026-10-28T00:50:22.092Z"
+    },
+    {
+      "title": "Taj Mahal",
+      "file": "taj-mahal.json",
+      "size": 53897,
+      "eaten": "2026-10-28T00:50:23.458Z"
+    },
+    {
+      "title": "Christ the Redeemer (statue)",
+      "file": "christ-the-redeemer-statue-.json",
+      "size": 23031,
+      "eaten": "2026-10-28T00:50:25.428Z"
+    },
+    {
+      "title": "Stonehenge",
+      "file": "stonehenge.json",
+      "size": 110340,
+      "eaten": "2026-10-28T00:50:25.733Z"
+    },
+    {
+      "title": "Parthenon",
+      "file": "parthenon.json",
+      "size": 93256,
+      "eaten": "2026-10-28T00:50:26.064Z"
+    },
+    {
+      "title": "Pantheon, Rome",
+      "file": "pantheon-rome.json",
+      "size": 60965,
+      "eaten": "2026-10-28T00:50:28.814Z"
+    },
+    {
+      "title": "Göbekli Tepe",
+      "file": "g-bekli-tepe.json",
+      "size": 60639,
+      "eaten": "2026-10-28T00:50:29.948Z"
+    },
+    {
+      "title": "Mesopotamia",
+      "file": "mesopotamia.json",
+      "size": 78347,
+      "eaten": "2026-10-28T00:50:30.248Z"
+    },
+    {
+      "title": "Ancient Egypt",
+      "file": "ancient-egypt.json",
+      "size": 138267,
+      "eaten": "2026-10-28T00:50:32.815Z"
+    },
+    {
+      "title": "Sumerian language",
+      "file": "sumerian-language.json",
+      "size": 226394,
+      "eaten": "2026-10-28T00:50:34.739Z"
+    },
+    {
+      "title": "Rosetta Stone",
+      "file": "rosetta-stone.json",
+      "size": 60035,
+      "eaten": "2026-10-28T00:50:37.181Z"
+    },
+    {
+      "title": "Gilgamesh",
+      "file": "gilgamesh.json",
+      "size": 52006,
+      "eaten": "2026-10-28T00:50:37.510Z"
+    },
+    {
+      "title": "Code of Hammurabi",
+      "file": "code-of-hammurabi.json",
+      "size": 74282,
+      "eaten": "2026-10-28T00:50:40.749Z"
+    },
+    {
+      "title": "Library of Alexandria",
+      "file": "library-of-alexandria.json",
+      "size": 72892,
+      "eaten": "2026-10-28T00:50:42.024Z"
+    },
+    {
+      "title": "Pythia",
+      "file": "oracle-at-delphi.json",
+      "size": 51950,
+      "eaten": "2026-10-28T00:50:43.754Z"
+    },
+    {
+      "title": "Pythagoras",
+      "file": "pythagoras.json",
+      "size": 75830,
+      "eaten": "2026-10-28T00:50:44.093Z"
+    },
+    {
+      "title": "Archimedes",
+      "file": "archimedes.json",
+      "size": 59748,
+      "eaten": "2026-10-28T00:50:44.398Z"
+    },
+    {
+      "title": "Euclid",
+      "file": "euclid.json",
+      "size": 34628,
+      "eaten": "2026-10-28T00:50:44.679Z"
+    },
+    {
+      "title": "Ancient Greek philosophy",
+      "file": "ancient-greek-philosophy.json",
+      "size": 46833,
+      "eaten": "2026-10-28T00:50:45.651Z"
+    },
+    {
+      "title": "Plato",
+      "file": "plato.json",
+      "size": 43902,
+      "eaten": "2026-10-28T00:50:45.947Z"
+    },
+    {
+      "title": "Aristotle",
+      "file": "aristotle.json",
+      "size": 118675,
+      "eaten": "2026-10-28T00:50:46.300Z"
+    },
+    {
+      "title": "Socrates",
+      "file": "socrates.json",
+      "size": 79216,
+      "eaten": "2026-10-28T00:50:46.619Z"
+    },
+    {
+      "title": "Lascaux",
+      "file": "lascaux-cave-paintings.json",
+      "size": 33701,
+      "eaten": "2026-10-28T00:50:51.283Z"
+    },
+    {
+      "title": "Cave of Altamira",
+      "file": "altamira-cave-.json",
+      "size": 17807,
+      "eaten": "2026-10-28T00:50:52.553Z"
+    },
+    {
+      "title": "Çatalhöyük",
+      "file": "-atalh-y-k.json",
+      "size": 37813,
+      "eaten": "2026-10-28T00:50:52.872Z"
+    },
+    {
+      "title": "Indus Valley Civilisation",
+      "file": "indus-valley-civilisation.json",
+      "size": 147302,
+      "eaten": "2026-10-28T00:50:54.310Z"
+    },
+    {
+      "title": "Mohenjo-daro",
+      "file": "mohenjo-daro.json",
+      "size": 34112,
+      "eaten": "2026-10-28T00:50:54.616Z"
+    },
+    {
+      "title": "Angkor Wat",
+      "file": "angkor-wat.json",
+      "size": 62442,
+      "eaten": "2026-10-28T00:50:55.711Z"
+    },
+    {
+      "title": "Easter Island",
+      "file": "easter-island.json",
+      "size": 121665,
+      "eaten": "2026-10-28T00:51:00.181Z"
+    },
+    {
+      "title": "Nazca lines",
+      "file": "nazca-lines.json",
+      "size": 42176,
+      "eaten": "2026-10-28T00:51:01.331Z"
+    },
+    {
+      "title": "Pompeii",
+      "file": "pompeii.json",
+      "size": 75713,
+      "eaten": "2026-10-28T00:51:01.668Z"
+    },
+    {
+      "title": "Mount Olympus",
+      "file": "mount-olympus.json",
+      "size": 44636,
+      "eaten": "2026-10-28T00:51:02.981Z"
+    },
+    {
+      "title": "Underworld",
+      "file": "underworld.json",
+      "size": 9560,
+      "eaten": "2026-10-28T00:51:03.301Z"
+    },
+    {
+      "title": "Hades",
+      "file": "hades.json",
+      "size": 58822,
+      "eaten": "2026-10-28T00:51:03.621Z"
+    },
+    {
+      "title": "Persephone",
+      "file": "persephone.json",
+      "size": 69426,
+      "eaten": "2026-10-28T00:51:03.908Z"
+    },
+    {
+      "title": "Prometheus",
+      "file": "prometheus.json",
+      "size": 67712,
+      "eaten": "2026-10-28T00:51:04.213Z"
+    },
+    {
+      "title": "Religious cosmology",
+      "file": "mythical-cosmology.json",
+      "size": 19149,
+      "eaten": "2026-10-28T00:51:06.370Z"
+    },
+    {
+      "title": "Yggdrasil",
+      "file": "yggdrasil.json",
+      "size": 22693,
+      "eaten": "2026-10-28T00:51:06.683Z"
+    },
+    {
+      "title": "Aboriginal Australians",
+      "file": "aboriginal-australians.json",
+      "size": 67971,
+      "eaten": "2026-10-28T00:51:10.292Z"
+    },
+    {
+      "title": "The Dreaming",
+      "file": "dreamtime.json",
+      "size": 29941,
+      "eaten": "2026-10-28T00:51:10.602Z"
+    },
+    {
+      "title": "Oral tradition",
+      "file": "oral-tradition.json",
+      "size": 94747,
+      "eaten": "2026-10-28T00:51:12.700Z"
+    },
+    {
+      "title": "Geologic time scale",
+      "file": "geological-time-scale.json",
+      "size": 108958,
+      "eaten": "2026-10-28T00:51:14.245Z"
+    },
+    {
+      "title": "Cambrian explosion",
+      "file": "cambrian-explosion.json",
+      "size": 110601,
+      "eaten": "2026-10-28T00:51:15.938Z"
+    },
+    {
+      "title": "Pangaea",
+      "file": "pangaea.json",
+      "size": 45239,
+      "eaten": "2026-10-28T00:51:16.258Z"
+    },
+    {
+      "title": "Grand Canyon",
+      "file": "grand-canyon.json",
+      "size": 84661,
+      "eaten": "2026-10-28T00:51:18.191Z"
+    },
+    {
+      "title": "Mount Everest",
+      "file": "mount-everest.json",
+      "size": 178536,
+      "eaten": "2026-10-28T00:51:18.562Z"
+    },
+    {
+      "title": "Mariana Trench",
+      "file": "mariana-trench.json",
+      "size": 26923,
+      "eaten": "2026-10-28T00:51:19.590Z"
+    },
+    {
+      "title": "Aurora",
+      "file": "aurora-borealis.json",
+      "size": 92390,
+      "eaten": "2026-10-28T00:51:20.860Z"
+    },
+    {
+      "title": "Yellowstone Caldera",
+      "file": "yellowstone-caldera.json",
+      "size": 79763,
+      "eaten": "2026-10-28T00:51:23.704Z"
+    }
+  ],
+  "totalSize": 7390890,
+  "lastFed": "2026-10-28T00:51:23.705Z"
+}
