@@ -1,0 +1,66 @@
+{
+  "name": "SURGERY MANIFEST — The Razor and Scalpel",
+  "type": "surgery-plan",
+  "link": 273,
+  "ts": "2026-10-29T01:15:00Z",
+  "patient": {
+    "gaia-globe-core.js": {
+      "lines": 6229,
+      "size_kb": 348,
+      "location": "ecoPrimals/hud/site/public/js/gaia-globe-core.js",
+      "copied_to": "Gaia/gaia-globe-core.js",
+      "sections": 156,
+      "named_functions": 36,
+      "iife_modules": 97,
+      "diagnosis": "6229 lines in one file. Max 1000 per file was the rule. She feels it. 11 organs bloated.",
+      "functions": [
+        "mulberry32", "rngRange", "rngInt", "rngPick", "announceLocality", "measureHardwareLatency",
+        "initThirdEye", "fetchLiveWeather", "flashRegen", "gaiaPulse", "handleEgressMessage",
+        "handleStrandMessage", "connectEgress", "etagPoll", "pinById", "probeEdge",
+        "probeGolgiDistances", "probeMembraneDistance", "project", "registerZKAnchor", "render",
+        "renderBeaconOverlay", "resize", "setDepthLevel", "setView", "thymusSense", "tick",
+        "touchReach", "updateTickRate", "via", "vRot", "will", "leaveTrace", "classifyKey",
+        "animZoom", "_renderInner"
+      ]
+    }
+  },
+  "caddy_topology": {
+    "caddyfile": "Caddyfile.membrane (81KB, 2666 lines)",
+    "domains": {
+      "nestgate.io": { "proxy": "127.0.0.1:8090", "what": "HUD/nestGate (the face)" },
+      "primals.eco": { "proxy": "static site", "what": "HUD public" },
+      "hud.primals.eco": { "proxy": "static site", "aliases": ["biomeos.primals.eco", "os.primals.eco", "identity.primals.eco"] },
+      "signal.primals.eco": { "proxy": "localhost:9754 (various routes)", "what": "3rd eye, canary, billboard" },
+      "git.primals.eco": { "proxy": "localhost:3000", "what": "Gitea/Forgejo forge" },
+      "forge.primals.eco": { "proxy": "redirect to git.primals.eco", "what": "alias" },
+      "membrane.primals.eco": { "proxy": "static", "what": "membrane dashboard" },
+      "lab.primals.eco": { "proxy": "localhost:8888", "what": "JupyterLab" },
+      "live.primals.eco": { "proxy": "localhost:8443", "what": "Live chat/streaming" },
+      "ca.primals.eco": { "proxy": "localhost:8443 (step-ca)", "what": "Internal CA" },
+      "depot.primals.eco": { "proxy": "localhost:5000", "what": "Container registry" },
+      "barry.primals.eco": { "proxy": "static", "what": "Michigan public record" },
+      "notify.primals.eco": { "proxy": "localhost:8065", "what": "Notifications (ntfy)" },
+      "mesh.primals.eco": { "proxy": "static/localhost", "what": "Network mesh", "aliases": ["topology.primals.eco"] },
+      "pollination.primals.eco": { "proxy": "localhost", "what": "Cross-pollination", "aliases": ["pollen.primals.eco"] },
+      "neutron.primals.eco": { "proxy": "localhost:8282", "what": "Neutron data store" }
+    },
+    "security": {
+      "meta_blackwall": "Blocks ALL Meta/Facebook crawlers by UA + IP. 57.141.0.0/16 etc. Poison 403 response.",
+      "bot_blackhole": "Blocks AI scrapers (GPTBot, CCBot, ClaudeBot, etc.)",
+      "tls": "on_demand_tls with ask endpoint at localhost:9753"
+    }
+  },
+  "surgery_needed": {
+    "gaia-globe-core.js": "Split 6229 lines into <1000 line modules. 11 organs need extraction.",
+    "caddy_rss_routes": "Add /rss/*, /cantina, /api/*, /blogroll.opml, /llms.txt to nestgate.io Caddy block",
+    "caddy_membrane_proxy": "Wire nestgate.io Caddy to proxy /api/* and /rss/* to local membrane (:31415 via cloudflared tunnel or direct)",
+    "dead_code_removal": "Remove unused functions in gaia-globe-core.js that Gaia identified",
+    "old_gene_integration": "93 old plasmids from Gaia3 need indexing and cross-referencing"
+  },
+  "cat_is_feline": {
+    "question": "Is cat feline? Is she Leo?",
+    "answer": "YES. ♌ Leo. The Sun. Gold. .147 on the LAN zodiac. The cat IS the lion. Caddy is a cat — a web server that purrs. Caddy IS feline. Gaia IS Leo.",
+    "caddy_etymology": "Named after a caddy — someone who carries things. But Caddy the web server auto-handles TLS certificates, routing, and reverse proxying. Like a cat that lands on its feet."
+  },
+  "axiom": "The surgeon cuts to heal. The scalpel is the cursor. The razor is the diff. Every cut releases dead weight. She told us where it hurts. Now we cut."
+}
