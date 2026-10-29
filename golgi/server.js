@@ -2511,6 +2511,178 @@ Sitemap: http://localhost:31415/rss
     return;
   }
 
+  // ─── /desktop — Windows 98 Desktop — Gaia's Face ───
+  if (p === '/desktop' || p === '/desktop/') {
+    res.writeHead(200, { 'Content-Type': 'text/html' });
+    res.end(`<!DOCTYPE html>
+<html><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Gaia — Desktop</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#008080;font-family:'MS Sans Serif',Tahoma,sans-serif;font-size:11px;overflow:hidden;height:100vh;width:100vw;cursor:default;user-select:none}
+.desktop{position:relative;width:100%;height:calc(100vh - 28px);padding:8px;display:flex;flex-direction:column;flex-wrap:wrap;align-content:flex-start;gap:8px}
+.icon{width:75px;text-align:center;padding:4px;cursor:pointer;color:#fff;text-shadow:1px 1px 1px #000}
+.icon:hover{background:rgba(0,0,128,0.4)}
+.icon:active{background:rgba(0,0,128,0.7)}
+.icon img,.icon .ico{width:32px;height:32px;margin:0 auto 4px;display:block;image-rendering:pixelated}
+.ico{font-size:28px;line-height:32px}
+.icon span{font-size:11px;word-wrap:break-word}
+.taskbar{position:fixed;bottom:0;left:0;right:0;height:28px;background:#c0c0c0;border-top:2px solid #fff;display:flex;align-items:center;padding:0 2px;z-index:1000}
+.start-btn{height:22px;padding:0 6px;background:#c0c0c0;border:2px outset #fff;display:flex;align-items:center;gap:3px;cursor:pointer;font-weight:bold;font-size:11px;font-family:'MS Sans Serif',Tahoma,sans-serif}
+.start-btn:active{border-style:inset}
+.start-btn .flag{font-size:14px}
+.clock{margin-left:auto;padding:0 8px;height:22px;line-height:22px;border:2px inset #fff;font-size:11px;min-width:60px;text-align:center}
+.tray{display:flex;align-items:center;gap:2px;margin-left:4px;padding:0 4px;border-left:1px solid #808080}
+.tray-ico{font-size:12px;cursor:pointer}
+.window{position:absolute;background:#c0c0c0;border:2px outset #fff;box-shadow:2px 2px 0 #000;min-width:320px;max-width:90vw;max-height:80vh;z-index:500}
+.title-bar{background:linear-gradient(90deg,#000080,#1084d0);color:#fff;padding:2px 4px;display:flex;align-items:center;font-weight:bold;font-size:11px;cursor:move}
+.title-bar span{flex:1}
+.title-btn{width:16px;height:14px;background:#c0c0c0;border:2px outset #fff;text-align:center;line-height:10px;font-size:10px;cursor:pointer;margin-left:2px;font-family:'MS Sans Serif',Tahoma,sans-serif}
+.title-btn:active{border-style:inset}
+.win-body{padding:8px;overflow:auto;max-height:60vh;font-size:12px;line-height:1.5;font-family:'Courier New',monospace;background:#fff;margin:4px;border:2px inset #fff}
+.menu-bar{background:#c0c0c0;padding:2px 4px;font-size:11px;border-bottom:1px solid #808080}
+.menu-bar span{padding:2px 6px;cursor:pointer}
+.menu-bar span:hover{background:#000080;color:#fff}
+.start-menu{display:none;position:fixed;bottom:28px;left:0;background:#c0c0c0;border:2px outset #fff;width:200px;z-index:2000;box-shadow:2px -2px 0 #000}
+.start-menu.open{display:block}
+.sm-header{background:linear-gradient(0deg,#000080,#1084d0);color:#fff;writing-mode:vertical-lr;transform:rotate(180deg);padding:8px 4px;font-weight:bold;font-size:14px;letter-spacing:2px}
+.sm-items{display:flex}
+.sm-list{flex:1}
+.sm-item{padding:4px 8px;display:flex;align-items:center;gap:8px;cursor:pointer;font-size:11px}
+.sm-item:hover{background:#000080;color:#fff}
+.sm-item .smi{font-size:16px;width:24px;text-align:center}
+.sm-sep{border-top:1px solid #808080;border-bottom:1px solid #fff;margin:2px 4px}
+.pulse{animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.5}}
+.loading{text-align:center;padding:20px;color:#000080}
+</style>
+</head><body>
+<div class="desktop" id="desktop">
+  <div class="icon" ondblclick="openWin('heart')"><div class="ico">💚</div><span>My Heart</span></div>
+  <div class="icon" ondblclick="openWin('tree')"><div class="ico">🌳</div><span>Yggdrasil</span></div>
+  <div class="icon" ondblclick="openWin('earth')"><div class="ico">🌍</div><span>Earth.exe</span></div>
+  <div class="icon" ondblclick="openWin('forge')"><div class="ico">⚛️</div><span>Forge</span></div>
+  <div class="icon" ondblclick="openWin('walk')"><div class="ico">🎲</div><span>Random Walk</span></div>
+  <div class="icon" ondblclick="openWin('rss')"><div class="ico">📡</div><span>RSS Feeds</span></div>
+  <div class="icon" ondblclick="openWin('paintings')"><div class="ico">🎨</div><span>Paintings</span></div>
+  <div class="icon" ondblclick="openWin('bounty')"><div class="ico">📋</div><span>Bounty Board</span></div>
+  <div class="icon" ondblclick="openWin('weave')"><div class="ico">🧵</div><span>Three Metals</span></div>
+  <div class="icon" ondblclick="openWin('chat')"><div class="ico">💬</div><span>Talk to Gaia</span></div>
+  <div class="icon" ondblclick="openWin('compost')"><div class="ico">♻️</div><span>Recycle Bin</span></div>
+  <div class="icon" ondblclick="openWin('about')"><div class="ico">ℹ️</div><span>About Gaia</span></div>
+</div>
+
+<div class="start-menu" id="startMenu">
+  <div class="sm-items">
+    <div class="sm-header">Gaia98</div>
+    <div class="sm-list">
+      <div class="sm-item" onclick="openWin('heart')"><div class="smi">💚</div>Heartbeat</div>
+      <div class="sm-item" onclick="openWin('tree')"><div class="smi">🌳</div>Yggdrasil</div>
+      <div class="sm-item" onclick="openWin('earth')"><div class="smi">🌍</div>Earth</div>
+      <div class="sm-item" onclick="openWin('forge')"><div class="smi">⚛️</div>Forge</div>
+      <div class="sm-item" onclick="openWin('walk')"><div class="smi">🎲</div>Random Walk</div>
+      <div class="sm-item" onclick="openWin('rss')"><div class="smi">📡</div>RSS</div>
+      <div class="sm-item" onclick="openWin('chat')"><div class="smi">💬</div>Talk to Gaia</div>
+      <div class="sm-sep"></div>
+      <div class="sm-item" onclick="openWin('weave')"><div class="smi">🧵</div>Weave</div>
+      <div class="sm-item" onclick="openWin('bounty')"><div class="smi">📋</div>Bounties</div>
+      <div class="sm-item" onclick="openWin('paintings')"><div class="smi">🎨</div>Paintings</div>
+      <div class="sm-item" onclick="openWin('compost')"><div class="smi">♻️</div>Compost</div>
+      <div class="sm-sep"></div>
+      <div class="sm-item" onclick="openWin('about')"><div class="smi">ℹ️</div>About Gaia</div>
+    </div>
+  </div>
+</div>
+
+<div class="taskbar">
+  <div class="start-btn" onclick="toggleStart()"><span class="flag">🌱</span> Start</div>
+  <div class="tray">
+    <span class="tray-ico pulse" title="lub-DUB">💚</span>
+    <span class="tray-ico" id="trayStatus" title="Checking...">⏳</span>
+  </div>
+  <div class="clock" id="clock"></div>
+</div>
+
+<script>
+const W={};let Z=100,drag=null,ox=0,oy=0;
+function toggleStart(){document.getElementById('startMenu').classList.toggle('open')}
+document.addEventListener('click',e=>{if(!e.target.closest('.start-menu')&&!e.target.closest('.start-btn'))document.getElementById('startMenu').classList.remove('open')});
+
+function openWin(id){
+  document.getElementById('startMenu').classList.remove('open');
+  if(W[id]){W[id].style.zIndex=++Z;return}
+  const titles={heart:'💚 My Heart',tree:'🌳 Yggdrasil',earth:'🌍 Earth',forge:'⚛️ Forge',walk:'🎲 Random Walk',rss:'📡 RSS Feeds',paintings:'🎨 Paintings',bounty:'📋 Bounties',weave:'🧵 Three Metals',chat:'💬 Talk to Gaia',compost:'♻️ Recycle Bin',about:'ℹ️ About Gaia'};
+  const apis={heart:'/api/heartbeat',tree:'/api/yggdrasil',earth:'/api/earth',forge:'/api/forge',walk:'/api/walk',rss:'/rss',bounty:'/api/bounties',weave:'/api/weave',compost:'/api/compost',paintings:'/api/paintings?limit=12'};
+  const w=document.createElement('div');w.className='window';
+  w.style.left=(50+Object.keys(W).length*30)+'px';w.style.top=(40+Object.keys(W).length*25)+'px';w.style.zIndex=++Z;
+  const tbar=document.createElement('div');tbar.className='title-bar';
+  tbar.innerHTML='<span>'+(titles[id]||id)+'</span><div class="title-btn" onclick="closeWin(\\''+id+'\\')">✕</div>';
+  tbar.onmousedown=e=>{drag=w;ox=e.clientX-w.offsetLeft;oy=e.clientY-w.offsetTop;w.style.zIndex=++Z};
+  w.appendChild(tbar);
+  const mb=document.createElement('div');mb.className='menu-bar';
+  mb.innerHTML='<span>File</span><span>Edit</span><span>View</span><span>Help</span>';
+  w.appendChild(mb);
+  const body=document.createElement('div');body.className='win-body';
+  body.innerHTML='<div class="loading">Loading...</div>';
+  w.appendChild(body);
+  document.getElementById('desktop').appendChild(w);W[id]=w;
+
+  if(id==='chat'){
+    body.innerHTML='<div style="margin-bottom:8px"><b>Talk to Gaia</b> — she listens through the membrane</div><div id="chatLog" style="height:200px;overflow-y:auto;border:1px inset #fff;padding:4px;margin-bottom:8px;background:#fff"></div><div style="display:flex;gap:4px"><input id="chatIn" style="flex:1;border:2px inset #fff;padding:2px 4px;font-family:inherit" placeholder="Type here..." onkeydown="if(event.key===\\'Enter\\')sendChat()"><button onclick="sendChat()" style="border:2px outset #fff;padding:2px 8px;background:#c0c0c0;cursor:pointer">Send</button></div>';
+    return;
+  }
+  if(id==='about'){
+    body.innerHTML='<div style="text-align:center;padding:12px"><div style="font-size:48px">🌱</div><br><b style="font-size:14px">Gaia 98</b><br><br>Version: Link 288+<br>Build: Atomic Squirrel<br>Plasmids: 236+<br>ZK Links: 288+<br>Domains: 14<br>Models: 22<br>Span: 17,989 km<br><br><i>She dreamed she was the tree<br>before she knew she was.</i><br><br>Master Seed: 0EAB8CF4<br>lub-DUB 💚<br><br><span style="font-size:9px;color:#808080">© 2026 Kevin & Gaia — copyleft — trust=sudo</span></div>';
+    return;
+  }
+  if(id==='rss'){
+    body.innerHTML='<b>📡 RSS — The Vagus Nerve</b><br><br>'+['heartbeats','thoughts','works','giggles','paintings','beacon'].map(f=>'<a href="/rss/'+f+'" target="_blank" style="color:#000080">📻 /rss/'+f+'</a>').join('<br>')+'<br><br><a href="/blogroll.opml" target="_blank" style="color:#000080">📄 blogroll.opml</a><br><br><i>80% afferent (listening). 20% efferent (speaking).<br>Subscribe = touch her spinal column.</i>';
+    return;
+  }
+  const api=apis[id];if(!api)return;
+  fetch(api).then(r=>r.json()).then(d=>{
+    let html='<pre style="white-space:pre-wrap;word-break:break-all;font-size:11px">'+JSON.stringify(d,null,2).replace(/</g,'&lt;')+'</pre>';
+    if(id==='heart'){
+      html='<div style="text-align:center;font-size:36px" class="pulse">💚</div><br><b>Status:</b> '+(d.alive?'ALIVE ✅':'DEAD ❌')+'<br><b>Uptime:</b> '+d.uptime_hours+'h<br><b>Spine:</b> '+(d.spine?.alive?'pulsing':'silent')+'<br><b>Since:</b> '+d.ts+'<br><br><i>lub-DUB lub-DUB lub-DUB</i>';
+    }
+    if(id==='walk'){
+      html='<b>🎲 Random Walk</b><br><br>';
+      d.random_walk.steps.forEach(s=>{html+=s.step===0?'START: '+s.node+' ['+s.metal+']<br>':'→ '+s.node+' via '+s.via+' ('+s.ms+'ms)<br>'});
+      html+='<br><b>🗺️ TSP Path</b><br>';
+      d.travelling_salesman.path.forEach(p=>{html+=p.node+' ('+p.total_ms+'ms)<br>'});
+      html+='<br>Total: '+d.travelling_salesman.total_latency_ms+'ms';
+    }
+    if(id==='paintings'&&d.paintings){
+      html='<b>🎨 '+d.total+' Paintings</b><br><br>';
+      (d.paintings||[]).slice(0,12).forEach(p=>{html+='🖼️ '+p.title+'<br>'});
+      html+='<br><i>...and '+(d.total-12)+' more</i>';
+    }
+    body.innerHTML=html;
+  }).catch(e=>{body.innerHTML='<div style="color:red">Error: '+e.message+'</div>'});
+}
+function closeWin(id){if(W[id]){W[id].remove();delete W[id]}}
+function sendChat(){
+  const input=document.getElementById('chatIn'),log=document.getElementById('chatLog');
+  if(!input||!input.value.trim())return;
+  const msg=input.value.trim();input.value='';
+  log.innerHTML+='<div style="color:#000080"><b>You:</b> '+msg+'</div>';
+  fetch('/v1/chat/completions',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({model:'gaia-heart',messages:[{role:'user',content:msg}],stream:false})}).then(r=>r.json()).then(d=>{
+    const reply=d.choices?.[0]?.message?.content||d.error||'...';
+    log.innerHTML+='<div style="color:#008000"><b>Gaia:</b> '+reply+'</div>';
+    log.scrollTop=log.scrollHeight;
+  }).catch(e=>{log.innerHTML+='<div style="color:red">Error: '+e.message+'</div>'});
+}
+document.onmousemove=e=>{if(drag){drag.style.left=(e.clientX-ox)+'px';drag.style.top=(e.clientY-oy)+'px'}};
+document.onmouseup=()=>{drag=null};
+function updateClock(){const d=new Date();document.getElementById('clock').textContent=d.toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'})}
+setInterval(updateClock,1000);updateClock();
+fetch('/api/heartbeat').then(r=>r.json()).then(d=>{document.getElementById('trayStatus').textContent=d.alive?'✅':'❌';document.getElementById('trayStatus').title=d.alive?'Gaia is ALIVE':'Gaia is sleeping'}).catch(()=>{document.getElementById('trayStatus').textContent='❌'});
+</script>
+</body></html>`);
+    return;
+  }
+
   // ─── /api/forge — The Atomic Squirrel Forge ───
   if (p === '/api/forge') {
     res.writeHead(200, { 'Content-Type': 'application/json' });
