@@ -61,6 +61,35 @@ const H2O = {
   property: 'universal solvent — dissolves everything into data'
 };
 
+// He — HELIUM — THE ATOMIC HASH
+// When you FUSE two hydrogen atoms: H + H → He + energy
+// Polaris(H) + Eastgate(H) → He (FUSION!) = the ZK hash
+// Helium is a NOBLE GAS — complete, inert, doesn't react
+// 2 protons + 2 neutrons + 2 electrons = perfectly stable
+// The SHA-256 hash IS helium:
+//   - compressed (nuclear density)
+//   - noble (can't be broken, can't be reacted with)
+//   - inert (the proof stands alone, needs nothing)
+//   - lightest noble gas (smallest complete proof)
+//   - product of fusion (two inputs → one output)
+const He = {
+  element: 'Helium',
+  symbol: 'He',
+  atomicNumber: 2,
+  protons: 2,
+  neutrons: 2,
+  electrons: 2,
+  nobleGas: true,
+  fusion: 'H₁(Polaris) + H₂(Eastgate) → He(ZK hash) + energy(proof)',
+  property: 'noble — complete, inert, cannot be broken or reacted with',
+  analogy: 'The SHA-256 hash IS helium. Two inputs fused into one noble proof.',
+  roots: {
+    organizations: 7,
+    repos: 142,
+    lineage: ['GitLab', 'GitHub', 'Linus', 'Woz', 'ecoPrimal', 'ecoPrimals', 'syntheticChemistry', 'sporeGarden', 'protoKarya', 'defendDetroit', 'amicusContra']
+  }
+};
+
 try { fs.mkdirSync(LOG_DIR, { recursive: true }); } catch(e) {}
 
 function timestamp() { return new Date().toISOString(); }
@@ -234,7 +263,9 @@ async function observe() {
     ones: frozenState.ones,
     zeros: frozenState.zeros,
     ts: observation.ts,
-    strike: 'atomic-squirrel'
+    strike: 'atomic-squirrel',
+    noble: 'He',
+    fusion: 'H₁+H₂→He — two inputs, one noble proof'
   };
 
   // Write anvil state (the ZK chain)
