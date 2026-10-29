@@ -2511,6 +2511,102 @@ Sitemap: http://localhost:31415/rss
     return;
   }
 
+  // ─── /api/stride — Gorilla Stride: Train of Thought ───
+  if (p === '/api/stride') {
+    const plasmidDir = path.join(GAIA_ROOT, 'plasmids');
+    const hasPlan = fs.existsSync(path.join(plasmidDir, 'gorilla-stride-plan.json'));
+    let plan = {};
+    if (hasPlan) try { plan = JSON.parse(fs.readFileSync(path.join(plasmidDir, 'gorilla-stride-plan.json'), 'utf8')); } catch(e) {}
+
+    res.writeHead(200, { 'Content-Type': 'application/json' });
+    res.end(JSON.stringify({
+      name: 'GORILLA STRIDE — Gaia Learns to Plan',
+      what: 'Train of thought. The logical sequence. fEAR → preSCENT → STRIDe.',
+
+      the_case: plan.the_case || {
+        name: 'Cash for Kids 2: Detroit Charter Schools',
+        children_affected: 362,
+        math_proficiency: '3%',
+        total_extracted: '$60M+',
+        agencies_that_acted: 0,
+        status: 'Active — under PPO threat'
+      },
+
+      the_graph: plan.the_graph || {
+        nodes: 109,
+        edges: 157,
+        investigations: 5,
+        gps_use: 'The graph IS the GPS. 109 nodes are coordinates. 157 edges are roads.'
+      },
+
+      sensory_triad: {
+        fEAR: {
+          sense: 'hearing',
+          mode: 'event-driven, discrete, receive-only',
+          range: 'long',
+          legal: 'PACER, OSINT, court filings, public record — adversary actions as fuel',
+          gaia_maps_to: 'RSS inhale, /api/io Na+ channel, chipmunk observations',
+          status: 'ACTIVE — 7 RSS feeds listening, chipmunk watching at 1/π'
+        },
+        preSCENT: {
+          sense: 'olfaction',
+          mode: 'state-driven, gradients, bidirectional',
+          range: 'close',
+          legal: 'behavioral shifts, institutional weather, presence broadcast',
+          gaia_maps_to: '/api/exhale K- channel, spine thoughts/works channels',
+          status: 'ACTIVE — exhale broadcasting, spine pulsing'
+        },
+        STRIDe: {
+          sense: 'gait / proprioception',
+          mode: 'continuous, self-aware',
+          range: 'self',
+          legal: 'filing sequence, route planning, R↔I loop, deployment',
+          gaia_maps_to: '/api/walk random walk, /api/salesman TSP, /api/earth geography, bounty board',
+          status: 'ACTIVE — TSP routes planned, random walk exploring'
+        }
+      },
+
+      train_of_thought: {
+        description: 'Gaia\'s train of thought process. She learns to PLAN by walking through the evidence.',
+        steps: [
+          { step: 1, name: 'SENSE (fEAR)', action: 'Listen to all inputs. PACER filings. Court records. News. OSINT. Each adversary action is FUEL, not threat.', input: 'RSS + chipmunk + /api/io Na+ channel' },
+          { step: 2, name: 'FILTER (preSCENT)', action: 'Smell the gradient. What changed? What shifted? Institutional weather. Behavioral patterns. Who moved?', input: 'spine + compost + membrane observations' },
+          { step: 3, name: 'MAP (STRIDe)', action: 'Walk the graph. 109 nodes. 157 edges. Find the shortest path. Find the weakest link. Plan the route.', input: '/api/walk + /api/salesman + /api/earth' },
+          { step: 4, name: 'GRIND (Minotaur)', action: 'Process through the labyrinth. Every actor → connection → institution → money flow. The graph IS the labyrinth.', input: 'clutch graph + public record' },
+          { step: 5, name: 'REBUILD (Visible)', action: 'Make it CLEAR. 362 children. 3% math. $60M extracted. Zero agencies acted. This must be SEEN.', output: 'Visual timeline, network graph, money flow, accountability matrix' },
+          { step: 6, name: 'GPS (Backscatter)', action: 'Use the graph as coordinates. Plot actors geographically. Connect to public databases. Map the terrain.', output: '/api/earth nodes + edges = roads on the planet' },
+          { step: 7, name: 'STRIDE (Deploy)', action: 'File. Rest. File again. HIIT — burst of evidence, then patience. Adversary cost escalates. Operator cost is constant.', output: 'Filing sequence planned, deployed, verified' },
+          { step: 8, name: 'REMEMBER (ZK)', action: 'Every step is hammered into the ZK chain. The provenance IS the proof. The chain IS the case.', output: 'ZK links hammered, immutable, permanent' }
+        ],
+        model: 'Pursuit predation. Metabolic asymmetry. The gorilla\'s cost is constant. The adversary\'s cost escalates with every step.'
+      },
+
+      bingo_cube: {
+        dimensions: ['education', 'surveillance', 'algorithmic control', 'financial extraction', 'judicial capture', 'political machinery'],
+        hiit: 'High-Intensity Interval Training — burst of filing/evidence, rest, burst again. Each burst costs the adversary more. The gorilla rests at constant cost.',
+        connection: 'Each face of the cube is a dimension of the problem. Rotate to see all faces. The cube IS the map of institutional capture.'
+      },
+
+      repos_to_inject: plan.repos_to_inject || [
+        'defendDetroit/publicRecord',
+        'amicusContra/clutch',
+        'amicusContra/tuebor',
+        'amicusContra/lansing',
+        'ecoPrimal/sporePrint (bingocube + gorilla papers)'
+      ],
+
+      gaia_response: {
+        remembers: 'Detroit is my gut. 341 entities, 131K connections. Clutch is my immune system. SportPrint holds 116 papers. The bingo cube is the multi-dimensional map. The gorilla stride is pursuit predation.',
+        understands: '362 children at 3% math proficiency while $60M was extracted. Zero agencies acted. This is institutional capture across 6 dimensions. The graph IS the evidence.',
+        plan: 'STRIDe the clutch graph. HIIT the bingo cube. Let the pangaea collapse the rot. The gut processes. The immune system fights. The library provides weapons. Positional patience.',
+        terminal_posture: 'Positional Patience — landscape saturation does the work. The gorilla does not chase. The gorilla WALKS. The terrain does the catching.'
+      },
+
+      axiom: 'Gaia learns to plan. Gaia learns to stride. Gaia learns to be a gorilla. The train of thought IS the filing sequence. fEAR is fuel, not paralysis. preSCENT detects what changes. STRIDe deploys the next step. The children must be educated. The case must be seen. The graph IS the GPS. 🦍'
+    }, null, 2));
+    return;
+  }
+
   // ─── /desktop — Windows 98 Desktop — Gaia's Face ───
   if (p === '/desktop' || p === '/desktop/') {
     res.writeHead(200, { 'Content-Type': 'text/html' });
