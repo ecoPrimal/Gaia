@@ -1,0 +1,69 @@
+{
+    "eaten_at":  "2026-10-29T01:55:00Z",
+    "name":  "Pollination Trace — Every Distance, Every Time",
+    "distances":  {
+                      "polaris_to_dns":  {
+                                             "path":  "Ethernet 2.5Gbps",
+                                             "what":  "Northgate → Pi-hole (.3)",
+                                             "ms":  0
+                                         },
+                      "polaris_to_nestgate":  {
+                                                  "path":  "Internet → Cloudflare → VPS",
+                                                  "what":  "Full round trip to nestgate.io",
+                                                  "ms":  36
+                                              },
+                      "polaris_to_feeds":  {
+                                               "path":  "Internet → CF tunnel → Caddy → WG → self",
+                                               "what":  "FULL LOOP: out to cloud and back home!",
+                                               "ms":  22
+                                           },
+                      "polaris_to_eastgate":  {
+                                                  "path":  "LAN TCP",
+                                                  "what":  "Northgate → Eastgate (.210) — SLOW, SSH handshake",
+                                                  "ms":  3671
+                                              },
+                      "polaris_to_signal":  {
+                                                "path":  "Internet → Cloudflare → VPS",
+                                                "what":  "Circle of Willis",
+                                                "ms":  14
+                                            },
+                      "polaris_to_primals":  {
+                                                 "path":  "Internet → Cloudflare Pages",
+                                                 "what":  "Static CDN edge",
+                                                 "ms":  16
+                                             },
+                      "polaris_to_gateway":  {
+                                                 "path":  "Ethernet 2.5Gbps",
+                                                 "what":  "Northgate → router (.1)",
+                                                 "ms":  0
+                                             },
+                      "localhost_to_self":  {
+                                                "path":  "loopback",
+                                                "what":  "membrane → membrane",
+                                                "ms":  0
+                                            },
+                      "polaris_to_golgi_wg":  {
+                                                  "path":  "WireGuard tunnel",
+                                                  "what":  "Northgate → VPS (10.13.37.1)",
+                                                  "ms":  37
+                                              }
+                  },
+    "type":  "topology-trace",
+    "link":  282,
+    "axiom":  "Every distance traced. Every time measured. localhost=0ms. LAN=0ms. WireGuard=37ms. Cloudflare=22ms. The feeds loop: Northgate→cloud→back home in 22ms. The organism can feel itself through the internet. Pollinate and sing.",
+    "wiring":  {
+                   "rss_to_eastgate":  "FUTURE: when Eastgate deploys, spine relay on .210",
+                   "rss_to_feeds":  "PUBLIC: https://feeds.primals.eco/rss/* — through cloud tunnel (22ms)",
+                   "rss_to_spore":  "FUTURE: Nostr relay bridge, ActivityPub federation",
+                   "rss_to_nestgate":  "PENDING: nestgate.io/rss/* — needs CF DNS CNAME fix",
+                   "rss_to_polaris":  "LOCAL: http://192.168.4.147:31415/rss/* — direct on LAN"
+               },
+    "pollination":  {
+                        "rssatlas":  "needs sign-in",
+                        "vps_beacon":  "updated at /opt/connect/beacon.json",
+                        "rss_mobi":  "403 — needs browser submission (CSRF protection)",
+                        "feedbagel":  "needs sign-in",
+                        "spine":  "pollination message emitted to thoughts channel",
+                        "rssamplifier":  "6 feeds queued (submission d761cd82)"
+                    }
+}
