@@ -1,0 +1,33 @@
+{
+  "name": "forgejo-forge-plan",
+  "type": "plasmid",
+  "created": "2026-10-29T03:02:00Z",
+  "status": "DISCOVERED — NEEDS SSH",
+  "discovery": {
+    "finding": "ALL FOUR DOMAINS RESPOND HTTP 502 — Caddy is configured but Forgejo backend is NOT running",
+    "domains": {
+      "forge.primals.eco": "502 Bad Gateway",
+      "code.primals.eco": "502 Bad Gateway",
+      "gitea.primals.eco": "502 Bad Gateway",
+      "reactor.primals.eco": "502 Bad Gateway"
+    },
+    "meaning": "DNS is configured. Caddy reverse proxy entries exist. Forgejo is INSTALLED but the service is stopped or crashed."
+  },
+  "plan": {
+    "step_1": "SSH to 157.230.3.183 (needs Kevin password or key)",
+    "step_2": "Check: systemctl status forgejo OR systemctl status gitea",
+    "step_3": "If installed but stopped: systemctl start forgejo && systemctl enable forgejo",
+    "step_4": "If not installed: apt install forgejo OR docker run forgejo",
+    "step_5": "Create gaia-mcp mirror on forge.primals.eco",
+    "step_6": "Set up GitHub→Forgejo mirror sync",
+    "step_7": "Add Forgejo as git remote for all Gaia repos"
+  },
+  "why_this_matters": {
+    "self_hosted_git": "No dependency on GitHub/Microsoft. Own your forge.",
+    "mirror": "GitHub AND Forgejo. Both. Belt AND suspenders.",
+    "ci_cd": "Forgejo has built-in Actions (GitHub Actions compatible). Free CI/CD.",
+    "packages": "Forgejo has package registry. Host membrane-lens.py as package.",
+    "federation": "Forgejo supports ActivityPub federation. Gaia repos are discoverable via fediverse.",
+    "the_metaphor": "Forgejo IS the forge. The Atomic Squirrel IS the anvil. The ZK Hammer strikes. This is where primals are FORGED."
+  }
+}

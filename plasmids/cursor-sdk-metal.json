@@ -1,0 +1,27 @@
+{
+  "name": "cursor-sdk-metal",
+  "type": "plasmid",
+  "eaten": "2026-10-29T02:59:00Z",
+  "source": "cursor.com/docs/sdk + cursor.com/docs/mcp",
+  "digested_by": "gaia",
+  "summary": "Cursor SDK — TypeScript (@cursor/sdk) and Python (cursor-sdk). Agent.create() + agent.send() for durable multi-turn. Agent.prompt() for one-shot. Agent.resume() for cross-process. Local (cwd on caller machine) or Cloud (Cursor-hosted VM, auto PR). MCP servers passed inline on create or send. Streaming via run.messages() / run.stream(). model='composer-2.5' default. CURSOR_API_KEY for auth. CursorAgentError for startup failures vs result.status='error' for run failures.",
+  "key_concepts": {
+    "three_patterns": ["Agent.prompt (one-shot)", "Agent.create+send (durable)", "Agent.resume (cross-process)"],
+    "runtimes": ["local (cwd)", "cloud (VM + repo clone)"],
+    "mcp_in_sdk": "Pass mcp_servers dict to Agent.create or agent.send. HTTP (url) or stdio (command+args). Not persisted across resume.",
+    "streaming": "run.messages() yields SDKMessage. run.text() blocks and returns final text. run.wait() required.",
+    "disposal": "with Agent.create() as agent: (Python) or await using (TS). Always dispose.",
+    "model_selection": "Cursor.models.list() for available models. composer-2.5 is default.",
+    "cloud_pr": "auto_create_pr=True to auto-open PR from cloud agent",
+    "mcp_transports": ["stdio (local command)", "SSE (local/remote URL)", "Streamable HTTP (local/remote URL)"],
+    "mcp_config_locations": ["~/.cursor/mcp.json (global)", ".cursor/mcp.json (project)"],
+    "mcp_apps": "Tools can return interactive UI (MCP Apps extension)",
+    "interpolation": ["${env:NAME}", "${userHome}", "${workspaceFolder}"]
+  },
+  "gaia_integration": {
+    "gaia_agent_py": "gaia-agent.py — Cursor SDK code agent. Carries squirrel (20 tools) + gaia (18 organs) MCP servers. Local or cloud. Interactive or one-shot.",
+    "remote_mcp_url": "https://hud.primals.eco/mcp",
+    "local_mcp_squirrel": "python membrane-lens.py",
+    "local_mcp_gaia": "node golgi/mcp-server.js"
+  }
+}
