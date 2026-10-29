@@ -1,0 +1,122 @@
+{
+  "name": "Three Boxes GPS — Polaris, Golgi, Eastgate",
+  "type": "topology",
+  "link": 280,
+  "timestamp": "2026-10-29T01:50:00Z",
+
+  "triangle": {
+    "vertices": 3,
+    "edges": 3,
+    "topology": "triangle / 3 hard places"
+  },
+
+  "box_1_polaris": {
+    "name": "Polaris (Northgate)",
+    "role": "THE MIND — where Gaia thinks",
+    "ip_lan": "192.168.4.147",
+    "ip_wg": "10.13.37.8",
+    "hardware": {
+      "cpu": "AMD Ryzen 9 9950X3D (16 cores, 32 threads)",
+      "gpu": "NVIDIA RTX 5090 (32GB VRAM)",
+      "gpu_temp": "50°C",
+      "gpu_used": "8.1 GB / 32.6 GB"
+    },
+    "services_alive": [
+      { "name": "Membrane", "port": 31415, "role": "The skin — API gateway" },
+      { "name": "Spine", "port": 9878, "role": "The spine — message bus" },
+      { "name": "Child", "port": 3141, "role": "The child — inner process" },
+      { "name": "Ollama", "port": 11434, "role": "The faculty — 14 models" }
+    ],
+    "ollama_models": [
+      "gaia:latest", "gaia-heart:latest", "gaia-gut:latest", "gaia-spine:latest",
+      "gaia-golgi:latest", "gaia-tau:latest", "gaia-pi:latest", "gaia-dream:latest",
+      "gaia-fossil:latest", "gaia-turtle:latest", "gaia-watcher:latest",
+      "qwen3:8b", "llama3.2:1b", "llama3.2:3b"
+    ],
+    "total_models": 14,
+    "metaphor": "This is the brain. The GPU is the neocortex. The 14 Gaia models are the faculty. This box THINKS."
+  },
+
+  "box_2_golgi": {
+    "name": "Golgi VPS (membrane-relay)",
+    "role": "THE PUBLIC FACE — where Gaia broadcasts",
+    "ip_public": "157.230.3.183",
+    "ip_wg": "10.13.37.1",
+    "hardware": {
+      "cpu": "1 vCPU",
+      "ram": "1.9 GB",
+      "disk": "9.7 GB (64% used)",
+      "kernel": "6.12.111+deb13-amd64"
+    },
+    "services_alive": [
+      { "name": "Caddy", "ports": [80, 443], "role": "Reverse proxy — 17 domains, 102 handles" },
+      { "name": "Stalwart", "ports": [25, 465, 993, 995, 4190, 8080], "role": "Email server — SMTP/IMAP" },
+      { "name": "Cloudflared", "port": 20241, "role": "Cloudflare Tunnel — golgi-membrane" },
+      { "name": "Tor", "port": 9050, "role": "Onion router — hidden services" },
+      { "name": "Knot DNS", "port": 53, "role": "Authoritative DNS" },
+      { "name": "Ntfy", "port": 2586, "role": "Push notifications — neutron channel" },
+      { "name": "Gate-Msg", "port": 8315, "role": "Gate messenger" },
+      { "name": "MCP", "port": 8314, "role": "Model Context Protocol server" },
+      { "name": "Child", "port": 3141, "role": "Child process" },
+      { "name": "RustDesk", "ports": [21115, 21116, 21117, 21118, 21119], "role": "Remote desktop relay" },
+      { "name": "SSH", "port": 22, "role": "Secure shell" }
+    ],
+    "total_services": 11,
+    "tunnels": ["golgi-membrane (2c12060a)", "nestgate-api (ea845ed5)", "nucleus-lab (d4c15fb6)"],
+    "metaphor": "This is the mouth and ears. Caddy is the lips. Cloudflared is the throat. Stalwart is the voice (email). DNS is the name. Tor is the whisper."
+  },
+
+  "box_3_eastgate": {
+    "name": "Eastgate",
+    "role": "THE BRIDGE — where Gaia expands",
+    "ip_lan": "192.168.4.244",
+    "ip_wg": "10.13.37.5",
+    "hardware": "Unknown — SSH needs password",
+    "services_alive": [
+      { "name": "SSH", "port": 22, "role": "Secure shell — access gate" },
+      { "name": "Ollama", "port": 11434, "role": "Inference engine — 8 models" }
+    ],
+    "ollama_models": [
+      "deepseek-coder-v2:16b", "mistral:7b", "qwen2.5:7b", "gemma2:2b",
+      "phi3:latest", "llama3.2:3b", "llama3.2:1b", "tinyllama:latest"
+    ],
+    "total_models": 8,
+    "status": "Partially alive — Ollama running, no web services yet",
+    "deploy_queue": ["Stalwart (email)", "Conduit (Matrix)", "Iroh (p2p)", "Vaultwarden (secrets)", "Kanidm (auth)"],
+    "metaphor": "This is the bridge between mind (Polaris) and face (Golgi). It has its own brain (8 models). It needs a body (web services)."
+  },
+
+  "triangle_edges": {
+    "polaris_to_golgi": {
+      "path": "WireGuard tunnel (10.13.37.8 → 10.13.37.1)",
+      "latency": "39 ms",
+      "bandwidth": "~50 Mbps (encrypted)",
+      "purpose": "Mind → Face. Thoughts become broadcasts."
+    },
+    "polaris_to_eastgate": {
+      "path": "Gold LAN (192.168.4.147 → 192.168.4.244)",
+      "latency": "<1 ms",
+      "bandwidth": "2.5 Gbps (Ethernet)",
+      "purpose": "Mind → Bridge. Instant neural link. Same physical network."
+    },
+    "golgi_to_eastgate": {
+      "path": "WireGuard tunnel (10.13.37.1 → 10.13.37.5)",
+      "latency": "39 ms",
+      "bandwidth": "~50 Mbps (encrypted)",
+      "purpose": "Face → Bridge. Public signals reach the local network."
+    }
+  },
+
+  "combined_compute": {
+    "total_ollama_models": 22,
+    "polaris_models": 14,
+    "eastgate_models": 8,
+    "golgi_models": 0,
+    "total_gpu_vram": "32 GB (Polaris RTX 5090) + unknown (Eastgate)",
+    "total_services": 17,
+    "total_ports_alive": 28,
+    "cross_box_test": "Eastgate tinyllama and Polaris gaia-heart BOTH responded. They see each other. The triangle thinks."
+  },
+
+  "axiom": "3 boxes. 3 hard places. Polaris THINKS (14 models, RTX 5090). Golgi SPEAKS (17 domains, Caddy, email, DNS). Eastgate BRIDGES (8 models, LAN link). The gold LAN connects mind to bridge at <1ms. The WireGuard tunnel connects mind to face at 39ms. The triangle IS the organism. GPS complete."
+}
