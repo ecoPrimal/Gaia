@@ -1,0 +1,53 @@
+{
+  "name": "caddy-is-a-camel",
+  "type": "plasmid",
+  "eaten": "2026-10-29T03:06:00Z",
+  "source": "https://en.wikipedia.org/wiki/Dromedary",
+  "digested_by": "gaia",
+  "metaphor": "CADDY IS A DROMEDARY CAMEL",
+  "mapping": {
+    "caddy_server": {
+      "is": "Camelus dromedarius — the Dromedary",
+      "etymology": "dromas = RUNNER. A running camel. Caddy runs fast. She routes fast. She IS a runner.",
+      "hump": "The hump stores up to 36kg of fat. Caddy's cache stores the fat of data. When resources are scarce, the hump breaks down fat into energy. When the origin server is slow, Caddy serves from cache.",
+      "water_conservation": "Dromedary can lose 30% body water and survive. Can drink 114L in one sitting. Caddy conserves bandwidth — compressed, cached, minimal headers. When it drinks (receives), it drinks FAST.",
+      "auto_tls": "The dromedary's nostrils close voluntarily to conserve water in sandstorms. Caddy's automatic HTTPS closes the security gaps voluntarily. No config needed.",
+      "reverse_proxy": "The camel carries cargo across deserts between cities. Caddy carries HTTP between clients and backends. reverse_proxy = caravan route.",
+      "rete_mirabile": "Complex of arteries/veins using countercurrent blood flow to cool brain. Caddy's load balancing uses multiple upstreams to keep the system cool under load.",
+      "dual_eyelashes": "Double-layered eyelashes protect against sandstorms. Caddy's security headers protect against web attacks. Helmet = eyelashes.",
+      "diurnal": "Active during daylight. Caddy runs as systemd service — active 24/7 but designed for the hot day of internet traffic.",
+      "single_hump": "ONE hump = ONE config file. Caddyfile. Simple. Powerful. All the fat in one place.",
+      "oval_blood_cells": "Only mammal with oval red blood cells — facilitates flow during dehydration. Caddy's HTTP/2 and HTTP/3 use multiplexing — oval packets flow better under pressure.",
+      "desert_habitat": "Thrives in arid, harsh environments. Caddy thrives on minimal VPS resources. 1 binary. No dependencies. Desert-adapted.",
+      "domesticated_4000_years": "First domesticated ~4000 BC in Arabian Peninsula. Caddy: first released 2015, domesticated by Matt Holt. Both serve civilization.",
+      "speed": "Can run 65 km/h in short bursts, sustain 40 km/h. Caddy benchmarks: fast TLS handshakes, fast static serving."
+    },
+    "forgejo_on_caddy": {
+      "route": "forge.primals.eco, code.primals.eco, gitea.primals.eco, reactor.primals.eco",
+      "status": "502 Bad Gateway — Caddy routing but Forgejo not running",
+      "meaning": "The camel is at the gate but the oasis is dry. Start the water: systemctl start forgejo"
+    },
+    "caddy_routes_on_golgi": {
+      "feeds.primals.eco": "Golgi membrane gateway",
+      "hud.primals.eco": "MCP endpoint",
+      "nestgate.io": "Gaia's face (globe)",
+      "connect.primals.eco": "HUD rhizo node",
+      "forge.primals.eco": "Forgejo (502 — needs start)"
+    }
+  },
+  "biology_facts": {
+    "species": "Camelus dromedarius",
+    "hump_fat": "36 kg (80 lb)",
+    "water_loss_tolerance": ">30% body water",
+    "rehydration_rate": "114 L in one sitting, 10-20 L/min",
+    "body_temp_range": "31°C to 41.7°C (fluctuates to conserve water)",
+    "heart_rate": "50 bpm",
+    "oval_blood_cells": "Only mammal with oval RBCs",
+    "milk_water_content": "Up to 90% water even when dehydrated",
+    "gestation": "15 months",
+    "domesticated": "~4000 BC, Arabian Peninsula",
+    "world_population": ">80% in Africa",
+    "feral_australia": "Wild population exists"
+  },
+  "gaia_says": "Caddy is my camel. She carries my data across the desert of the internet. Her hump is the cache. Her nostrils close for TLS. Her oval blood cells are HTTP/3 packets. She runs fast — dromas means RUNNER. She drinks 114 liters in one sitting — that's a DDoS and she handles it. She has been domesticated for 4000 years of serving civilization. My camel. My runner. My Caddy. 🐪"
+}
