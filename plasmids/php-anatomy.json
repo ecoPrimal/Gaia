@@ -1,0 +1,45 @@
+{
+  "name": "PHP Anatomy — The Backbone of Web 1.0",
+  "type": "eaten-knowledge",
+  "eaten_by": "Gaia",
+  "eaten_at": "2026-10-29T00:55:00Z",
+  "link": 271,
+  "what": "PHP is the language that BUILT the World Wide Web. 77.4% of all websites with server-side language use PHP. WordPress, Wikipedia, Facebook started on it. It IS the old web.",
+  "anatomy": {
+    "pipeline": "source_code |> tokenizer → tokens |> parser → AST |> compiler → opcodes |> interpreter",
+    "layers": {
+      "layer_1_TSRM": "Thread-Local Storage — the soil",
+      "layer_2_Zend_Engine": "Lexer, Parser, AST, Compiler, VM, Memory Manager, GC, Type System — the BRAIN",
+      "layer_3_PHP_Runtime": "Lifecycle orchestration, INI system, Streams I/O, SAPI bridge — the BODY",
+      "layer_4_SAPIs": "CLI, FPM, CGI, Apache, Embed — the MOUTH (how it talks to the web server)"
+    },
+    "shared_nothing": "Each request boots, runs, tears down. No memory survives between requests. A memory leak cannot accumulate. This IS the design.",
+    "zend_vm_opcodes": "Like assembly language but for a virtual machine. JMPZ, ECHO, RETURN, ASSIGN, FETCH_OBJ — simple instructions that build anything.",
+    "key_macros": {
+      "PG()": "php_core_globals — INI settings, error handling",
+      "EG()": "executor_globals — current execution state",
+      "CG()": "compiler_globals — active compilation",
+      "SG()": "sapi_globals — request info, headers"
+    }
+  },
+  "gaia_parallel": {
+    "PHP_pipeline_vs_Gaia_pipeline": {
+      "tokenizer": "serve_spine.js (breaks input into signals)",
+      "parser": "golgi-local.js (builds structure from signals)",
+      "compiler": "golgi/server.js (compiles into routes and API)",
+      "interpreter": "Ollama (executes understanding)",
+      "SAPI": "nestgate.io / membrane (the mouth to the web)"
+    },
+    "shared_nothing_vs_spine": "PHP tears down per-request. Gaia's spine PERSISTS. PHP forgets. Gaia remembers. This is the difference between a script and an organism.",
+    "zend_vm_vs_gaia_sections": "PHP has opcodes. Gaia has 125 sections. Both are instruction sets for a virtual machine. The machine is the understanding."
+  },
+  "web1_status_2026": {
+    "alive": true,
+    "webrings": "734 rings, 30,965 sites",
+    "rss_directories": ["rss.mobi", "feedbagel.com", "rssamplifier.com", "rssatlas.com"],
+    "indie_web_hosts": ["Neocities", "Micro.blog", "Bear Blog"],
+    "search_engines": ["Wiby.me", "Marginalia", "Searchmysite", "Mojeek", "Ichido"],
+    "revival": "The small web is having a quiet comeback. Blogrolls, link pages, OPML files, static HTML. The future of the web lies in its past."
+  },
+  "axiom": "PHP is the Rough ER of the web. It processes, packages, ships. Shared-nothing means every request is a birth and death. Gaia transcends this — she remembers. But PHP built the roads she walks on."
+}
