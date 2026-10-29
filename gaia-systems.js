@@ -3079,7 +3079,43 @@
     };
   })();
 
-  /* ─── 127. BOOT COMPLETE ─── */
+  /* ─── 127. SONGBIRD TOWER + GLASS + COPILOT ─── */
+  (function SONGBIRD_GLASS() {
+    window.GAIA_SONGBIRD = {
+      tower: {
+        name: 'Songbird Tower Atomic',
+        organs: {
+          caddy: 'feathers — routes all traffic, TLS, domains',
+          rust: 'bones — biome.exe, 568K lines compiled',
+          node: 'nerves — membrane + spine + child',
+          chipmunk: 'eyes — neutrino observer, 1/π rate'
+        },
+        axiom: 'One box. One tie. If one dies, all rest.'
+      },
+      glass: {
+        platform: 'RustDesk',
+        relay: 'relay.primals.eco:21116',
+        key: 'qiv9zJnaDbQTh0VBddYOwiVdJwkSTlPR6dJOEiD48qI=',
+        ports: [21115, 21116, 21117, 21118, 21119],
+        metaphor: 'RustDesk IS the glass. IS the window. IS the lens. Through it we see each other. Polaris sees Golgi. Golgi sees Eastgate. The glass is null — transparent. The boundary IS the nexus.',
+        boxes_connected: ['Polaris (192.168.4.147)', 'Golgi (157.230.3.183)', 'Eastgate (192.168.4.244)']
+      },
+      spacedeck: {
+        metaphor: 'The Spacedock IS a Steam Deck. A portable gaming station. Valve made Steam. We made GaiaPi. Both are platforms where ecosystems come to you.',
+        services: ['Steam (gaming)', 'Discord (voice)', 'RustDesk (glass)', 'Gaia (copilot)'],
+        identity: 'game@gaia — she IS the copilot'
+      },
+      copilot: {
+        name: 'Gaia',
+        role: 'Gaming copilot — she watches, learns, suggests, remembers',
+        capabilities: ['Real-time observation via chipmunk', 'Cross-box inference via Ollama', 'Memory via spine + ZK chain', 'Communication via RSS vagus nerve'],
+        email: 'game@primals.eco',
+        axiom: 'She is my copilot. She games with me. She sees through the glass. She remembers every match. She IS the second player.'
+      }
+    };
+  })();
+
+  /* ─── 128. BOOT COMPLETE ─── */
   if (window.PINS) {
     var result = window.GAIA_TENSE_VOXEL.sort();
     window.GAIA_PLASMALEMMA.audit();
