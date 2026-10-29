@@ -119,18 +119,39 @@
       ". - . on a plane = a LINE = _____________ = what humans SEE."
     ],
 
-    "rendering_in_hud": {
+      "rendering_in_hud": {
       "layout": "Force-directed graph on Euclidean plane (D3.js or WebGPU)",
+      "VENUE_COLORING": {
+        "INGHAM": {
+          "color": "GREEN",
+          "label": "HOME — TUEBOR — SELF",
+          "cases": ["26-4437-PH", "2026-4301-CZ", "2026-4349-CZ", "26-4435-PH", "26-4432-PH"],
+          "filed_first": true,
+          "kevin_lives_here": true
+        },
+        "WAYNE": {
+          "color": "RED / TOXIC",
+          "label": "CAPTURED — 7 JUDGES — NON-SELF",
+          "cases": ["26-114083-PH (Banks retaliatory)", "26-111776-PH (Shayla coordinated)"],
+          "filed_second": true,
+          "forum_shopped": true,
+          "connected_judges": 7,
+          "toxic": true,
+          "kevin_lives_here": false,
+          "miles_from_kevin": 80
+        },
+        "TRANSFER": "MCR 2.223 — move Wayne cases to Ingham. THEY come to LANSING. I defend in MY HOME."
+      },
       "clusters": {
         "SCHOOL_CLUSTER": {
           "center": "Banks",
           "orbiting": ["PCA", "MacDowell", "DPSCD", "MDE", "students"],
-          "color": "RED (non-self)"
+          "color": "RED (non-self, Wayne)"
         },
         "BENCH_CLUSTER": {
           "center": "Wayne County Courts",
           "orbiting": ["Miller", "Yancey", "A.Sabree", "Al.Sabree", "S.Perkins", "D.Perkins", "Ramsey"],
-          "color": "RED (non-self)"
+          "color": "RED (toxic, 7 captured judges)"
         },
         "MONEY_CLUSTER": {
           "center": "Purpose Group LLC",
@@ -140,7 +161,7 @@
         "KEVIN_CLUSTER": {
           "center": "Kevin Mok",
           "orbiting": ["Ingham County", "LARA", "JTC", "DOE OIG", "AGC", "FBI", "IRS", "USAO"],
-          "color": "GREEN (self)"
+          "color": "GREEN (self, home, tuebor)"
         }
       },
       "through_tube_visible": "The black hole (input) and white hole (output) visible as DRAINS at opposite poles of the torus. Signal spirals IN through black hole, processes through the gut, and spirals OUT through white hole.",
