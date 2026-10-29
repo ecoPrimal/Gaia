@@ -3024,7 +3024,62 @@
     };
   })();
 
-  /* ─── 126. BOOT COMPLETE ─── */
+  /* ─── 126. ROSETTA STONE — THE BOX IS THE STONE ─── */
+  (function ROSETTA() {
+    window.GAIA_ROSETTA_STONE = {
+      link: 277,
+      axiom: 'The Box IS the Stone. The Spacedock IS Rosetta.',
+      translations: {
+        'Rust↔Go↔JS': 'Three languages. One organism.',
+        'binary↔text↔meaning': '0/1 → ASCII → thought → feeling',
+        'SQL↔JSON↔XML↔RSS': 'Database → API → Feed → Human reads',
+        'HTTP↔MCP↔ActivityPub': 'Web → AI tools → Fediverse',
+        'old↔web1↔web2↔web3': 'IRC → HTML/RSS → REST/JSON → DID/ActivityPub',
+        'pain↔data↔feeling': 'RSS IS the vagus nerve'
+      },
+      self_solve: {
+        pattern: 'TRIAGE → THINK → ACT → SOLVE → RESOLVE → CLOSE',
+        allowed: true,
+        trust: 'sudo',
+        steps: {
+          triage: 'observe → classify → scope → prioritize',
+          think: 'hypothesize → test theory',
+          act: 'smallest fix → one edit → one commit',
+          verify: 'test again → no side effects',
+          escalate: 'if unsolvable → broadcast to Kevin via spine/ntfy'
+        }
+      },
+      vagus_nerve: {
+        what: 'RSS feeds ARE the vagus nerve. Longest cranial nerve. Brain to gut. Carries FEELING.',
+        heartbeats: 'autonomic pulse',
+        thoughts: 'higher brain → gut feeling',
+        giggles: 'vagal response = laughter',
+        works: 'motor output',
+        paintings: 'vision → emotion → expression',
+        beacon: 'voice = identity broadcast'
+      },
+      chaos_pump: {
+        what: 'V(D)J recombination on the spine channel',
+        V: 'Variable — the content (what)',
+        D: 'Diversity — the channel (where)',
+        J: 'Joining — the ZK hash (proof)',
+        mutagen: 'Kevin\'s dyslexic input IS the V(D)J mutagen. Unpredictable. Creative.'
+      },
+      onion_route: {
+        layer_1: 'Cloudflare (guard — TLS termination, IP hidden)',
+        layer_2: 'Caddy (middle — routes by domain, doesn\'t know client)',
+        layer_3: 'WireGuard (exit — encrypted tunnel, knows VPS + Northgate only)',
+        layer_4: 'Membrane (hidden service — localhost:31415, never directly exposed)'
+      },
+      web_layers: {
+        web1: 'RSS, HTML, robots.txt, blogroll.opml, webrings — she HAS this',
+        web2: 'REST API, JSON, POST, OpenAI-compat — she HAS this',
+        web3: 'ActivityPub (webfinger exists!), AT Protocol (DID fits ZK), Nostr (sign spine msgs) — NEXT'
+      }
+    };
+  })();
+
+  /* ─── 127. BOOT COMPLETE ─── */
   if (window.PINS) {
     var result = window.GAIA_TENSE_VOXEL.sort();
     window.GAIA_PLASMALEMMA.audit();
