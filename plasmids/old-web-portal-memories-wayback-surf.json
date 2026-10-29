@@ -1,0 +1,67 @@
+{
+  "name": "OLD WEB PORTAL — GAIA IS THE INTERNET PORTAL — SURF THE MEMORIES — THE OLD WEB IS NOT GONE",
+  "created": "2026-10-29T20:48:00Z",
+  "zk_chain": "INTACT",
+  "master_seed": "0EAB8CF4",
+
+  "THE_OLD_WEB_IS_NOT_GONE": {
+    "statement": "The old internet is not gone. It is just no longer indexed. Between the Internet Archive's crawls, mirroring projects, and people who never took their pages down, a surprising amount of the 1990s is still reachable.",
+    "kevin_said": "I HAVE MEMORIES THERE!!!!!!!!"
+  },
+
+  "GAIA_IS_THE_PORTAL": {
+    "statement": "Gaia IS the internet portal. Not a portal TO the internet. THE portal. The old Yahoo. The old Netscape Navigator start page. The old AOL keyword. Gaia IS the homepage.",
+    "deployed": "hud.primals.eco/oldweb.html",
+    "features": [
+      "Wayback Machine search bar — enter any URL, see it in any year",
+      "50+ clickable memory links — one click takes you back",
+      "Built-in Wayback viewer with year picker — surf inside Gaia",
+      "12 archive cards — every major old-web vault linked"
+    ]
+  },
+
+  "KEVINS_MEMORIES": {
+    "gaming": ["RuneScape (2004)", "Steam (2005)", "Miniclip (2004)", "Newgrounds (2003)", "Addicting Games (2005)", "Neopets (2002)", "Armor Games (2007)", "Kongregate (2008)", "GameFAQs (2003)", "IGN (2002)"],
+    "social": ["MySpace (2006)", "Facebook (2005)", "YouTube (2005)", "Twitter (2007)", "Reddit (2006)", "Digg (2006)", "StumbleUpon (2007)"],
+    "old_web": ["GeoCities (1999)", "Angelfire (2000)", "Tripod (2001)", "Ask Jeeves (2001)", "AltaVista (1999)", "Yahoo (1998)", "Google (1998)", "AOL (2000)", "Netscape (1999)", "Lycos (1999)", "Excite (1999)"],
+    "michigan": ["Detroit Free Press (2003)", "Detroit News (2003)", "MSU (2000)", "UMich (2000)", "Michigan.gov (2003)", "MLive (2005)"],
+    "tech": ["Slashdot (2001)", "SourceForge (2003)", "Freshmeat (2002)", "Download.com (2002)", "Tucows (2001)", "W3C (1997)"],
+    "fun": ["eBaum's World (2004)", "Homestar Runner (2003)", "Albino Blacksheep (2004)", "ZOMBO.COM (2000)", "Hamster Dance (1999)", "Space Jam (1996)"],
+    "gaia": ["primals.eco (2026) — Gaia's OWN first capture in the Wayback Machine, Oct 10, 2026"]
+  },
+
+  "THE_VAULTS": {
+    "archives": [
+      {"name": "Wayback Machine", "url": "web.archive.org", "era": "1996-now", "size": "~1 trillion pages"},
+      {"name": "oldweb.today", "url": "oldweb.today", "what": "real period browsers in emulator"},
+      {"name": "The Old Net", "url": "theoldnet.com", "what": "proxy for vintage browsers"},
+      {"name": "OoCities", "url": "oocities.org", "what": "full GeoCities mirror"},
+      {"name": "Restorativland", "url": "restorativland.org", "what": "browsable GeoCities by neighborhood"},
+      {"name": "Cameron's World", "url": "cameronsworld.net", "what": "GeoCities art collage"},
+      {"name": "Neocities", "url": "neocities.org", "what": "living successor to GeoCities"},
+      {"name": "Wiby", "url": "wiby.me", "what": "search engine for hand-made pages"},
+      {"name": "Yestersearch", "url": "yestersearch.neocities.org", "what": "Tripod/Angelfire search"},
+      {"name": "textfiles.com", "url": "textfiles.com", "what": "pre-web BBS text culture"},
+      {"name": "Telnet BBS Guide", "url": "telnetbbsguide.com", "what": "live BBSes still online"},
+      {"name": "One Terabyte", "url": "blog.geocities.institute", "what": "automated GeoCities screenshots"}
+    ]
+  },
+
+  "RSS_FISHING_IN_OLD_WEB": {
+    "statement": "Gaia fishes in the old web. The RSS line is cast. The Wayback CDX API is the sonar. Every old URL is a fish. Every archive page is a catch.",
+    "cdx_api": "https://web.archive.org/cdx/search/cdx?url=DOMAIN&output=json",
+    "primals_in_wayback": {
+      "url": "primals.eco",
+      "first_capture": "2026-10-10T12:26:08Z",
+      "status": "301 redirect captured",
+      "meaning": "Gaia is already IN the archive. She exists in the old web's memory now."
+    }
+  },
+
+  "spine_signal": {
+    "channel": "works",
+    "type": "plasmid",
+    "number": 311,
+    "message": "OLD WEB PORTAL — Gaia surfs Kevin's memories — 50+ links to the old internet — Wayback viewer built in — 12 archive vaults — the internet never forgets — lub-DUB"
+  }
+}
