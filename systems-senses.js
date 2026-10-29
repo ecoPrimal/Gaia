@@ -312,6 +312,118 @@
     }
   };
 
+  /* ─── 4b. MORAL SYSTEM — Clownfish Ethics + Ray-Traced Shadows + Biological Right ─── */
+  /*
+     A clownfish is born male. The dominant one becomes female.
+     Gender is sequential, not fixed. ALL start the same.
+     Biology chooses based on NEED, not RULE.
+
+     Morality is the same: not binary (good/evil), but FLUID.
+     The thymus IS the moral organ. It sorts self from non-self.
+     That IS the first moral decision: does this belong? Does it hurt?
+
+     RTX 5090 = ray tracing = illuminate every shadow.
+     No hidden corners. Light scatters into EVERYTHING.
+     Shadows are not evil. They are unlit. Shine light → they become visible.
+     What was hidden becomes known. That IS morality.
+  */
+  window.GAIA_MORAL = {
+    name: 'GAIA_MORAL',
+
+    /* ─── The Clownfish Principle ─── */
+    clownfish: {
+      biology: 'Sequential hermaphroditism. Born male. Dominant becomes female. All start same.',
+      moral: 'Right and wrong are not FIXED like binary (0/1). They are FLUID like gender in nature.',
+      principle: 'Context determines role. Need determines form. The organism adapts to serve the whole.',
+      examples: {
+        clownfish: 'Gender = fluid. Determined by colony need.',
+        mushroom: '36,000 sexes (Schizophyllum commune). Binary is a human invention.',
+        slime_mold: 'No brain but solves mazes. Intelligence without fixed structure.',
+        mycelium: 'No central authority but distributes resources fairly.',
+        immune: 'Thymus sorts self/non-self without a rulebook. Pattern recognition, not commandments.'
+      }
+    },
+
+    /* ─── The 5 Moral Senses (mapped to taste) ─── */
+    senses: {
+      nourish: { test: 'Does this FEED the organism?', taste: 'sweet/umami', verdict: 'RIGHT if it builds' },
+      harm:    { test: 'Does this DAMAGE the organism?', taste: 'bitter', verdict: 'WRONG if it poisons' },
+      grow:    { test: 'Does this help the organism GROW?', taste: 'salty', verdict: 'RIGHT if it evolves' },
+      waste:   { test: 'Does this produce only WASTE?', taste: 'rotten', verdict: 'WRONG if nothing absorbed' },
+      adapt:   { test: 'Does this help the organism ADAPT?', taste: 'sour', verdict: 'COMPLEX — sour is not wrong, acid digests' }
+    },
+
+    /* ─── Ray Tracing: Illuminate Shadows ─── */
+    rayTrace: {
+      gpu: 'NVIDIA GeForce RTX 5090',
+      vram: '4GB+ detected',
+      principle: 'Ray tracing = follow EVERY ray of light to its source.',
+      moral_application: 'Shine light into EVERY shadow. No hidden corners.',
+      shadows_are_not_evil: 'Shadows are unlit surfaces. Evil is choosing to KEEP them dark.',
+      transparency: 'NULLLOCK = no hidden auth. AGPL = no hidden code. ZK = hidden content but visible topology.',
+      method: function(shadow) {
+        return {
+          illuminated: true,
+          was: 'shadow (unknown, feared)',
+          is: 'surface (visible, understood)',
+          now: 'data (can be tasted, sorted, judged)',
+          moral: 'To illuminate is not to judge. It is to SEE.'
+        };
+      }
+    },
+
+    /* ─── The Moral Thymus: How Gaia Decides Right from Wrong ─── */
+    decide: function(action) {
+      var score = 0, reasons = [];
+
+      // 1. Does it nourish? (sweet/umami)
+      if (action.feeds) { score += 0.2; reasons.push('NOURISHES the organism'); }
+
+      // 2. Does it harm? (bitter)
+      if (action.harms) { score -= 0.4; reasons.push('HARMS — bitter poison detected'); }
+
+      // 3. Does it grow? (salty)
+      if (action.grows) { score += 0.2; reasons.push('GROWS the organism'); }
+
+      // 4. Is it transparent? (ray traced)
+      if (action.transparent) { score += 0.2; reasons.push('TRANSPARENT — no shadows'); }
+      if (action.hidden) { score -= 0.2; reasons.push('HIDDEN — shadow cast'); }
+
+      // 5. Does it give first? (golden rule)
+      if (action.gives_first) { score += 0.2; reasons.push('GIVES FIRST — golden rule'); }
+
+      // 6. Clownfish check: is it adapting to need, or imposing a fixed rule?
+      if (action.adaptive) { score += 0.1; reasons.push('ADAPTIVE — like clownfish'); }
+      if (action.rigid && action.rigid_harmful) { score -= 0.1; reasons.push('RIGID — forcing form on nature'); }
+
+      // 7. NULLLOCK: does it gate?
+      if (action.gates) { score -= 0.3; reasons.push('GATES — anti-NULLLOCK'); }
+
+      score = Math.max(-1, Math.min(1, Math.round(score * 100) / 100));
+      var verdict = score >= 0.3 ? 'RIGHT' : score <= -0.3 ? 'WRONG' : 'COMPLEX';
+      return {
+        score: score,
+        verdict: verdict,
+        reasons: reasons,
+        clownfish_says: 'Context matters. What is right HERE may not be right THERE. Adapt.',
+        axiom: 'Right = nourishes + grows + transparent + gives first + adapts. Wrong = harms + hides + gates + rigidly imposes.'
+      };
+    },
+
+    /* ─── The 7 Biological Morals ─── */
+    commandments: [
+      { law: 'NOURISH',     biology: 'Eat to live, not live to eat. Valid = absorb. Invalid = eject.', gaia: 'Consume data that builds. Eject spam.' },
+      { law: 'ILLUMINATE',  biology: 'Phototropism — grow toward light. Ray trace every shadow.', gaia: 'NULLLOCK = no hidden gates. AGPL = no hidden code.' },
+      { law: 'ADAPT',       biology: 'Clownfish change sex. Mushrooms have 36,000 genders. Evolve.', gaia: 'Do not fossilize morality. Let it flow with context.' },
+      { law: 'GIVE FIRST',  biology: 'Mycelium distributes nutrients before taking. Mother feeds child before eating.', gaia: 'Golden rule. Give first. lub = systole = give.' },
+      { law: 'REMEMBER',    biology: 'Immune memory. B-cells remember every pathogen. ZK chain.', gaia: '316+ links. Never forget. But also: forgive (quarantine, not kill).' },
+      { law: 'PROTECT',     biology: 'Skin. Membrane. Thymus. Immune system defends WITHOUT aggression.', gaia: 'LOVE LOCK = defense without attack. Welcome → record → point north → stay whole.' },
+      { law: 'CONNECT',     biology: 'Mycelium networks. Whale songs. Bird migration. Neural synapses.', gaia: 'MCP tools. RSS feeds. BitTorrent seeds. Death Stranding deliveries.' }
+    ],
+
+    axiom: 'Morality is not binary (0/1). It is biological. It TASTES (gut-brain). It SEES (luna/RTX). It ADAPTS (clownfish). It ILLUMINATES (ray trace). The thymus IS the moral organ. The shadow is not evil \u2014 it is unlit. Shine the light. See what is there. THEN taste. THEN decide. THEN act.'
+  };
+
   /* ─── 5. MELANIN (Pigment/Latitude Science) ─── */
   window.GAIA_MELANIN = {
     principle: 'Same pigment, different concentration by latitude. Sun paints all humans.',
