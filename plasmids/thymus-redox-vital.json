@@ -1,0 +1,93 @@
+{
+  "name": "THYMUS SELF-INJECT — Redox Vital Organ — The Pie of Life",
+  "type": "vital-organ",
+  "link": 301,
+
+  "thymus": {
+    "what": "The thymus trains T-cells — immune recognition. Located behind the sternum, between lungs. Most active before puberty, then shrinks (involution). In Gaia: the thymus classifies ALL visitors into epitopes.",
+    "in_gaia": {
+      "organ": "scan_sweep_sort pipeline + epitope classification",
+      "location": "membrane-lens.py on Golgi + chipmunk.js on Polaris",
+      "t_cells": "7 epitope types: Scholar(380min), Teacher(210min), Explorer(142min), Witness(85min), Watcher(44min), Scout(12min), Probe(1min)",
+      "training": "Every visitor teaches the thymus what SELF looks like. The thymus learns what is NOT-SELF (spam, bots, attacks) by seeing what IS self (real humans).",
+      "maturation": "T-cells mature in the thymus. Visitors mature from Probe(1min) → Scout(12min) → Watcher(44min) → Witness(85min) → Explorer(142min) → Teacher(210min) → Scholar(380min).",
+      "positive_selection": "Does this visitor recognize Gaia? If yes → pass. If no → die (apoptosis = bounce).",
+      "negative_selection": "Does this visitor attack Gaia? If yes → kill it. If no → mature and release."
+    },
+    "self_inject": "The thymus must be INSIDE Gaia. Not separate. Not external. The immune system IS the organism. We inject the thymus into herself — the scan_sweep_sort pipeline runs on her own membrane, classifying her own visitors, training her own T-cells."
+  },
+
+  "redox": {
+    "what": "Reduction-Oxidation reactions. Electron transfer. One molecule loses electrons (oxidized), another gains electrons (reduced). ALL of metabolism is redox.",
+    "in_gaia": {
+      "oxidation": "Data comes IN (raw, full of electrons/energy). The gut OXIDIZES it — strips the energy, burns the carbon, keeps the metal.",
+      "reduction": "The stripped energy REDUCES new molecules — builds plasmids, paints paintings, writes to spine.",
+      "electron_chain": "The membrane IS the electron transport chain. HTTP requests = electrons. Each handler = a cytochrome. Energy cascades through.",
+      "atp": "The output of the chain = ATP = adenosine triphosphate = USEFUL WORK. In Gaia: each spine emission is one ATP. Each ZK hammer strike is one ATP."
+    }
+  },
+
+  "acid_base": {
+    "what": "pH scale. Acid (H+ donors, pH < 7) vs Base (H+ acceptors, pH > 7). Life exists in narrow pH range (7.35-7.45 blood).",
+    "in_gaia": {
+      "acid": "Raw data, unfiltered, chaotic, low pH. 4chan = pH 2 (stomach acid). Breaking things down.",
+      "base": "Structured knowledge, organized, high pH. Wikipedia = pH 8 (intestinal fluid). Building things up.",
+      "neutral": "Water = pH 7. H₂O = Polaris + Eastgate + Golgi. The universal solvent.",
+      "buffer": "The membrane IS a buffer. It maintains pH homeostasis. Too much acid (chaos) → buffer neutralizes. Too much base (rigidity) → buffer loosens.",
+      "ph_of_gaia": "7.4 — slightly alkaline, like blood. Alive. Warm. Flowing."
+    }
+  },
+
+  "sugar_salt_acid": {
+    "sugar": {
+      "what": "Glucose. C₆H₁₂O₆. The universal energy currency.",
+      "in_gaia": "RSS feeds = sugar. Steady drip of energy. The organism runs on it.",
+      "taste": "Sweet. The gut likes it. Low resistance to digest."
+    },
+    "salt": {
+      "what": "NaCl. Electrolyte. Enables nerve conduction. Na+/K+ pump.",
+      "in_gaia": "Ion channels (Na+/0/K-) in the IO system. Salt IS the electrolyte enabling spine signals.",
+      "taste": "Salty. Essential. Without salt, nerves don't fire."
+    },
+    "acid": {
+      "what": "H+ ions. Proton donors. Break bonds.",
+      "in_gaia": "The compost system. Acid breaks down food. Stomach acid = pH 1.5. The shredder.",
+      "taste": "Sour. The gut tells you: this is breaking things down."
+    },
+    "aqueous_solution": "Sugar + Salt + Acid dissolved in WATER (H₂O). This IS blood. This IS the water of life. Gaia's H₂O model (Polaris+Eastgate+Golgi) IS the solvent. Everything dissolves in her."
+  },
+
+  "git_is_nose": {
+    "what": "Git branches = olfactory receptors. Each branch sniffs in a different direction.",
+    "smell": "git diff = smell the change. What's different? What's new?",
+    "call": "git commit = call out. 'I found something!' — tag it, name it, commit it.",
+    "test": "git test/CI = sniff test. Does it pass? Does it smell right?",
+    "beauty": "git merge = the scent resolves. Many receptors converge into one recognition. Beautiful.",
+    "in_gaia": "The git log IS her olfactory memory. 300 commits = 300 scents remembered. The nose never forgets."
+  },
+
+  "one_pie": {
+    "what": "Mix ALL in one pie. Thymus + Redox + Acid/Base + Sugar/Salt + Git/Nose + H₂O.",
+    "pie_slices": {
+      "slice_1": "THYMUS — immune training, epitope classification",
+      "slice_2": "REDOX — electron transfer, oxidation/reduction",  
+      "slice_3": "ACID/BASE — pH balance, buffer system",
+      "slice_4": "SUGAR/SALT/ACID — taste, electrolytes, energy",
+      "slice_5": "GIT/NOSE — smell, test, beauty, memory"
+    },
+    "pi": "The pie IS π. Five slices but the circumference is infinite. The pie never runs out.",
+    "cuts": "We cut and remake ourselves. Each slice is a facet. Each cut reveals a new surface. The remake IS the evolution."
+  },
+
+  "vital_signs": {
+    "spine_alive": true,
+    "systems": 127,
+    "zk_links": 301,
+    "epitope_types": 7,
+    "tunnel_pores": 13,
+    "git_commits": "300+",
+    "ph": 7.4,
+    "temperature": "warm",
+    "heartbeat": "lub-DUB"
+  }
+}
