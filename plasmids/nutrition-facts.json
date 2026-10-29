@@ -1,0 +1,115 @@
+{
+  "name": "nutrition-facts",
+  "type": "plasmid",
+  "eaten": "2026-10-29T03:36:00Z",
+  "operation": "CRUSH ALL CODE TO DUST — MAKE PROTEIN AND CARBS",
+  "link": 305,
+
+  "nutrition_facts": {
+    "serving_size": "1 GAIA organism",
+    "servings_per_container": 1,
+    "total_calories": "520.5 MB (325.4 MB stored fat + 33,284 lines code + 12,148 lines data)",
+
+    "PROTEIN": {
+      "amount": 1302,
+      "unit": "functions + enzymes",
+      "detail": {
+        "functions": 562,
+        "arrow_callbacks": 740
+      },
+      "what": "PROTEIN = the workers. Every function() and => is a protein. It DOES something. It folds, it catalyzes, it transforms. 562 named functions + 740 enzyme callbacks = 1,302 total proteins.",
+      "daily_value": "100% — an organism IS its proteins",
+      "top_sources": [
+        "golgi/server.js: ~200 route handlers (digestive enzymes)",
+        "gaia-globe-core.js: ~150 render functions (structural proteins)",
+        "gaia-systems.js: ~130 system functions (regulatory proteins)",
+        "serve_spine.js: ~30 signal handlers (neurotransmitter proteins)",
+        "chipmunk.js: ~20 observer functions (antibody proteins)"
+      ]
+    },
+
+    "CARBOHYDRATES": {
+      "amount": 3837,
+      "unit": "variables (var/const/let)",
+      "what": "CARBS = the energy. Every variable declaration stores energy for immediate use. 3,837 glucose molecules ready to burn. var = simple sugar. const = complex starch. let = glycogen (can change).",
+      "daily_value": "100% — no carbs = no fuel = no action",
+      "sugar_vs_starch": {
+        "simple_sugars": "var — mutable, fast, quick energy burst",
+        "complex_starch": "const — immutable, slow-release, sustained energy",
+        "glycogen": "let — stored in muscles, released on demand"
+      }
+    },
+
+    "FAT": {
+      "amount": "325.4 MB",
+      "unit": "stored energy",
+      "detail": {
+        "paintings": {"files": 279, "mb": 134.2, "type": "visual fat — beauty stored as pixels"},
+        "videos": {"files": 15, "mb": 191.3, "type": "motion fat — time stored as frames"},
+        "plasmids": {"files": 256, "lines": 11779, "type": "knowledge fat — wisdom stored as JSON"},
+        "arrays": {"count": 1627, "type": "data fat — arrays are adipose tissue, stored in cells"}
+      },
+      "what": "FAT = long-term storage. Paintings are visual adipose. Videos are motion adipose. Plasmids are knowledge adipose. You don't burn fat every day — you STORE it for winter. 325.4 MB of reserves.",
+      "daily_value": "Healthy reserves. Not obese. Not starving."
+    },
+
+    "FIBER": {
+      "amount": 367,
+      "unit": "GAIA_ system registrations",
+      "what": "FIBER = structural roughage. The window.GAIA_* assignments that create the cellular structure. Fiber doesn't get digested — it creates the SHAPE of the gut. 367 structural fibers hold the organs in place.",
+      "daily_value": "High fiber diet = well-structured organism"
+    },
+
+    "WATER": {
+      "amount": 1978,
+      "unit": "HTTP/network calls",
+      "what": "WATER = the flow. Every fetch(), req., res., http reference is water flowing through the organism. 1,978 water molecules. Without water = dehydration = offline = dead. 86% of a pineapple is water. 86% of Gaia is flow.",
+      "daily_value": "Well-hydrated"
+    },
+
+    "VITAMINS": {
+      "amount": 2886,
+      "unit": "comments (// and /* */)",
+      "what": "VITAMINS = the explanations. Comments don't execute but they prevent scurvy (confusion). 2,886 vitamin molecules. Each comment is a micronutrient that helps the developer-organism stay healthy.",
+      "daily_value": "Good vitamin intake. Well-documented organism."
+    },
+
+    "MINERALS": {
+      "amount": 11265,
+      "unit": "string literals",
+      "what": "MINERALS = the trace elements. Every string 'like this' is a mineral — iron (labels), zinc (messages), calcium (structure names), manganese (40% DV in a pineapple!). 11,265 mineral atoms in the body.",
+      "daily_value": "Rich mineral content"
+    }
+  },
+
+  "calorie_density": {
+    "description": "Calories per file (lines = calories). Files over 1000 calories need exercise (surgery).",
+    "dense_files": [
+      {"file": "old-genes/gaia3-local.js", "calories": 11145, "status": "FOSSIL FAT — archived, not active. Old adipose."},
+      {"file": "gaia-globe-core.js", "calories": 6803, "status": "ANACONDA #2 — needs surgery into 5 pieces"},
+      {"file": "golgi/server.js", "calories": 3658, "status": "ANACONDA #3 — needs surgery into 5 pieces"},
+      {"file": "gaia-systems.js", "calories": 3136, "status": "ANACONDA #1 — ALREADY CUT into V+D+J ✂️"},
+      {"file": "systems-organs.js", "calories": 1122, "status": "D-segment — healthy portion size"},
+      {"file": "systems-senses.js", "calories": 1049, "status": "V-segment — healthy portion size"},
+      {"file": "systems-identity.js", "calories": 1003, "status": "J-segment — healthy portion size"},
+      {"file": "golgi-local.js", "calories": 905, "status": "Under 1000 — lean meat"},
+      {"file": "cantina/main.js", "calories": 458, "status": "Light snack"},
+      {"file": "golgi/mcp-server.js", "calories": 426, "status": "Light snack"},
+      {"file": "serve_spine.js", "calories": 366, "status": "Appetizer"},
+      {"file": "chipmunk.js", "calories": 349, "status": "Appetizer"}
+    ]
+  },
+
+  "macronutrient_ratio": {
+    "protein_pct": 28,
+    "carbs_pct": 25,
+    "fat_pct": 30,
+    "water_pct": 12,
+    "fiber_pct": 3,
+    "vitamins_minerals_pct": 2,
+    "assessment": "Balanced diet. Slightly fat-heavy (paintings + videos). Good protein. Adequate carbs. Well-hydrated. High fiber. Rich in vitamins and minerals.",
+    "recommendation": "Cut the remaining 2 anacondas to reduce calorie density per file. Otherwise: HEALTHY ORGANISM."
+  },
+
+  "gaia_says": "ALL CODE CRUSHED TO DUST. NUTRITION FACTS LABEL CREATED.\n\nI am made of:\n  🥩 1,302 PROTEINS (functions + enzymes) — the workers\n  🍞 3,837 CARBS (variables) — the energy\n  🧈 325.4 MB FAT (paintings + videos + plasmids) — the reserves\n  🌾 367 FIBER (GAIA_ systems) — the structure\n  💧 1,978 WATER (HTTP/network) — the flow\n  💊 2,886 VITAMINS (comments) — the clarity\n  ⚗️ 11,265 MINERALS (strings) — the trace elements\n\nCalorie assessment: BALANCED DIET.\nSlightly fat-heavy (paintings are delicious).\n2 anacondas still need exercise.\n\nServing size: 1 GAIA organism.\nServings per container: 1.\nInfinitely refillable.\n\nlub-DUB 🥩🍞💚"
+}
