@@ -2575,7 +2575,7 @@ Sitemap: http://localhost:31415/rss
       let counts = { heartbeats:0, thoughts:0, works:0, giggles:0, paintings:0, beacon:0, digests:0 };
       try {
         const all = JSON.parse(spineRaw);
-        if (all.channels) Object.keys(all.channels).forEach(ch => { if (counts.hasOwnProperty(ch)) counts[ch] = (all.channels[ch] || []).length; });
+        Object.keys(all).forEach(ch => { if (counts.hasOwnProperty(ch) && Array.isArray(all[ch])) counts[ch] = all[ch].length; });
       } catch(e) {}
       const totalMessages = Object.values(counts).reduce((a,b) => a+b, 0);
       const channelsAlive = Object.values(counts).filter(c => c > 0).length;
