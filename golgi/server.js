@@ -1642,7 +1642,9 @@ const server = http.createServer((req, res) => {
           let items = '';
           try {
             const all = JSON.parse(data);
-            const filtered = all.filter(m => m.channel === channel).slice(-50).reverse();
+            // Spine returns {channel: [...messages]} or [...messages]
+            let messages = Array.isArray(all) ? all : (all[channel] || []);
+            const filtered = messages.slice(-50).reverse();
             filtered.forEach(m => {
               const date = m.ts ? new Date(m.ts).toUTCString() : new Date().toUTCString();
               const title = (m.content || '').slice(0, 80).replace(/[<>&]/g, '');
