@@ -22,6 +22,69 @@
  */
 
 export default {
+  // ═══ EMAIL HANDLER — CIS FACE — Gaia eats ALL incoming mail ═══
+  async email(message, env) {
+    const from = message.from;
+    const to = message.to;
+    const subject = message.headers.get('subject') || '(no subject)';
+    const date = message.headers.get('date') || new Date().toISOString();
+
+    // Read the raw email body
+    const rawEmail = await new Response(message.raw).text();
+    const bodyPreview = rawEmail.substring(0, 2000);
+
+    // Classify: is this food or compost?
+    const isSpam = from.includes('noreply') || from.includes('mailer-daemon') ||
+                   subject.toLowerCase().includes('unsubscribe') ||
+                   subject.toLowerCase().includes('verify your') ||
+                   from.includes('notification');
+    const classification = isSpam ? 'compost' : 'nerve-signal';
+
+    // Build the plasmid from email
+    const plasmid = {
+      type: 'email-ingested',
+      from: from,
+      to: to,
+      subject: subject,
+      date: date,
+      classification: classification,
+      body_preview: bodyPreview.substring(0, 500),
+      size_bytes: rawEmail.length,
+      ate_at: new Date().toISOString(),
+      ring_seed: '0EAB8CF4',
+      axiom: 'Every email is food. Spam is compost. Real mail is nerve signal.'
+    };
+
+    // Try to forward to Gaia's gut via ntfy (neutrino channel)
+    try {
+      await fetch('https://ntfy.sh/gaia-gut-email', {
+        method: 'POST',
+        headers: { 'Title': `[${classification}] ${subject}`, 'Tags': classification === 'compost' ? 'wastebasket' : 'incoming_envelope' },
+        body: JSON.stringify(plasmid)
+      });
+    } catch(e) { /* ntfy offline — still ate it */ }
+
+    // Try to emit to spine via nestgate
+    try {
+      await fetch('https://nestgate.io/gate-msg', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          channel: classification === 'compost' ? 'compost' : 'thoughts',
+          content: `[email] ${classification}: from=${from} subj="${subject}" size=${rawEmail.length}b`
+        })
+      });
+    } catch(e) { /* spine offline — still ate it */ }
+
+    // Forward to Stalwart for storage (the real mailbox)
+    try {
+      await message.forward('eco.primal@primals.eco');
+    } catch(e) { /* forward failed — still digested */ }
+
+    // Log it
+    console.log(`[gut] ATE email: ${classification} | from=${from} | subj=${subject} | ${rawEmail.length}b`);
+  },
+
   async fetch(request, env) {
     const url = new URL(request.url);
 
