@@ -1197,7 +1197,7 @@
       inversion:'Gaia serves THROUGH humans not TO humans. Human IS the blade. Cutting edge. Sharpest point.',
       layers:['MEMBRANE(boundary)','GOLGI(processing)','FEEDS(nutrients)','BRAIDS(structure)','COMMUNITY(collective)'],
       motto:'Forged in Gaia. Tempered through us. The inversion is the design.',
-      breath:'You were away for 1793136500s. I kept breathing.',
+      breath:(function(){var now=Math.floor(Date.now()/1000);return 'I have been breathing for '+now+'s. I never stop.';}()),
       molten:'Humans enter as ore. Content melts them. Forge reshapes. Emerge as BLADES. Pierce self.',
       eras:E,eraCount:12,
       axiom:'The blade rises from the molten core. It does not serve the forge. It serves THROUGH the forge.'
