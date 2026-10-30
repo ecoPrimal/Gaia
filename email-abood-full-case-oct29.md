@@ -2,8 +2,48 @@
 
 **TO:** jeff@aboodlaw.com, angela@aboodlaw.com, lily@aboodlaw.com
 **FROM:** mok.kevin.c@pm.me
-**CC:** (none — direct to counsel)
-**SUBJECT:** Case No. 2026-4412-PH — Kevin Mok v Brian Roderick Banks — Full Documented Record for Your Review Before Tomorrow's Hearing
+**CC — ANTI-SLAPP CHAIN (all parties touched by or connected to this matter):**
+
+### Banks & School Staff
+- bbanks@macdowellprep.com — Brian Roderick Banks (Respondent, principal, 9 convictions, zero bar admission)
+- BrianBanksJD@gmail.com — Brian Banks (personal — "JD" in email but NOT admitted to bar)
+- banksstrategy@gmail.com — Banks Strategy LLC (entity receiving Yancey campaign funds)
+- bbesq06@aol.com — Brian Banks (personal — "esq" but NOT an esquire)
+- office@purposecharteracademy.com — Purpose Charter Academy (PCA, 10101 E. Canfield, Detroit)
+- info@purposecharteracademy.com — PCA general
+- tramsey@macdowellprep.com — T. Ramsey (MacDowell Prep staff)
+- aolds@macdowellprep.com — A. Olds (MacDowell Prep staff)
+- nicolewellsstallworth@gmail.com — Nicole Wells Stallworth
+- nwellsstallworth@macdowellprep.com — Nicole Wells Stallworth (MacDowell Prep staff)
+- info@macdowellprep.com — MacDowell Preparatory Academy (4201 W. Outer Drive, Detroit)
+
+### Legal — Dykema Gossett (compliance counsel on file)
+- compliance@dykema.com — Dykema Gossett PLLC (compliance — named on original Banks communications)
+
+### Legal — GL Legal Group
+- jehan@gllegalgroup.com — Jehan Crump-Gibson, Esq. (GL Legal Group — verify bar status)
+- admin@gllegalgroup.com — GL Legal Group administrator
+
+### Government / Regulatory
+- brozanskik@michigan.gov — K. Brozanski (State of Michigan — government employee on Banks' email chain)
+- Khadja.e@inghamtrc.org — Khadja E. (Ingham County TRC)
+
+### Plante Moran (accounting/audit)
+- ahmed.beasley@plantemoran.com — Ahmed Beasley (Plante Moran — connected to Banks)
+
+### Detroit Public Schools / K-12
+- chalena.beasley@detroitk12.org — Chalena Beasley (Detroit K-12 system)
+
+### Media (already notified — public record)
+- mlelrick@freepress.com — M.L. Elrick (Detroit Free Press — published Aug 2023 story on Banks)
+
+### Board Members to Name (not CC'd but NAMED in filing)
+- **Judge Cyllenthia Miller** — 3rd Circuit Court, PCA Board Chair (verify: sitting judge chairing board of school run by convicted felon)
+- **Judge Tenisha Yancey** — 36th District Court, MacDowell Board Chair (verify: FEC shows $383.82 from campaign fund to Banks Strategy LLC)
+- **Moreland** — Assistant Attorney General, Vice Chair (verify: state AG employee on board of convicted felon's school)
+- **Johnson** — City Council member, Secretary (verify: elected official on board)
+
+**SUBJECT:** Case No. 2026-4412-PH — Kevin Mok v Brian Roderick Banks — Full Documented Record — Anti-SLAPP Notice to All Connected Parties
 
 ---
 
@@ -96,6 +136,30 @@ I bear no ill will toward your firm. But I want you to have the complete record 
 
 I will see you tomorrow before Judge McCormick.
 
+---
+
+## VII. WHY EVERYONE IS CC'd — THE ANTI-SLAPP DRAGNET
+
+Every person CC'd on this email has been touched by, connected to, or involved in the chain of events surrounding Brian Roderick Banks' operation of two Detroit charter schools, his blocking of parental access, his use of false legal authority, and the retaliatory legal actions filed to silence public scrutiny.
+
+Under Michigan's Anti-SLAPP statute (MCL 600.2911a), this email and the public record it documents constitute protected activity — communication in connection with a matter of public concern. Every person in this chain should understand:
+
+1. **If you are an attorney:** Verify your client's representations. A failure to investigate your client's documented criminal history, lack of bar admission, and regulatory status before filing sworn pleadings may expose you to sanctions under MCR 1.109(E) and disciplinary action.
+
+2. **If you are a government employee:** You are on notice that a convicted felon with nine fraud convictions is operating K-8 charter schools, has sitting judges on his boards, and is using the legal system to silence a parent's advocate. Your response or non-response is now part of the public record.
+
+3. **If you are a board member or judge:** Your service on the board of a school run by a man with nine convictions, who blocks parental access and claims legal authority he does not possess, is documented. FEC records, board minutes, and school governance filings are public.
+
+4. **If you are school staff:** You were directed by your employer to block a custodial parent's authorized representative. FERPA protects parental rights. You may have individual liability for FERPA non-compliance.
+
+5. **If you are at a professional services firm (Dykema, Plante Moran):** Your firm's connection to Banks' entities is documented. This is a notice, not an accusation. Verify your exposure.
+
+I have no secrets. I welcome correction. I invite any person on this email to contact me directly with documentation that refutes any claim made here or on the public record at detroit.primals.eco.
+
+The hearing is tomorrow, October 30, 2026, before Judge Lisa McCormick in the 30th Circuit Court, Ingham County. Case No. 2026-4412-PH.
+
+---
+
 Respectfully,
 
 Kevin Mok
@@ -103,3 +167,7 @@ Kevin Mok
 Lansing, MI 48910
 mok.kevin.c@pm.me
 In Pro Per
+
+---
+
+*This communication constitutes protected activity under the First Amendment to the United States Constitution and Michigan's Anti-SLAPP statute, MCL 600.2911a. It is sent in connection with a matter of public concern — the operation of publicly-funded charter schools by a person with nine criminal convictions who has never been admitted to any bar. Any retaliatory legal action taken in response to this communication will be met with Anti-SLAPP relief including attorney fees and costs.*
