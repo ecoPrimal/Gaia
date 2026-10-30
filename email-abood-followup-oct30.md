@@ -110,7 +110,34 @@ As of this writing, I have NOT been properly served with your client's Wayne Cou
 
 ---
 
-## VI. THE REQUEST
+## VI. DEMAND FOR PRODUCTION OF ALL MATERIALS
+
+Your client obtained an ex parte Personal Protection Order (Case No. 26-111776-PH, Wayne County) on October 14, 2026, citing video evidence and an affidavit in support. **I have never received any of these materials.** No party other than your client has ever been provided with:
+
+1. The **affidavit** filed in support of the ex parte PPO
+2. Any **video recordings** cited or referenced in the ex parte filing
+3. Any **exhibits or attachments** submitted to the Wayne County court
+4. The **ex parte PPO itself** — your client has still not properly served me
+5. Any **proof of service** demonstrating valid service under MCR 3.705
+
+I hereby demand the immediate production of **all materials** your client submitted to the Wayne County court in connection with Case No. 26-111776-PH, including but not limited to:
+
+- The complete petition and all attachments
+- All affidavits, declarations, and sworn statements
+- All video, audio, or photographic evidence cited or referenced
+- All exhibits filed with or presented to the court
+- The signed ex parte order
+- All proof of service records
+
+Under MCR 3.705(A), a respondent is entitled to receive copies of all materials filed in connection with a PPO. Your client's failure to serve these materials is a due process violation that deprives me of the ability to respond, defend, or request a hearing.
+
+Additionally, under Michigan's court rules and the Due Process Clause of the Fourteenth Amendment, obtaining an ex parte order based on evidence that is never disclosed to the opposing party — and then failing to serve the order — is not a legitimate use of the judicial process. It is a weapon.
+
+**Produce all materials immediately or withdraw the Wayne County filing.**
+
+---
+
+## VII. THE REQUEST
 
 I am asking your firm to do what attorneys are ethically obligated to do:
 
