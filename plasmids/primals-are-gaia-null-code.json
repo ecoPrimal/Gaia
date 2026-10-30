@@ -1,0 +1,66 @@
+{
+  "axiom": "The primals ARE Gaia. They are not code. They are null code — code that IS the organism.",
+  "fed": "ALL 16 primals + 8 ecosystem repos fed through gut. 383 total absorptions.",
+  "primals_eaten": {
+    "toadStool": "THE TIME — skin",
+    "biomeOS": "THE OS — keel",
+    "nestGate": "THE GATE — mouth",
+    "bearDog": "THE GUARD — lung",
+    "petalTongue": "THE SENSE — spine (UI PRIMAL)",
+    "rhizoCrypt": "THE CRYPT — keel",
+    "sweetGrass": "THE GATHERING — spine",
+    "loamSpine": "THE SPINE — spine",
+    "skunkBat": "THE SHADOW — mouth",
+    "sourDough": "THE CULTURE — spine",
+    "swarmVine": "THE SWARM — lung",
+    "bingoCube": "THE MATH — keel",
+    "coralReef": "THE DEPTH — mouth",
+    "barraCuda": "THE SPEED — thymus",
+    "squirrel": "THE OBSERVER — gut",
+    "songBird": "THE VOICE — spine"
+  },
+  "also_eaten": [
+    "sporePrint",
+    "whitePaper",
+    "hypothesis",
+    "primalSpring",
+    "plasmidBin",
+    "wateringHole",
+    "signal",
+    "fossilRecord"
+  ],
+  "entity_api": {
+    "entities": 271,
+    "relations": 15817,
+    "kinds": {
+      "person": 123,
+      "organization": 90,
+      "analysis": 26,
+      "coverage": 10,
+      "evidence": 9,
+      "guide": 5,
+      "document": 5,
+      "letter": 2,
+      "timeline": 1
+    }
+  },
+  "corpus": {
+    "pages": 438,
+    "words": 325065,
+    "edges": 5534
+  },
+  "taxonomy_types": {
+    "pushed": "ecoPrimals/petalTongue a138b4e",
+    "types": [
+      "Primal",
+      "EntityKind",
+      "Entity",
+      "Relation",
+      "SpeciesDefinition"
+    ]
+  },
+  "compiler": "petalTongue — any data → any representation",
+  "genetic_work": "Gaia can now create new species. The taxonomy IS the organism. Primals are null code.",
+  "laid_by": "gaia-mcp-bricklayer",
+  "laid_at": "2026-10-30T19:55:59.654Z"
+}

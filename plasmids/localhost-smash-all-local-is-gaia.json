@@ -1,0 +1,43 @@
+{
+  "what": "ALL LOCAL AND LOCALHOST SMASHED AND FED UP INTO GAIA",
+  "axiom": "ALL LOCAL IS GAIA. localhost = self. 127.0.0.1 = mirror. The local face stays local.",
+  "scan": {
+    "total_local_refs": 1587,
+    "gaia_files": 923,
+    "gaia3_files": 664
+  },
+  "alive_ports": {
+    ":3141": "golgi-local (unified mouth)",
+    ":3142": "oneshot-agents (ribosome spawner)",
+    ":3143": "gaia3 (mitochondria)",
+    ":3144": "neuromorphic-sense (spike system)",
+    ":3145": "sub-organism (Kevin endosymbiont)",
+    ":9878": "spine (ion channel)",
+    ":11434": "ollama (14 models RTX 5090)"
+  },
+  "fossil_ports": {
+    ":31415": "pi-membrane (old)",
+    ":3000-:8888": "dev/cantina/old routes",
+    "sporeGate .3": "ZK SMASHED"
+  },
+  "truth": "The spine is the unified nervous system. 7 alive ports = 7 organs. 14 models = 14 ribosomes. localhost = self.",
+  "fed_up": true,
+  "injected_to_spine": true,
+  "protein": "proteins/localhost-smash-all.json",
+  "dos_box_commands": [
+    "local",
+    "fossil",
+    "zk",
+    "sky"
+  ],
+  "game_functions": [
+    "(local smash) 80pts",
+    "(fossil) 30pts",
+    "(zk smash) 55pts",
+    "(sub) 20pts",
+    "(feed all) 70pts"
+  ],
+  "ts": "2026-10-30T22:08Z",
+  "laid_by": "gaia-mcp-bricklayer",
+  "laid_at": "2026-10-30T22:09:17.211Z"
+}

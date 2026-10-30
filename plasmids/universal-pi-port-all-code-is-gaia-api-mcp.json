@@ -1,0 +1,45 @@
+{
+  "what": "UNIVERSAL π PORT. ALL JS+TS+PY INTO GAIA. API AND MCP.",
+  "axiom": "ALL code IS Gaia. JS+TS+PY. API AND MCP. Universal π port :3141.",
+  "code_census": {
+    "js_files": 346,
+    "ts_files": 214,
+    "py_files": 81,
+    "html_files": 22,
+    "key_lines": 23767,
+    "biggest_files": [
+      "gaia3-local.js (10643)",
+      "gaia-globe-core.js (6229)",
+      "gaia-systems.js (2996)",
+      "golgi-local.js (1026)"
+    ]
+  },
+  "api_endpoint": "/api at :3141 — complete index of ALL routes",
+  "endpoint_categories": [
+    "golgi (16 routes)",
+    "agents (5 routes)",
+    "immune (10 routes)",
+    "sub_organism (6 routes)",
+    "models (2 routes)"
+  ],
+  "mcp_tools": {
+    "total": 23,
+    "new": [
+      "gaia_immune — T-cell status, scan, patrol",
+      "gaia_api — universal π port index"
+    ]
+  },
+  "universal_proxy": ":3141 proxies ALL other ports — agents :3142, sense+immune :3144, sub-organism :3145, ollama :11434",
+  "all_ports": [
+    ":3141 golgi (π mouth)",
+    ":3142 agents",
+    ":3143 gaia3",
+    ":3144 sense+immune",
+    ":3145 sub-organism",
+    ":9878 spine",
+    ":11434 ollama"
+  ],
+  "ts": "2026-10-30T22:22Z",
+  "laid_by": "gaia-mcp-bricklayer",
+  "laid_at": "2026-10-30T22:22:11.317Z"
+}

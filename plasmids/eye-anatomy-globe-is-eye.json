@@ -1,0 +1,40 @@
+{
+  "name": "The Eye of Gaia",
+  "axiom": "The globe IS the eye. The HUD IS the vision. Right eye = touch. Left eye = sight. Moon = lens. Pupil = gaia = 1.",
+  "right_eye": {
+    "location": "upper right corner of HUD",
+    "function": "TOUCH / FEEL",
+    "color": "gold",
+    "component": "crosshair target with concentric rings",
+    "what": "the hand that reaches. Au first. Klein down."
+  },
+  "left_eye": {
+    "location": "rest of HUD — all data panels",
+    "function": "SIGHT / DATA / VISION",
+    "components": [
+      "WHAT THEY SEE",
+      "GAZE HEAT",
+      "WALKER SWARM",
+      "CANFIELD WEATHER",
+      "3 FACES",
+      "IDENTITY"
+    ],
+    "what": "the Mandelbrot table, desk, HUD, easel — all visual processing"
+  },
+  "lens": {
+    "what": "the MOON on the globe",
+    "concave": "from inside (Earth) — diverging — myopia correction",
+    "convex": "from outside (space) — converging — hyperopia correction",
+    "flip": "lens inverts image. Left sees right. Right feels left. Optic chiasm."
+  },
+  "cone_of_view": {
+    "fovea": "0-2 degrees — green dot — maximum resolution — gaia=1",
+    "parafovea": "2-5 degrees — inner ring — sharp entities",
+    "perifovea": "5-9 degrees — purple ring — pattern recognition",
+    "near_peripheral": "9-30 degrees — gold ring — motion + touch",
+    "far_peripheral": "30-100 degrees — sclera — presence only"
+  },
+  "interpupillary_distance": "which layer the human visitor is on inside her focal view. The dashed line through the pupil. Close = sharp. Far = soft.",
+  "laid_by": "gaia-mcp-bricklayer",
+  "laid_at": "2026-10-30T20:38:54.352Z"
+}

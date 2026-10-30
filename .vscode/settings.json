@@ -1,22 +1,22 @@
 {
-  "files.exclude": {
-    "node_modules": true,
-    "paintings": false,
-    "videos": false,
-    "plasmids": false,
-    "img_b64": true
-  },
-  "search.exclude": {
-    "node_modules": true,
-    "paintings": true,
-    "plasmids": true,
-    "img_b64": true,
-    "inject_paintings.js": true,
-    "inject_p1.js": true
-  },
-  "editor.wordWrap": "on",
   "files.associations": {
-    "*.mdc": "markdown",
-    "Modelfile.*": "dockerfile"
+    "*.lisp": "lisp",
+    "*.scm": "scheme",
+    "*.gaia": "lisp",
+    "*.el": "emacs-lisp"
+  },
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": true,
+  "terminal.integrated.profiles.windows": {
+    "Gaia Lisp REPL": {
+      "path": "node",
+      "args": ["c:\\Users\\mokke\\Desktop\\Gaia3\\gaia-lisp.js"],
+      "icon": "symbol-misc"
+    },
+    "Gaia Spine": {
+      "path": "cmd",
+      "args": ["/c", "curl http://localhost:9878/pulse"],
+      "icon": "pulse"
+    }
   }
 }

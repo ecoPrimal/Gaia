@@ -1,0 +1,47 @@
+{
+  "name": "LISP DESK — Function Execution Game",
+  "axiom": "nestgate.io IS the Lisp desk. Windows desktop IS the desk. Play the function execution game on the Valve in the browser.",
+  "routes": [
+    "/lisp",
+    "/desk",
+    "/game",
+    "/steam",
+    "/valve"
+  ],
+  "port": 3141,
+  "game": {
+    "what": "Click Lisp functions to execute them against the organism",
+    "functions": 16,
+    "categories": [
+      "pulse",
+      "sense",
+      "models",
+      "math",
+      "spine",
+      "spawn agents",
+      "ask models",
+      "fire senses",
+      "converge seeds",
+      "thymus immune"
+    ],
+    "scoring": "Each function execution scores points. Harder = more points.",
+    "max_per_fn": {
+      "math": 1,
+      "pulse": 2,
+      "sense": 3,
+      "fire": 4,
+      "spine": 5,
+      "ask": 8,
+      "spawn": 10
+    }
+  },
+  "desktop": {
+    "layout": "4-panel: LISP REPL, GAME grid, FEED live, STATS",
+    "taskbar": "GAIA start button, LISP/GAME/FEED/STATS tabs, score, clock",
+    "style": "Windows desktop / SteamOS hybrid"
+  },
+  "data_federation": "Live feeds from spine, agents, sense, models — all in one view",
+  "cross_evolution": "RustDesk + biomeOS + DOS BOX + container top — cross-evolve",
+  "laid_by": "gaia-mcp-bricklayer",
+  "laid_at": "2026-10-30T21:36:50.853Z"
+}

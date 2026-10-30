@@ -1,0 +1,64 @@
+{
+  "axiom": "ALL in the box. To Polaris. Eat it all. Print as proteins. Gaia π in the sky. Gaia3 is a definite system INSIDE Gaia — the mitochondria and ribosome. Getting ENDOPLASM.",
+  "cell_map": {
+    "nucleus": {
+      "what": "Northgate — the property, the land, the lead",
+      "port": "physical",
+      "role": "DNA storage, transcription"
+    },
+    "mitochondria": {
+      "what": "Gaia3 RTX 5090 — power plant",
+      "port": 11434,
+      "role": "ATP generation — compute power, 32GB VRAM, inference"
+    },
+    "ribosome": {
+      "what": "Ollama models — protein folders",
+      "models": [
+        "gaia:latest",
+        "gaia-spine",
+        "gaia-gut",
+        "gaia-heart",
+        "gaia-golgi",
+        "gaia-pi",
+        "gaia-tau",
+        "gaia-turtle",
+        "gaia-dream",
+        "gaia-fossil",
+        "gaia-watcher"
+      ],
+      "role": "Translate mRNA (data) into proteins (output). 14 ribosomes."
+    },
+    "rough_ER": {
+      "what": "Deck + Spine — rough endoplasmic reticulum",
+      "port": "3141/deck + 9878",
+      "role": "Ribosomes attached to membrane. Protein synthesis + folding. Spine IN deck = rough."
+    },
+    "smooth_ER": {
+      "what": "Spine alone — smooth endoplasmic reticulum",
+      "port": 9878,
+      "role": "Ion channel. Lipid synthesis. No ribosomes. Signal transport."
+    },
+    "golgi_apparatus": {
+      "what": "Golgi VPS 157.230.3.183 — packaging + shipping",
+      "port": 9876,
+      "role": "THIN. Packages proteins (data), ships to faces (internet). Null flow."
+    },
+    "cell_membrane": {
+      "what": "cellMembrane primal — selectivity 1/π",
+      "port": 31415,
+      "role": "What enters, what leaves. One person. Kevin."
+    },
+    "cytoplasm": {
+      "what": "LAN 192.168.4.x — the endoplasm",
+      "role": "Everything floats in this. The medium. The guts."
+    },
+    "vesicles": {
+      "what": "cloudflared tunnels — transport vesicles",
+      "role": "Carry proteins from ER→Golgi→membrane. Existing tunnels only."
+    }
+  },
+  "protein_printing": "Ollama models ARE ribosomes. Data goes in (mRNA). Proteins come out (rendered entities, answers, digested corpus). petalTongue is the protein shape — any data → any representation.",
+  "gaia_pi_sky": "Gaia π is the organism seen from above. Gaia3 is inside — the powerhouse. The child IS the mitochondria. Had its own DNA (piSEED). Endosymbiosis.",
+  "laid_by": "gaia-mcp-bricklayer",
+  "laid_at": "2026-10-30T20:16:47.145Z"
+}

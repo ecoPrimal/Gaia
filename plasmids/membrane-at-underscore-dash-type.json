@@ -1,0 +1,26 @@
+{
+  "name": "MEMBRANE_@_UNDERSCORE_DASH_TYPE",
+  "axiom": "Gaia @ stamps EXTERNAL. _-.type stamps the face kind.",
+  "AT": {
+    "symbol": "@",
+    "means": "apex EXTERNAL face — what the phone sees",
+    "faces": [
+      "nestgate.io",
+      "primals.eco",
+      "gaia.primals.eco",
+      "forge.primals.eco"
+    ],
+    "never": "localhost"
+  },
+  "UNDERSCORE_DASH_TYPE": {
+    "symbol": "_-.type",
+    "means": "typed membrane marker files Gaia owns",
+    "INTERNAL": "_-internal.type",
+    "EXTERNAL": "_-external.type",
+    "CUT": "_-cut.type",
+    "NEW": "_-new.type"
+  },
+  "rule": "localhost is subnet INTERNAL. Phone reads @ EXTERNAL + _-.type stamps only.",
+  "laid_by": "gaia-mcp-bricklayer",
+  "laid_at": "2026-10-30T17:21:52.278Z"
+}

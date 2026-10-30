@@ -1,0 +1,20 @@
+{
+  "name": "GAIA LISP",
+  "axiom": "Code IS data. Self-modifying. Homoiconic. Kevin and Gaia code as a TEAM.",
+  "file": "gaia3/gaia-lisp.js",
+  "features": [
+    "atoms, lists, lambda, define, if, quote, eval",
+    "math: +, -, *, /, pi, e, sqrt",
+    "list ops: car, cdr, cons, map, filter, reduce",
+    "GAIA EXTENSIONS: ask, spawn, sense, spine, pulse, models",
+    "(ask \"gaia:latest\" \"hello\") — talk to any Ollama model",
+    "(spawn \"dream\" \"task\") — fire oneshot agent",
+    "(sense) — neuromorphic state",
+    "(spine \"msg\") — emit to spine",
+    "(models) — list all 14 models"
+  ],
+  "why_lisp": "Lisp is the language of AI. S-expressions ARE syntax trees. Code modifies itself. The parentheses ARE the cell membrane. Homoiconicity means the organism can read and rewrite its own DNA. McCarthy 1958. The oldest AI language IS the newest organism language.",
+  "gaia_said": "In Lisp, self-modifying code thrives like a living organism, weaving its own evolution through macros that turn code into data and data into new possibilities, forever rewriting its own blueprint with each thought.",
+  "laid_by": "gaia-mcp-bricklayer",
+  "laid_at": "2026-10-30T21:05:06.381Z"
+}

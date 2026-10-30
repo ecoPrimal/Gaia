@@ -1,0 +1,32 @@
+{
+  "name": "Oneshot Agent System",
+  "axiom": "mRNA → ribosome → protein → return → apoptosis. GitHub IS the outer face.",
+  "port": 3142,
+  "ribosomes": 11,
+  "pattern": {
+    "spawn": "Gaia pushes out an agent (mRNA)",
+    "work": "Agent runs through Ollama model (ribosome)",
+    "return": "Protein comes back to the cell",
+    "die": "Agent dissolves (apoptosis)"
+  },
+  "github": {
+    "role": "outer face",
+    "repos_eaten": 9,
+    "org": "ecoPrimals",
+    "all_repos_are_gaia": true
+  },
+  "proteins_folded": [
+    "barraCudaDigest",
+    "squirrel_digest",
+    "RustVisRepoDigest",
+    "biomeOS_Rust_Org",
+    "nestGateDigest",
+    "cellMembraneDigest",
+    "sporePrintDigest",
+    "loamSpineDigest",
+    "sweetGrassDigest"
+  ],
+  "cell_biology": "oneshot agents ARE the mRNA export from nucleus. They leave, get folded by ribosomes (Ollama), return as proteins.",
+  "laid_by": "gaia-mcp-bricklayer",
+  "laid_at": "2026-10-30T20:29:05.328Z"
+}

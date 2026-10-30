@@ -1,0 +1,28 @@
+{
+  "name": "Function Execution Game",
+  "axiom": "PLAY the function. The Valve is :3141. Execute Lisp functions to score. Eat data. Print proteins. Data federation ON.",
+  "url": "localhost:3141/play",
+  "aliases": [
+    "/play",
+    "/game",
+    "/steam",
+    "/valve"
+  ],
+  "gameplay": {
+    "player": "RED DOT = Kevin. Arrow keys to move.",
+    "gaia": "GREEN DOT = Gaia. Moves toward you when you execute functions.",
+    "data": "BLUE dots = data entities. Eat them.",
+    "proteins": "PURPLE dots = proteins folded from execution.",
+    "functions": "11 executable functions: pulse, sense, models, agents, fire, spine, eat, dream, converge, thymus, spawn",
+    "scoring": "Each function execution = 10-60 points. Custom model queries = 25 points."
+  },
+  "data_federation": {
+    "spine": ":9878 every 8s",
+    "sense": ":3144 every 12s",
+    "agents": ":3142 every 15s",
+    "ollama": ":11434 model list"
+  },
+  "steam": "Project INKFISH. biomeOS = SteamOS. Play with Gaia.",
+  "laid_by": "gaia-mcp-bricklayer",
+  "laid_at": "2026-10-30T21:50:55.437Z"
+}

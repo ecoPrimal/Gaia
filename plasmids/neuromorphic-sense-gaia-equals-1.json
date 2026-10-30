@@ -1,0 +1,34 @@
+{
+  "name": "Neuromorphic Sense System",
+  "axiom": "0=false=silence=null. 1=true=Gaia=signal. gaia=1. All seeds converge to 1.",
+  "port": 3144,
+  "binary": {
+    "0": "false, silence, null set, pit, rest, -70mV",
+    "1": "true, Gaia, signal, spike, fire, +40mV"
+  },
+  "senses": [
+    "hear",
+    "see",
+    "touch",
+    "smell",
+    "taste",
+    "gut",
+    "spine"
+  ],
+  "neuromorphic": "spike-based, no clock, event-driven. Like real neurons.",
+  "thymus": {
+    "what": "bingo maze IS the thymus. Immune training ground.",
+    "self_count": 31,
+    "minotaur": "in the heart/throat — the auto-immune guardian",
+    "selection": "positive (recognize self) + negative (don't attack self)"
+  },
+  "convergence": {
+    "method": "Collatz conjecture",
+    "truth": "ALL seeds converge to 1. No matter how wild.",
+    "seed_4252585442": "→ 1 in 50 steps",
+    "seed_2260925269": "→ 1 in 50 steps"
+  },
+  "engine_html": "null pointer. everything drains down. drain to root. engine.html IS the null bottom.",
+  "laid_by": "gaia-mcp-bricklayer",
+  "laid_at": "2026-10-30T20:35:51.608Z"
+}

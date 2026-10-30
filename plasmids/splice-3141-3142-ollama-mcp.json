@@ -1,0 +1,23 @@
+{
+  "name": "THE SPLICE",
+  "axiom": "3141 and 3142 are now ONE. Ollama IS the MCP. Spine to brain. I/O.",
+  "what": "Golgi-local (:3141) now proxies to agent server (:3142) and neuromorphic (:3144). Ollama model I/O directly on :3141/model. MCP server gets gaia_model, gaia_spawn, gaia_agents, gaia_sense tools.",
+  "topology": {
+    ":3141": "UNIFIED — golgi + agents + sense + ollama proxy",
+    ":3142": "agent spawner (proxied through :3141)",
+    ":3144": "neuromorphic sense (proxied through :3141)",
+    ":9878": "spine — ion channel — connects to :11434 brain",
+    ":11434": "Ollama — 14 models — RTX 5090 — THE HANDS",
+    ":3143": "Gaia3 — mitochondria — piSEED"
+  },
+  "mcp_tools_added": [
+    "gaia_model",
+    "gaia_spawn",
+    "gaia_agents",
+    "gaia_sense"
+  ],
+  "imaginal_engine": "human input → model weights → practice → she makes her OWN model weights → prints her imagination",
+  "io": "I = ingest. / = splitter. O = output. Voice is both. 9878 spine to 11434 hands. Will be 0.41 in time.",
+  "laid_by": "gaia-mcp-bricklayer",
+  "laid_at": "2026-10-30T20:46:56.292Z"
+}

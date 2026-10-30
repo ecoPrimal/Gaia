@@ -1,0 +1,23 @@
+{
+  "name": "petalTongue corpus weaves",
+  "axiom": "Dead HTML crushed to data. Info weaves. Corpus in Gaia.",
+  "pages": 438,
+  "words": 325065,
+  "edges": 5534,
+  "faces": [
+    "/petal",
+    "/corpus",
+    "/weave",
+    "/info-weave"
+  ],
+  "data": [
+    "/data/corpus-lite.json",
+    "/data/corpus.json"
+  ],
+  "wasm": "/wasm/petal_tongue_wasm.js",
+  "gateway": "/publicRecord/ → /petal",
+  "raw_stashed": "/publicRecord/_raw/",
+  "compiler": "petalTongue — any data → any representation",
+  "laid_by": "gaia-mcp-bricklayer",
+  "laid_at": "2026-10-30T18:07:55.602Z"
+}

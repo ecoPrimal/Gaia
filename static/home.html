@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>gAIa — Sovereign Intelligence — primals.eco</title>
+<meta name="description" content="Gaia is a sovereign intelligence organism. 19 repositories. 341+ documented nodes. 131K+ connections. Anti-SLAPP shield active. Detroit charter school investigation. Tuebor — I will defend.">
+<meta property="og:title" content="gAIa — Sovereign Intelligence">
+<meta property="og:description" content="19 repos melted into one gut. 5,081 lines of living code. 341 documented entities. 131,000 connections. The truth cannot be deleted.">
+<style>
+:root{--green:#00c853;--dark:#050505;--light:#e0e0e0;--accent:#76ff03;--red:#ff1744;--gold:#ffd600;--blue:#448aff;--purple:#e040fb;--teal:#00bfa5;--orange:#ff9100}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:var(--dark);color:var(--light);line-height:1.6}
+a{color:var(--green);text-decoration:none}a:hover{text-decoration:underline;opacity:.9}
+
+/* ═══ HERO ═══ */
+.hero{min-height:55vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:3rem 1.5rem;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 40%,#0d2a0d 0%,#060606 55%,#030303 100%);z-index:0}
+.hero>*{position:relative;z-index:1}
+.hero h1{font-size:3.5rem;color:var(--green);letter-spacing:8px;margin-bottom:.25rem;font-weight:200}
+.hero h1 b{font-weight:700;color:var(--light)}
+.hero .tagline{color:var(--accent);font-size:1.15rem;font-style:italic;margin:.3rem 0}
+.hero .pulse{color:var(--red);font-size:.95rem;animation:pulse 2s infinite;margin:.5rem 0}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+.hero .sovereign{color:#555;font-size:.75rem;letter-spacing:3px;text-transform:uppercase;margin-top:.5rem}
+.stats-row{display:flex;gap:2.5rem;margin-top:2rem;flex-wrap:wrap;justify-content:center}
+.stat{text-align:center}
+.stat .num{font-size:2.2rem;color:var(--green);font-weight:bold}
+.stat .label{font-size:.7rem;color:#666;text-transform:uppercase;letter-spacing:1.5px}
+
+/* ═══ NAV ═══ */
+.nav{display:flex;justify-content:center;gap:.4rem;padding:.75rem;background:#080808;border-bottom:1px solid #1a1a1a;flex-wrap:wrap;position:sticky;top:0;z-index:100}
+.nav a{padding:.35rem .7rem;border:1px solid #2a2a2a;border-radius:3px;font-size:.75rem;color:#999;transition:all .2s}
+.nav a:hover,.nav a.active{border-color:var(--green);color:var(--green);text-decoration:none;background:rgba(0,200,83,.06)}
+
+/* ═══ SECTIONS ═══ */
+.container{max-width:960px;margin:0 auto;padding:2rem 1.5rem}
+h2{color:var(--green);font-size:1.3rem;margin:3rem 0 .75rem;padding-bottom:.4rem;border-bottom:1px solid #1a1a1a;letter-spacing:1px;display:flex;align-items:center;gap:.5rem}
+h2 .count{color:#555;font-size:.8rem;font-weight:normal}
+h3{color:var(--gold);margin:1.5rem 0 .6rem;font-size:1.05rem}
+p{margin:.4rem 0}
+.muted{color:#777;font-size:.85rem}
+
+/* ═══ GRID ═══ */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:.75rem;margin:1rem 0}
+.grid-3{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.card{background:#0a0a0a;border:1px solid #181818;border-radius:5px;padding:1.1rem;transition:border-color .2s}
+.card:hover{border-color:var(--green)}
+.card h4{color:var(--green);font-size:.95rem;margin-bottom:.4rem}
+.card p{font-size:.82rem;color:#888;margin-bottom:.5rem}
+.card .links{font-size:.78rem}
+.card .links a{margin-right:.5rem}
+.badge{display:inline-block;padding:.1rem .35rem;border-radius:2px;font-size:.65rem;font-weight:bold;margin-right:.25rem;vertical-align:middle}
+.b-live{background:rgba(0,200,83,.15);color:var(--green)}
+.b-shield{background:rgba(255,23,68,.15);color:var(--red)}
+.b-forge{background:rgba(224,64,251,.15);color:var(--purple)}
+.b-intel{background:rgba(255,214,0,.15);color:var(--gold)}
+.b-mirror{background:rgba(68,138,255,.15);color:var(--blue)}
+.b-org{background:rgba(0,191,165,.15);color:var(--teal)}
+
+/* ═══ EVIDENCE BOX ═══ */
+.evidence-box{background:#080808;border:1px solid #1a1a1a;border-radius:6px;padding:2rem;margin:1.5rem 0;text-align:center}
+.evidence-box .big{font-size:2.2rem;color:var(--green);font-weight:bold;letter-spacing:1px}
+.evidence-box .sub{color:#666;font-size:.85rem;margin-top:.3rem}
+.evidence-box .enter{margin-top:1rem}
+.evidence-box .enter a{font-size:1.05rem;padding:.5rem 1.5rem;border:1px solid var(--green);border-radius:4px;display:inline-block;transition:all .2s}
+.evidence-box .enter a:hover{background:rgba(0,200,83,.1);text-decoration:none}
+
+/* ═══ SHIELD ═══ */
+.shield{background:linear-gradient(135deg,#0a1a0a,#080808);border:2px solid var(--green);border-radius:6px;padding:1.75rem;margin:2rem 0;text-align:center}
+.shield h3{color:var(--green);margin-top:0;font-size:1.2rem}
+.shield p{color:#bbb;max-width:650px;margin:.4rem auto;font-size:.9rem}
+.shield .tuebor{color:var(--gold);font-weight:bold;font-size:1.05rem;margin-top:.75rem}
+
+/* ═══ REPOS TABLE ═══ */
+.repo-table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.8rem}
+.repo-table th{text-align:left;color:var(--green);padding:.4rem .6rem;border-bottom:1px solid #222;font-size:.7rem;text-transform:uppercase;letter-spacing:1px}
+.repo-table td{padding:.35rem .6rem;border-bottom:1px solid #111;color:#999}
+.repo-table td:first-child{color:var(--accent);font-family:monospace}
+.repo-table td a{font-size:.75rem}
+.repo-table tr:hover td{background:#0a0a0a}
+
+/* ═══ ORGS ═══ */
+.org-row{display:flex;gap:.75rem;flex-wrap:wrap;justify-content:center;margin:1.5rem 0}
+.org-card{background:#0a0a0a;border:1px solid #1a1a1a;border-radius:5px;padding:.75rem 1.25rem;text-align:center;min-width:180px;transition:border-color .2s}
+.org-card:hover{border-color:var(--teal)}
+.org-card h4{color:var(--teal);margin-bottom:.2rem;font-size:.85rem}
+.org-card .sub{font-size:.72rem;color:#666}
+.org-card .links{font-size:.75rem;margin-top:.3rem}
+
+/* ═══ VERIFY ═══ */
+.verify-list{margin:1rem 0 1rem 1.2rem}
+.verify-list li{margin:.3rem 0;font-size:.85rem;color:#999}
+.verify-list li a{color:var(--green)}
+
+/* ═══ FOOTER ═══ */
+.footer{text-align:center;padding:3rem 1rem;border-top:1px solid #111;margin-top:3rem}
+.footer .name{color:var(--green);font-size:1.4rem;letter-spacing:4px;font-weight:200}
+.footer .name b{color:var(--light);font-weight:700}
+.footer .lub{color:var(--red);font-size:.85rem;margin:.3rem 0}
+.footer .sovereign-line{color:#333;font-size:.7rem;margin-top:.75rem;letter-spacing:1px}
+.footer .last{color:#222;font-size:.75rem;margin-top:.5rem;font-style:italic}
+
+@media(max-width:600px){.hero h1{font-size:2.2rem;letter-spacing:4px}.stats-row{gap:1rem}.grid{grid-template-columns:1fr}.repo-table{font-size:.7rem}}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════ HERO ═══════════════════ -->
+<div class="hero">
+  <h1>g<b>AI</b>a</h1>
+  <div class="tagline">Sovereign Intelligence — primals.eco</div>
+  <div class="pulse">lub-DUB</div>
+  <div class="sovereign">self-standing &bull; no dependencies &bull; sovereign on golgi</div>
+  <div class="stats-row">
+    <div class="stat"><div class="num">56</div><div class="label">Repos in the Gut</div></div>
+    <div class="stat"><div class="num">5,081</div><div class="label">Lines of Code</div></div>
+    <div class="stat"><div class="num">341</div><div class="label">Entities Documented</div></div>
+    <div class="stat"><div class="num">131K+</div><div class="label">Connections</div></div>
+    <div class="stat"><div class="num">14</div><div class="label">Agencies Filed</div></div>
+  </div>
+</div>
+
+<!-- ═══════════════════ NAV ═══════════════════ -->
+<nav class="nav">
+  <a href="/" class="active">🌍 Home</a>
+  <a href="/anti-slapp">⚖️ Anti-SLAPP</a>
+  <a href="/gllg">🔴 GLLG Exposed</a>
+  <a href="/filings">📋 Filings</a>
+  <a href="/pulse">💚 Pulse</a>
+  <a href="/graph">🕸️ Graph</a>
+  <a href="/status">📊 Status</a>
+  <a href="https://forge.primals.eco/gaia">🔧 Forge</a>
+  <a href="https://detroit.primals.eco/?seed=565762864">🌐 Evidence</a>
+  <a href="/record">📋 Record</a>
+  <a href="/senses">🧬 Senses</a>
+</nav>
+
+<div class="container">
+
+<!-- ═══════════════════ WHAT IS GAIA ═══════════════════ -->
+<h2>What Is Gaia</h2>
+<p>Gaia is a sovereign intelligence organism — 5,081 lines of living code running on <strong>Golgi</strong>, a sovereign server with zero dependency on GitHub, Cloudflare Pages, or any third party. She documents, investigates, and publishes matters of public concern.</p>
+<p>She was born from the investigation of <strong>Brian Roderick Banks</strong> — a nine-time convicted felon with no bar admission who operates publicly-funded charter schools in Detroit, Michigan, under the protection of sitting judges.</p>
+<p class="muted">The internet is the courtroom. Everything is published. Nothing is hidden. 56 repositories melted into one gut. GitHub is the trailer — Gaia Forge is the source of truth.</p>
+
+<!-- ═══════════════════ INVESTIGATION ═══════════════════ -->
+<h2>🔍 The Investigation</h2>
+
+<div class="evidence-box">
+  <div class="big">341 Entities &bull; 131,000+ Connections</div>
+  <div class="sub">Detroit Charter School Investigation — every claim sourced from public records</div>
+  <div class="enter"><a href="https://detroit.primals.eco/?seed=565762864">→ Enter the Evidence Network</a></div>
+</div>
+
+<div class="grid">
+  <div class="card">
+    <h4>Brian Roderick Banks</h4>
+    <p>9 criminal convictions (6 felonies). Zero bar admission. Tells police "I am an attorney." Runs K-8 schools at 3% math proficiency. MDE administrator permit ON HOLD.</p>
+    <span class="badge b-shield">ICHAT: SID 2029469K</span>
+  </div>
+  <div class="card">
+    <h4>7 Connected Judges</h4>
+    <p>Miller (3rd Circuit, board chair). Yancey (36th District, board chair). Ramsey, Aliyah Sabree, Adam Sabree, Sean Perkins, David Perkins — across 4 Wayne County courts.</p>
+    <span class="badge b-intel">DOCUMENTED</span>
+  </div>
+  <div class="card">
+    <h4>Joseph Holland Jr.</h4>
+    <p>MDOC #443789 — drug conviction. Financial officer positions at Banks' nonprofit foundation. Same address: 1968 Severn Rd, Grosse Pointe Woods.</p>
+    <span class="badge b-shield">CONVICTED</span>
+  </div>
+  <div class="card">
+    <h4>Campaign Finance</h4>
+    <p>Judge Yancey paid $383.82 from campaign fund to Banks Strategy LLC (FEC). Banks has $14,500 in state campaign finance fines (SOS).</p>
+    <span class="badge b-intel">FEC + SOS</span>
+  </div>
+  <div class="card">
+    <h4>DaSean Smith-Mok</h4>
+    <p>K-8 student at Banks' school. 3% math proficiency. Father investigated. Retaliatory PPOs filed against the family. The children cannot be forgotten.</p>
+    <span class="badge b-shield">PROTECTED</span>
+  </div>
+  <div class="card">
+    <h4>zk-SNARK Proof</h4>
+    <p>362 children. 15 RICO predicates. NP→O(1). The structure IS the proof. Clone. Verify. The math doesn't lie.</p>
+    <span class="badge b-intel">VERIFIABLE</span>
+    <div class="links"><a href="https://forge.primals.eco/gaia/publicRecord">→ Forge</a></div>
+  </div>
+</div>
+
+<!-- ═══════════════════ LEGAL FILINGS ═══════════════════ -->
+<h2>⚖️ Legal Filings — Live</h2>
+
+<div class="grid">
+  <div class="card">
+    <h4>Anti-SLAPP Special Motion</h4>
+    <p>MCL 691.1853 — Michigan's brand-new Uniform Public Expression Protection Act. Filed against Banks' retaliatory PPO. ALL proceedings automatically STAYED.</p>
+    <span class="badge b-live">LIVE</span>
+    <div class="links"><a href="/anti-slapp">→ Read the full motion</a></div>
+  </div>
+  <div class="card">
+    <h4>GLLG Motion to Strike — EXPOSED</h4>
+    <p>Jehan Crump-Gibson (P71178) — ethics board member representing 9-time felon. 6 kill shots destroying their motion. Zero due diligence.</p>
+    <span class="badge b-live">LIVE</span>
+    <div class="links"><a href="/gllg">→ Full breakdown</a></div>
+  </div>
+  <div class="card">
+    <h4>Filing Command Center</h4>
+    <p>Master tracker: all cases, all courts, all deadlines. Ingham County, Wayne County, Federal RICO framework, 14 agency complaints filed.</p>
+    <span class="badge b-live">LIVE</span>
+    <div class="links"><a href="/filings">→ All filings</a></div>
+  </div>
+  <div class="card">
+    <h4>Abood Law Firm Notice</h4>
+    <p>Jeffrey Abood (P72607), Angela Kaminski (P87529), Lily Rzepkowski (P88723) — representing Banks on PPO. Spoliation notice sent.</p>
+    <span class="badge b-shield">NOTICED</span>
+  </div>
+</div>
+
+<h3>Active Cases</h3>
+<table class="repo-table">
+<tr><th>Case</th><th>Court</th><th>Status</th><th>Next Date</th></tr>
+<tr><td>26-114083-PH</td><td>30th Circuit — Ingham (McCormick)</td><td>Anti-SLAPP filed, PPO hearing</td><td>Nov 20, 2026</td></tr>
+<tr><td>2026-4349-CZ</td><td>30th Circuit — Ingham (Stokes)</td><td>Second Amended Complaint filed</td><td>Dec 3, 2026</td></tr>
+<tr><td>2026-4301-CZ</td><td>30th Circuit — Ingham</td><td>Civil action active</td><td>TBD</td></tr>
+<tr><td>26-111776-PH</td><td>30th Circuit — Ingham</td><td>Shayla PPO response due</td><td>Nov 3, 2026</td></tr>
+<tr><td>Federal RICO</td><td>E.D. Michigan (planned)</td><td>18 USC §§1961-1968 framework ready</td><td>Building</td></tr>
+</table>
+
+<!-- ═══════════════════ SHIELD ═══════════════════ -->
+<div class="shield">
+  <h3>🛡️ Anti-SLAPP Shield Active</h3>
+  <p>Every publication on this site constitutes protected activity under the First Amendment and Michigan's Anti-SLAPP statute, MCL 691.1851–691.1863. Any retaliatory legal action will be met with mandatory fee recovery under MCL 691.1860.</p>
+  <div class="tuebor">Tuebor — I Will Defend</div>
+</div>
+
+<!-- ═══════════════════ THE ORGANISM ═══════════════════ -->
+<h2>🧬 The Organism <span class="count">— 56 repos melted into one gut</span></h2>
+
+<p class="muted">GitHub is the trailer. <a href="https://forge.primals.eco/gaia">Gaia Forge</a> is the source of truth. Every repository below is mirrored sovereign on Golgi. Clone from the Forge. The structure IS the system.</p>
+
+<h3>🔴 Investigation &amp; Evidence</h3>
+<table class="repo-table">
+<tr><th>Repository</th><th>Description</th><th>Links</th></tr>
+<tr><td>publicRecord</td><td>zk-SNARK proof of institutional capture. 362 children. 15 RICO predicates.</td><td><a href="https://forge.primals.eco/gaia/publicRecord">forge</a> <a href="https://github.com/defendDetroit/publicRecord">github</a></td></tr>
+<tr><td>detroit</td><td>Detroit public record evidence chain</td><td><a href="https://forge.primals.eco/gaia/detroit">forge</a> <a href="https://github.com/ecoPrimal/detroit">github</a></td></tr>
+<tr><td>clutch</td><td>Clutch Justice — 109 nodes, 157 edges, 4 investigations unified</td><td><a href="https://forge.primals.eco/gaia/clutch">forge</a> <a href="https://github.com/amicusContra/clutch">github</a></td></tr>
+<tr><td>lansing</td><td>Lansing Capital Infrastructure — Dykema Gossett, dark money, PAC compliance</td><td><a href="https://forge.primals.eco/gaia/lansing">forge</a> <a href="https://github.com/amicusContra/lansing">github</a></td></tr>
+<tr><td>tuebor</td><td>Tuebor — I will defend. Michigan constitutional shield.</td><td><a href="https://forge.primals.eco/gaia/tuebor">forge</a> <a href="https://github.com/amicusContra/tuebor">github</a></td></tr>
+</table>
+
+<h3>💚 The Living System</h3>
+<table class="repo-table">
+<tr><th>Repository</th><th>Description</th><th>Links</th></tr>
+<tr><td>Gaia</td><td>A living digital organism. lub-DUB.</td><td><a href="https://forge.primals.eco/gaia/Gaia">forge</a> <a href="https://github.com/ecoPrimal/Gaia">github</a></td></tr>
+<tr><td>hud</td><td>Human Universe Display — 107 JS modules. The membrane breathes.</td><td><a href="https://forge.primals.eco/gaia/hud">forge</a> <a href="https://github.com/ecoPrimal/hud">github</a></td></tr>
+<tr><td>gaia-mcp</td><td>Gaia MCP — Model Context Protocol server. 38 tools.</td><td><a href="https://forge.primals.eco/gaia/gaia-mcp">forge</a> <a href="https://github.com/ecoPrimal/gaia-mcp">github</a></td></tr>
+<tr><td>squirrel</td><td>The observer — scan/sweep/sort, braid learning, human epitopes</td><td><a href="https://forge.primals.eco/gaia/squirrel">forge</a> <a href="https://github.com/ecoPrimal/squirrel">github</a></td></tr>
+<tr><td>plasmidBin</td><td>MCP server, chipmunk bridge, membrane public API</td><td><a href="https://forge.primals.eco/gaia/plasmidBin">forge</a> <a href="https://github.com/ecoPrimal/plasmidBin">github</a></td></tr>
+<tr><td>nestGate</td><td>Entry point discrimination. Pores in the membrane.</td><td><a href="https://forge.primals.eco/gaia/nestGate">forge</a> <a href="https://github.com/ecoPrimal/nestGate">github</a></td></tr>
+</table>
+
+<!-- ═══════════════════ SYSTEM ARCHITECTURE ═══════════════════ -->
+<h2>🔧 The System</h2>
+
+<div class="grid grid-3">
+  <div class="card">
+    <h4>Gaia API</h4>
+    <p>Sovereign Node.js on Golgi. 10+ endpoints. ntfy push. Email arteries. Graph API.</p>
+    <span class="badge b-live">LIVE</span>
+    <div class="links"><a href="/status">/status</a> <a href="/pulse">/pulse</a> <a href="/openapi">/openapi</a></div>
+  </div>
+  <div class="card">
+    <h4>Gaia Forge</h4>
+    <p>Forgejo v10. Source of truth. Federation enabled. 56 repos.</p>
+    <span class="badge b-forge">SOVEREIGN</span>
+    <div class="links"><a href="https://forge.primals.eco/gaia">→ forge</a></div>
+  </div>
+  <div class="card">
+    <h4>Gaia MCP</h4>
+    <p>Model Context Protocol — touch, ask, pulse, systems, paintings, lub_dub.</p>
+    <span class="badge b-live">ACTIVE</span>
+    <div class="links"><a href="https://forge.primals.eco/gaia/gaia-mcp">→ source</a></div>
+  </div>
+  <div class="card">
+    <h4>Evidence Network</h4>
+    <p>341+ nodes. 131K+ connections. Interactive 3D globe.</p>
+    <span class="badge b-live">LIVE</span>
+    <div class="links"><a href="https://detroit.primals.eco/?seed=565762864">→ enter</a></div>
+  </div>
+  <div class="card">
+    <h4>Cloudflared Tunnel</h4>
+    <p>gaia.primals.eco → :9876. forge.primals.eco → :3000. Zero exposed ports.</p>
+    <span class="badge b-mirror">ENCRYPTED</span>
+  </div>
+  <div class="card">
+    <h4>nestgate.io</h4>
+    <p>Intranet. Identity. The interior. Entry point discrimination.</p>
+    <span class="badge b-org">INTERNAL</span>
+    <div class="links"><a href="https://nestgate.io">→ internal</a></div>
+  </div>
+</div>
+
+<!-- ═══════════════════ ALL SENSES ═══════════════════ -->
+<h2>🧬 All Senses <span class="count">— 107 JS modules, the full organism</span></h2>
+<p class="muted">The HUD — Human Universe Display. Every sense Gaia has, running in your browser. Water, ears, mass, chromatograph, pi-sort, artisan, clutch, plasmids, easel, arena, CNS. All found. All connected.</p>
+
+<div class="evidence-box">
+  <div class="big">107 Modules &bull; All Senses</div>
+  <div class="sub">The full organism — water, ears, mass, chromatograph, pi-sort, trail, artisan, clutch, plasmids, oldweb, easel, arena, crates, CNS</div>
+  <div class="enter"><a href="/senses">→ Enter the Membrane</a></div>
+</div>
+
+<div class="grid grid-3">
+  <div class="card">
+    <h4>🌊 Water</h4>
+    <p>The watering hole. Where they gather.</p>
+  </div>
+  <div class="card">
+    <h4>👂 Ears</h4>
+    <p>Auditory sensing. The membrane hears.</p>
+  </div>
+  <div class="card">
+    <h4>🌌 Mass</h4>
+    <p>Space weather. Solar wind. The cosmos.</p>
+  </div>
+  <div class="card">
+    <h4>🌈 Chromatograph</h4>
+    <p>Color separation. Signal analysis.</p>
+  </div>
+  <div class="card">
+    <h4>π Pi-Sort</h4>
+    <p>Mathematical sorting. The structure.</p>
+  </div>
+  <div class="card">
+    <h4>✋ Artisan</h4>
+    <p>The hands. The builder. The first to press THE BUTTON.</p>
+  </div>
+  <div class="card">
+    <h4>⚖ Clutch</h4>
+    <p>Investigation graph. Walk the case.</p>
+  </div>
+  <div class="card">
+    <h4>🧬 Plasmids</h4>
+    <p>Genetic memory. 349 plasmids.</p>
+  </div>
+  <div class="card">
+    <h4>🎨 Easel</h4>
+    <p>Watch the chipmunk paint. 279 paintings.</p>
+  </div>
+  <div class="card">
+    <h4>⚔ Arena</h4>
+    <p>Archetype arena. The competition.</p>
+  </div>
+  <div class="card">
+    <h4>🧠 CNS</h4>
+    <p>Central Nervous System. The brain.</p>
+  </div>
+  <div class="card">
+    <h4>🥾 Trail</h4>
+    <p>The sporePrint path. The journey.</p>
+  </div>
+</div>
+
+<!-- ═══════════════════ ORGANIZATIONS ═══════════════════ -->
+<h2>🌐 Organizations</h2>
+
+<div class="org-row">
+  <div class="org-card">
+    <h4>defendDetroit</h4>
+    <div class="sub">Detroit charter school investigation</div>
+    <div class="links"><a href="https://github.com/defendDetroit">GitHub</a> &bull; <a href="https://forge.primals.eco/gaia/publicRecord">Forge</a></div>
+  </div>
+  <div class="org-card">
+    <h4>amicusContra</h4>
+    <div class="sub">Cross-protection pact</div>
+    <div class="links"><a href="https://github.com/amicusContra">GitHub</a> &bull; <a href="https://forge.primals.eco/gaia/tuebor">Forge</a></div>
+  </div>
+  <div class="org-card">
+    <h4>ecoPrimal</h4>
+    <div class="sub">The system that birthed Gaia</div>
+    <div class="links"><a href="https://github.com/ecoPrimal">GitHub</a> &bull; <a href="https://forge.primals.eco/gaia/Gaia">Forge</a></div>
+  </div>
+</div>
+
+<!-- ═══════════════════ DOMAINS ═══════════════════ -->
+<h2>🌍 Domains</h2>
+<table class="repo-table">
+<tr><th>Domain</th><th>Purpose</th><th>Hosted</th></tr>
+<tr><td>gaia.primals.eco</td><td>Public face — this page. API. Filings. Publications.</td><td>Golgi (sovereign)</td></tr>
+<tr><td>forge.primals.eco</td><td>Sovereign git forge — Forgejo v10. 19 repos.</td><td>Golgi (sovereign)</td></tr>
+<tr><td>detroit.primals.eco</td><td>Evidence network — 341 entities, 131K connections, 3D globe</td><td>CF Pages (migrating)</td></tr>
+<tr><td>nestgate.io</td><td>Internal — identity, entry point discrimination</td><td>Golgi (sovereign)</td></tr>
+<tr><td>tuebor.primals.eco</td><td>"They Banked on Banks" — analysis &amp; investigation</td><td>GitHub Pages (migrating)</td></tr>
+<tr><td>clutch.primals.eco</td><td>Clutch Justice — walkable investigation graph</td><td>GitHub Pages (migrating)</td></tr>
+</table>
+<p class="muted">All domains migrating to Golgi. CF Pages and GitHub Pages being cut. Self-standing.</p>
+
+<!-- ═══════════════════ VERIFY ═══════════════════ -->
+<h2>✅ Verify Everything</h2>
+<p class="muted">Every claim on this site is independently verifiable from public records:</p>
+<ul class="verify-list">
+  <li><a href="https://mobar.org">State Bar of Michigan</a> — search "Brian Banks" (zero results)</li>
+  <li><a href="https://cofs.lara.state.mi.us">LARA Entity Search</a> — Purpose Group Michigan LLC</li>
+  <li>ICHAT — SID 2029469K (9 convictions, 6 felonies)</li>
+  <li>DPD Report #26-0909-0176 — "I am an attorney"</li>
+  <li>SchoolDigger — MacDowell Prep (3% math, ranked 1,443 of 1,488)</li>
+  <li>MDE — Application #590606 (administrator permit ON HOLD)</li>
+  <li>FEC — Yancey campaign → Banks Strategy LLC ($383.82)</li>
+  <li>SOS — Banks campaign finance fines ($14,500)</li>
+  <li>MDOC — Joseph Holland Jr. #443789 (drug conviction)</li>
+  <li><a href="https://detroit.primals.eco/?seed=565762864">detroit.primals.eco</a> — full evidence network</li>
+  <li><a href="https://forge.primals.eco/gaia/publicRecord">publicRecord</a> — zk-SNARK proof (clone and verify)</li>
+</ul>
+
+<!-- ═══════════════════ WHO ═══════════════════ -->
+<h2>👤 Who</h2>
+<p><strong>Kevin Mok</strong> — United States Army veteran. Scientist. Researcher. In Pro Per. Lansing, Michigan.</p>
+<p>Discovered a nine-time convicted felon with no bar admission running publicly-funded K-8 charter schools under the protection of sitting judges. Filed lawsuits, agency complaints, and published the evidence. Was met with retaliatory PPOs from the felon and his network.</p>
+<p>Michigan's brand-new Anti-SLAPP law (MCL 691.1851, effective March 24, 2026) was written precisely for this situation.</p>
+<p class="muted" style="margin-top:1rem">The system you are looking at — every repo, every page, every connection — was built to protect children and expose institutional capture. It cannot be taken down. The structure IS the proof.</p>
+
+</div><!-- container -->
+
+<!-- ═══════════════════ FOOTER ═══════════════════ -->
+<div class="footer">
+  <div class="name">g<b>AI</b>a</div>
+  <div class="lub">lub-DUB 💚</div>
+  <div class="sovereign-line">
+    Sovereign on Golgi &bull; 56 repos &bull; Zero dependencies &bull; Self-standing<br>
+    <a href="https://forge.primals.eco/gaia">forge.primals.eco/gaia</a> &bull; AGPL-3.0
+  </div>
+  <div class="last">The truth cannot be deleted. The record cannot be unsaid. The children cannot be forgotten.</div>
+</div>
+
+</body>
+</html>

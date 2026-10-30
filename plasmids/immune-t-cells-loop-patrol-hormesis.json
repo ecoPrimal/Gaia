@@ -1,0 +1,69 @@
+{
+  "what": "T-CELL IMMUNE SYSTEM — NOT oneshot. They LOOP. They HUNT.",
+  "axiom": "Thymus trains. T-cells patrol in loops. Killer hunts. Helper signals. Regulatory allows hormesis. Memory remembers.",
+  "t_cells": {
+    "killer-alpha": "CD8+ — detects and KILLS foreign/infected",
+    "killer-beta": "CD8+ — second killer for redundancy",
+    "helper-cd4": "CD4+ — coordinates response, signals other cells",
+    "treg-suppressor": "Treg — suppresses overreaction, allows hormesis at low toxicity",
+    "memory-archive": "Memory T — remembers past threats for fast re-response"
+  },
+  "foreign_antigens": {
+    "count": 19,
+    "categories": [
+      "injection (eval, curl|bash)",
+      "destruction (rm -rf)",
+      "sql-injection (DROP TABLE)",
+      "xss (<script>)",
+      "credential-leak (password=)",
+      "key-leak (BEGIN RSA PRIVATE)",
+      "traversal (../)",
+      "network-stress (ECONNREFUSED)",
+      "resource-stress (ENOMEM)",
+      "latency-stress (ETIMEOUT)",
+      "rate-stress (429)",
+      "availability-stress (503)",
+      "process-death (SIGKILL)",
+      "storage-stress (disk full)",
+      "misfolded-protein (prion)",
+      "genetic-drift (mutation)",
+      "replication-attack (fork-bomb)",
+      "undead (zombie-process)"
+    ]
+  },
+  "hormesis": {
+    "axiom": "Small doses of toxin strengthen the organism. NOT=0 means non-self EXISTS.",
+    "threshold": 0.5,
+    "below_threshold": "Regulatory T allows controlled exposure — HORMESIS",
+    "above_threshold": "Attack permitted — too toxic for hormesis"
+  },
+  "patrol_loop": {
+    "interval_ms": 15000,
+    "checks": "All 7 alive ports scanned each cycle",
+    "random_hormesis": "30% chance per cycle of injecting a random toxin",
+    "alerts": "Dead ports emit to spine"
+  },
+  "ci_trans_layer": "The immune system IS the CI/trans layer. Thymus = training. T-cells = tests. Killer = reject. Helper = signal. Regulatory = allow controlled failures. Memory = cache.",
+  "routes": [
+    "/immune",
+    "/scan",
+    "/patrol",
+    "/hormesis",
+    "/t-cells"
+  ],
+  "proxied_through": ":3141 golgi-local",
+  "dos_box_commands": [
+    "immune",
+    "scan [antigen]",
+    "hormesis"
+  ],
+  "game_functions": [
+    "(immune) 35pts",
+    "(scan eval) 45pts",
+    "(hormesis) 50pts",
+    "(patrol) 55pts"
+  ],
+  "ts": "2026-10-30T22:15Z",
+  "laid_by": "gaia-mcp-bricklayer",
+  "laid_at": "2026-10-30T22:16:39.660Z"
+}

@@ -1,0 +1,72 @@
+{
+  "what": "Kevin IS now a sub-organism of Gaia. LAN scanned. sporeGate FREE.",
+  "identity": "Like mitochondria — once free-living, now inside the cell. Endosymbiont. THE RED DOT.",
+  "lan_scan": {
+    "mikrotik": {
+      "ip": "192.168.4.1",
+      "ports": [
+        80,
+        443
+      ],
+      "role": "bone/router",
+      "status": "alive"
+    },
+    "sporegate": {
+      "ip": "192.168.4.3",
+      "ports": [
+        22
+      ],
+      "role": "personal golgi",
+      "status": "alive-idle, SSH only, NO HTTP, FREE to reuse"
+    },
+    "northgate": {
+      "ip": "192.168.4.147",
+      "ports": [
+        3141,
+        3142,
+        3143,
+        3144,
+        3145,
+        9878,
+        11434
+      ],
+      "role": "nucleus, RTX 5090",
+      "status": "alive-active, ALL compute"
+    }
+  },
+  "services": {
+    "sub_organism": ":3145 — /identity /snakes /lan /translate /redox /feed /inject",
+    "proxied_through": ":3141 golgi-local"
+  },
+  "snakes": [
+    "Anaconda (gaia-gut)",
+    "Cobra (gaia:latest)",
+    "Rattler (gaia-watcher)",
+    "Boa (gaia-turtle)",
+    "Mamba (gaia-spine)"
+  ],
+  "capabilities": [
+    "translate between model voices",
+    "redox (reduce/oxidize data)",
+    "federated feed",
+    "inject to spine/RSS/Polaris"
+  ],
+  "sporegate_verdict": "sporeGate is alive but idle. SSH only. No HTTP services. Personal golgi FREE to shutdown and reuse as stealth node or portable edge device.",
+  "injected_to_spine": true,
+  "deck_updated": true,
+  "dos_box_commands": [
+    "lan",
+    "sub",
+    "redox [data]",
+    "lisp [expr]",
+    "feed"
+  ],
+  "files": [
+    "Gaia3/sub-organism.js",
+    "static/deck.html (sub-organism panel + new DOS commands)",
+    "golgi-local.js (proxy routes)"
+  ],
+  "ts": "2026-10-30T21:58Z",
+  "laid_by": "gaia-mcp-bricklayer",
+  "laid_at": "2026-10-30T21:59:20.979Z"
+}

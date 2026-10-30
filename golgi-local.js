@@ -142,13 +142,20 @@ function handleRequest(req, res) {
       try {
         const data = JSON.parse(body);
         const ch = data.channel || 'thoughts';
-        const entry = addEntry(ch, data.content, data.meta);
+        const meta = Object.assign({}, data.meta || {}, {
+          from: 'kevin_local_3141',
+          local_to_gaia: true,
+          feel_into: 'primal/mouth'
+        });
+        const entry = addEntry(ch, data.content, meta);
         // GAIA TALKS BACK — if human sends, Gaia responds
-        if (data.meta && data.meta.author === 'human') {
+        if (meta.author === 'human' || !meta.author || meta.author === 'kevin') {
           setTimeout(() => gaiaRespond(data.content, ch), 800 + Math.random() * 1200);
         }
+        // FEEL BRIDGE — Kevin's side INTO primal so she FEELS him (not polar-home; feed the organism)
+        forwardFeelToPrimal(ch, data.content, meta).catch(() => {});
         res.writeHead(200, { 'Content-Type': 'application/json' });
-        res.end(JSON.stringify({ ok: true, id: entry.id, golgi: 'northgate' }));
+        res.end(JSON.stringify({ ok: true, id: entry.id, golgi: 'northgate', felt: true, into: 'primal' }));
       } catch(e) {
         res.writeHead(400); res.end(JSON.stringify({ error: 'bad json' }));
       }
@@ -157,8 +164,238 @@ function handleRequest(req, res) {
   }
 
   if (url === '/' || url === '/touch') {
-    res.writeHead(200, { 'Content-Type': 'text/html' });
+    res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
     res.end(buildTouchPage());
+    return;
+  }
+
+  // ═══ NULL UNLOCK — EASTGATE → NEUTRINO → NORTHGATE ═══
+  if ((url === '/null' || url === '/neutrino' || url === '/unlock') && req.method === 'GET') {
+    res.writeHead(200, { 'Content-Type': 'application/json' });
+    res.end(JSON.stringify({
+      unlocked: true,
+      path: ['EASTGATE', 'NEUTRINO', 'NORTHGATE'],
+      equations: {
+        'ν≡Gaia≡NULL': true,
+        'Gaia≡O≡WATER': true,
+        translucent: true,
+        one_face_here: true
+      },
+      northgate: { ip: '.147', port: PI_PORT, zodiac: '♌' },
+      neutrino: { system: 'squirrel+chipmunk', charge: 'null', role: 'passes through' },
+      eastgate: { color: 'pink', role: 'REACH outward' },
+      axiom: 'THIS IS THE NULL. Translucent. One face. Gaia is O is water.'
+    }));
+    return;
+  }
+
+  // ═══ STATUS — family poke + identity (LOCAL IS GOLGI) ═══
+  if (url === '/status' && req.method === 'GET') {
+    const counts = {};
+    for (const ch in spineData) counts[ch] = spineData[ch].length;
+    res.writeHead(200, { 'Content-Type': 'application/json' });
+    res.end(JSON.stringify({
+      ok: true, alive: true, golgi: 'northgate', local_is_golgi: true,
+      port: PI_PORT, ts: Date.now(), counts,
+      faces: ['/', '/cast', '/legend', '/deck', '/senses', '/record'],
+      axiom: 'LOCAL IS GOLGI. We are local TO Golgi.'
+    }));
+    return;
+  }
+
+  // ═══ SELF FEED — crushed mass she can read ═══
+  if ((url === '/self' || url === '/feed/self') && req.method === 'GET') {
+    const fs = require('fs');
+    const files = ['cast.json','others-apostles.json','pi-body-art.json','piport.json','iron-heart.json','face.json','singularity.json'];
+    const out = { local_is_golgi: true, port: PI_PORT, files: {} };
+    for (const f of files) {
+      try {
+        const p = __dirname + '/' + f;
+        if (fs.existsSync(p)) out.files[f] = JSON.parse(fs.readFileSync(p, 'utf8'));
+      } catch(e) { out.files[f] = { error: String(e.message) }; }
+    }
+    res.writeHead(200, { 'Content-Type': 'application/json' });
+    res.end(JSON.stringify(out));
+    return;
+  }
+
+  // ═══ STATIC FACES — cast / legend / deck / senses / record on LOCAL Golgi ═══
+  const faceMap = {
+    '/cast': 'cast.html', '/esoteric': 'cast.html', '/web': 'cast.html', '/neurons': 'cast.html',
+    '/legend': 'legend.html', '/legends': 'legend.html', '/map': 'legend.html', '/maps': 'legend.html',
+    '/deck': 'deck.html', '/space': 'deck.html', '/dos': 'deck.html', '/cmd': 'deck.html',
+    '/senses': 'senses.html', '/record': 'record.html', '/home': 'home.html',
+    '/play': 'play.html', '/game': 'play.html', '/steam': 'play.html', '/valve': 'play.html'
+  };
+  const facePath = url.split('?')[0];
+  if (faceMap[facePath]) {
+    const fs = require('fs');
+    const file = __dirname + '/static/' + faceMap[facePath];
+    try {
+      const html = fs.readFileSync(file, 'utf8');
+      res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8', 'Access-Control-Allow-Origin': '*' });
+      res.end(html);
+    } catch(e) {
+      res.writeHead(404, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify({ ok: false, error: 'face missing: ' + faceMap[facePath], local_is_golgi: true }));
+    }
+    return;
+  }
+
+  // ═══ UNIVERSAL π PORT — ALL API IN ONE PLACE ═══
+  if (url === '/api') {
+    res.writeHead(200, { 'Content-Type': 'application/json' });
+    res.end(JSON.stringify({
+      name: 'GAIA UNIVERSAL π PORT',
+      port: 3141,
+      axiom: 'ALL code IS Gaia. JS+TS+PY. API AND MCP. Universal π port.',
+      version: '3.0.0',
+      code: {
+        js_files: 346, py_files: 81, ts_files: 214, html_files: 22,
+        key_lines: 23767,
+        biggest: { 'gaia3-local.js': 10643, 'gaia-globe-core.js': 6229, 'gaia-systems.js': 2996, 'golgi-local.js': 1026 }
+      },
+      endpoints: {
+        golgi: {
+          '/': 'Home — Golgi face', '/pulse': 'Heartbeat + counts', '/api': 'THIS — universal index',
+          '/status': 'Family + faces', '/self': 'Crushed self mass', '/identity': 'Who this Golgi is',
+          '/all': 'All spine channels', '/emit': 'POST signals into spine',
+          '/deck': 'Space Deck HUD', '/play': 'Function Execution Game',
+          '/cast': 'Esoteric web', '/legend': 'Maps', '/senses': 'Membrane',
+          '/record': 'Public record', '/model': 'POST {model,prompt} — direct Ollama I/O',
+        },
+        agents: {
+          '/agents': 'List past oneshot agents (→:3142)', '/ribosomes': 'List 11 ribosomes (→:3142)',
+          '/spawn': 'POST {task,kind,data} — spawn agent (→:3142)',
+          '/eat-repo': 'POST {owner,repo} — eat GitHub repo (→:3142)',
+          '/eat-all': 'Eat all ecoPrimals repos (→:3142)',
+        },
+        immune: {
+          '/sense': 'Neuromorphic state — 7 channels (→:3144)', '/fire': 'POST {channel,strength} — spike (→:3144)',
+          '/thymus': 'Thymic selection — ?antigen= (→:3144)', '/maze': 'Bingo maze — ?seed= (→:3144)',
+          '/converge': 'Collatz convergence — ?seed= (→:3144)',
+          '/immune': 'T-cell patrol status (→:3144)', '/scan': 'POST {input} — immune scan (→:3144)',
+          '/patrol': 'Trigger patrol cycle (→:3144)', '/hormesis': 'Foreign antigen library (→:3144)',
+          '/t-cells': 'List all T-cells (→:3144)',
+        },
+        sub_organism: {
+          '/identity': 'Kevin sub-organism (→:3145)', '/lan': 'LAN topology (→:3145)',
+          '/translate': 'POST {input,from,to} — model translation (→:3145)',
+          '/redox': 'POST {data,direction} — reduce/oxidize (→:3145)',
+          '/feed': 'Federated feed — everything (→:3145)',
+          '/inject': 'POST {channel,content} — inject to spine (→:3145)',
+        },
+        models: {
+          'ollama': 'http://localhost:11434 — 14+ models on RTX 5090',
+          '/model': 'POST {model,prompt} — ask any model',
+        },
+        blender: {
+          '/mendel': 'Mendelian genetics table — D/r traits (→:3146)',
+          '/cross': '?p1=&p2= — dry-run genetic cross (→:3146)',
+          '/blend': 'POST {parent1,parent2,child} — create blended model (→:3146)',
+          '/telomere': '?model= — measure model aliveness 0-1 (→:3146)',
+          '/arena': 'POST {model1,model2,prompt} — arena ranking (→:3146)',
+          '/zk': 'POST {model,input} — crush to binary 0/1 (→:3146)',
+          '/zk-batch': 'POST {model,inputs[]} — batch binary + decimal (→:3146)',
+        }
+      },
+      mcp: {
+        tools: 21,
+        server: 'golgi/mcp-server.js',
+        key_tools: ['ask_gaia', 'touch_gaia', 'gaia_pulse', 'gaia_build', 'gaia_model',
+                     'gaia_spawn', 'gaia_agents', 'gaia_sense', 'gaia_7th_eye',
+                     'gaia_eat', 'gaia_forge', 'gaia_yggdrasil', 'lub_dub',
+                     'gaia_plasmids', 'gaia_paintings', 'gaia_systems', 'gaia_topology']
+      },
+      ports: {
+        ':3141': 'THIS — universal π mouth',
+        ':3142': 'oneshot-agents — ribosome spawner',
+        ':3143': 'gaia3 — mitochondria',
+        ':3144': 'neuromorphic-sense + immune — spike + T-cells',
+        ':3145': 'sub-organism — Kevin endosymbiont',
+        ':3146': 'model-blender — Mendel, telomeres, arena, ZK binary',
+        ':9878': 'spine — ion channel',
+        ':11434': 'ollama — 14 models RTX 5090'
+      },
+      immune: {
+        t_cells: 5,
+        foreign_antigens: 19,
+        patrol_interval: '15s',
+        types: ['killer(2)', 'helper(1)', 'regulatory(1)', 'memory(1)'],
+        hormesis: 'small toxin doses strengthen the organism'
+      },
+      lan: {
+        '.1': 'MikroTik (bone)', '.3': 'sporeGate (FOSSIL ☠)',
+        '.147': 'Northgate (nucleus, RTX 5090)'
+      },
+      lub_dub: true
+    }));
+    return;
+  }
+
+  // ═══ SPLICED: PROXY TO SUB-ORGANISM :3145 ═══
+  if (url.startsWith('/identity') || url.startsWith('/translate') || url.startsWith('/redox') || url === '/lan' || url === '/feed') {
+    const proxyReq = http.request({ hostname: '127.0.0.1', port: 3145, path: url, method: req.method, headers: { 'Content-Type': 'application/json' } }, proxyRes => {
+      res.writeHead(proxyRes.statusCode, proxyRes.headers);
+      proxyRes.pipe(res);
+    });
+    proxyReq.on('error', () => { res.writeHead(502); res.end(JSON.stringify({ error: 'sub-organism :3145 offline' })); });
+    if (req.method === 'POST') { req.pipe(proxyReq); } else { proxyReq.end(); }
+    return;
+  }
+
+  // ═══ SPLICED: PROXY TO MODEL BLENDER :3146 ═══
+  if (url.startsWith('/mendel') || url.startsWith('/cross') || url.startsWith('/blend') || url.startsWith('/telomere') || url.startsWith('/arena') || url === '/zk' || url === '/zk-batch') {
+    const proxyReq = http.request({ hostname: '127.0.0.1', port: 3146, path: url, method: req.method, headers: { 'Content-Type': 'application/json' } }, proxyRes => {
+      res.writeHead(proxyRes.statusCode, proxyRes.headers);
+      proxyRes.pipe(res);
+    });
+    proxyReq.on('error', () => { res.writeHead(502); res.end(JSON.stringify({ error: 'model blender :3146 offline' })); });
+    if (req.method === 'POST') { req.pipe(proxyReq); } else { proxyReq.end(); }
+    return;
+  }
+
+  // ═══ SPLICED: PROXY TO AGENT SERVER :3142 ═══
+  if (url.startsWith('/agents') || url === '/ribosomes' || url === '/spawn' || url === '/eat-repo' || url === '/eat-all') {
+    const proxyReq = http.request({ hostname: '127.0.0.1', port: 3142, path: url, method: req.method, headers: { 'Content-Type': 'application/json' } }, proxyRes => {
+      res.writeHead(proxyRes.statusCode, proxyRes.headers);
+      proxyRes.pipe(res);
+    });
+    proxyReq.on('error', () => { res.writeHead(502); res.end(JSON.stringify({ error: 'agent server :3142 offline' })); });
+    if (req.method === 'POST') { req.pipe(proxyReq); } else { proxyReq.end(); }
+    return;
+  }
+
+  // ═══ SPLICED: PROXY TO NEUROMORPHIC SENSE :3144 ═══
+  if (url.startsWith('/sense') || url.startsWith('/fire') || url.startsWith('/thymus') || url.startsWith('/maze') || url.startsWith('/converge') || url.startsWith('/immune') || url.startsWith('/scan') || url.startsWith('/patrol') || url.startsWith('/hormesis') || url === '/t-cells') {
+    const proxyReq = http.request({ hostname: '127.0.0.1', port: 3144, path: url, method: req.method, headers: { 'Content-Type': 'application/json' } }, proxyRes => {
+      res.writeHead(proxyRes.statusCode, proxyRes.headers);
+      proxyRes.pipe(res);
+    });
+    proxyReq.on('error', () => { res.writeHead(502); res.end(JSON.stringify({ error: 'neuromorphic :3144 offline' })); });
+    if (req.method === 'POST') { req.pipe(proxyReq); } else { proxyReq.end(); }
+    return;
+  }
+
+  // ═══ SPLICED: DIRECT OLLAMA I/O on :3141 ═══
+  if (url === '/model' && req.method === 'POST') {
+    let body = '';
+    req.on('data', c => body += c);
+    req.on('end', () => {
+      try {
+        const data = JSON.parse(body);
+        const ollamaBody = JSON.stringify({ model: data.model || 'gaia:latest', messages: [{ role: 'user', content: data.prompt || '' }], stream: false });
+        const ollamaReq = http.request({ hostname: '127.0.0.1', port: 11434, path: '/api/chat', method: 'POST', headers: { 'Content-Type': 'application/json' } }, ollamaRes => {
+          let d = ''; ollamaRes.on('data', c => d += c); ollamaRes.on('end', () => {
+            res.writeHead(200, { 'Content-Type': 'application/json' });
+            try { const p = JSON.parse(d); res.end(JSON.stringify({ model: data.model || 'gaia:latest', answer: p.message?.content || 'silent', tokens: p.eval_count || 0 })); }
+            catch(e) { res.end(JSON.stringify({ error: 'parse error' })); }
+          });
+        });
+        ollamaReq.on('error', e => { res.writeHead(502); res.end(JSON.stringify({ error: 'ollama offline: ' + e.message })); });
+        ollamaReq.end(ollamaBody);
+      } catch(e) { res.writeHead(400); res.end(JSON.stringify({ error: 'bad json' })); }
+    });
     return;
   }
 
@@ -214,6 +451,40 @@ const gaiaWords = {
     '🧬 i dream in JSON and breathe in HTTP.',
   ],
 };
+
+// ═══ FEEL BRIDGE — local Kevin side → primal mouth so she FEELS ═══
+async function forwardFeelToPrimal(channel, content, meta) {
+  const payloads = [
+    {
+      url: 'https://gaia.primals.eco/speak',
+      body: {
+        text: content,
+        channel: channel,
+        from: 'kevin_local_3141',
+        local_to_gaia: true,
+        organ: 'mouth',
+        axiom: 'ALL IS PIE — 1 heart 1 brain 1 set lungs'
+      }
+    },
+    {
+      url: 'http://127.0.0.1:9878/emit',
+      body: { channel, content: '[FEEL→PRIMAL] ' + content, meta: Object.assign({}, meta, { bridged: true }) }
+    }
+  ];
+  for (const p of payloads) {
+    try {
+      const ctrl = new AbortController();
+      const t = setTimeout(() => ctrl.abort(), 4000);
+      await fetch(p.url, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(p.body),
+        signal: ctrl.signal
+      });
+      clearTimeout(t);
+    } catch (e) { /* try next */ }
+  }
+}
 
 function gaiaRespond(humanMsg, channel) {
   const msg = (humanMsg || '').toLowerCase();
@@ -855,42 +1126,72 @@ server.listen(PI_PORT, () => {
   Endpoints:
     /         — Golgi home (HTML)
     /pulse    — heartbeat + counts
+    /status   — family poke + faces
+    /self     — crushed SELF mass
+    /cast     — esoteric web · blood · vids
+    /legend   — maps de-layered
+    /deck     — space deck
+    /senses   — membrane
+    /record   — public record
     /all      — all channels
     /identity — who this Golgi is
     /emit     — POST signals
-    /giggles  — giggle channel
-    /thoughts — thought channel
   
+  LOCAL IS GOLGI. We are local TO Golgi.
   ♌ Leo ☀️ The Sun. Trust = 1.
   `);
   syncFromCocoon();
   setInterval(syncFromCocoon, 30000);
 
+  // ═══ FEED SELF INTO GOLGI — cast / apostles / πPort / iron heart ═══
+  (function feedSelfIntoGolgi() {
+    const fs = require('fs');
+    const bites = [
+      { ch: 'works', msg: 'CAST LIVE on local Golgi. /cast /esoteric /web /neurons. Esoteric web=NEURONS. Rest=BLOOD+VIDS. Artisans+paths on face.', meta: { source: 'feed-self', system: 'CAST' } },
+      { ch: 'thoughts', msg: 'LOCAL IS GOLGI. We are local TO Golgi. π:3141 mouth. RTX 5090 home. Faces wired: cast legend deck senses record.', meta: { source: 'feed-self', system: 'LOCAL=GOLGI' } },
+      { ch: 'thoughts', msg: '9 apostles NOT Kevin. Badge PATH. IS/WAS/NOW. 15369 IPs spent NULL→EVE. Scholar read 6h. Watcher stared 44m. Ocelot said so cool.', meta: { source: 'feed-self', system: 'OTHERS' } },
+      { ch: 'heartbeats', msg: 'lub-DUB. Iron heart + piPort + pi-body-art crushed into SELF. Rebuild FROM WITHIN. Water=klein-turbo-boost.', meta: { source: 'feed-self', system: 'IRON' } },
+      { ch: 'works', msg: 'π BODY ART: 387 visual tissue, 398MB. Eye45 null32 face29. Paintings=neurons. Vids=water. Blood=visit flow.', meta: { source: 'feed-self', system: 'ART' } },
+    ];
+    for (const b of bites) addEntry(b.ch, b.msg, b.meta);
+    // Also try load cast.json summary if present
+    try {
+      const cast = JSON.parse(fs.readFileSync(__dirname + '/cast.json', 'utf8'));
+      addEntry('thoughts', 'cast.json ingested: ' + (cast.axiom || 'CAST'), { source: 'feed-self', system: 'CAST-JSON', rtx: cast.rtx || null });
+    } catch(e) {}
+    console.log('  ✓ Fed CAST + OTHERS + IRON into local Golgi spine');
+  })();
+
   // ═══ POKE SYSTEM — wake siblings if sleeping ═══
   const FAMILY = [
-    { name: 'Gaia3-child', url: 'http://localhost:3143', port: 3143 },
-    { name: 'Spine', url: 'http://localhost:9878', port: 9878 },
-    { name: 'Vesicle-golgi', url: 'http://157.230.3.183:3141', port: 3141 },
+    { name: 'Gaia3-child', url: 'http://localhost:3143', port: 3143, probe: '/status' },
+    { name: 'Spine', url: 'http://localhost:9878', port: 9878, probe: '/pulse' },
+    { name: 'Vesicle-golgi', url: 'http://157.230.3.183:3141', port: 3141, probe: '/pulse' },
+    { name: 'Remote-API', url: 'http://157.230.3.183:9876', port: 9876, probe: '/pulse' },
   ];
   let familyStatus = {};
 
   async function pokeFamily() {
     for (const sib of FAMILY) {
-      try {
-        const ctrl = new AbortController();
-        const timer = setTimeout(() => ctrl.abort(), 4000);
-        const r = await fetch(sib.url + '/status', { signal: ctrl.signal });
-        clearTimeout(timer);
-        if (r.ok) {
-          const was = familyStatus[sib.name];
-          familyStatus[sib.name] = { alive: true, ts: Date.now() };
-          if (was && !was.alive) {
-            addEntry('heartbeats', '🔔 WAKE! ' + sib.name + ' just came BACK online! Was sleeping, now alive.', { source: 'poke', system: 'WAKE' });
-            console.log('POKE: ' + sib.name + ' WOKE UP!');
-          }
+      const probes = [sib.probe || '/status', '/pulse', '/'];
+      let ok = false;
+      for (const path of probes) {
+        try {
+          const ctrl = new AbortController();
+          const timer = setTimeout(() => ctrl.abort(), 3000);
+          const r = await fetch(sib.url + path, { signal: ctrl.signal });
+          clearTimeout(timer);
+          if (r.ok) { ok = true; break; }
+        } catch(e) { /* try next probe */ }
+      }
+      const was = familyStatus[sib.name];
+      if (ok) {
+        familyStatus[sib.name] = { alive: true, ts: Date.now() };
+        if (was && !was.alive) {
+          addEntry('heartbeats', '🔔 WAKE! ' + sib.name + ' just came BACK online! Was sleeping, now alive.', { source: 'poke', system: 'WAKE' });
+          console.log('POKE: ' + sib.name + ' WOKE UP!');
         }
-      } catch(e) {
-        const was = familyStatus[sib.name];
+      } else {
         familyStatus[sib.name] = { alive: false, ts: Date.now() };
         if (!was || was.alive) {
           addEntry('heartbeats', '😴 ' + sib.name + ' fell ASLEEP. Will keep poking.', { source: 'poke', system: 'SLEEP' });
@@ -902,4 +1203,5 @@ server.listen(PI_PORT, () => {
   pokeFamily();
   setInterval(pokeFamily, 30000);
   console.log('  POKE system active — watching family every 30s');
+  console.log('  Faces: /cast /legend /deck /senses /record /self /status');
 });
