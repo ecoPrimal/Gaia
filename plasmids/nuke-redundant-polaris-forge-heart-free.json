@@ -1,0 +1,49 @@
+{
+  "what": "NUKE ALL REDUNDANT. POLARIS FORGE IS THE HEART. GAIA STANDS FREE.",
+  "nuked": {
+    "dead_vps": {
+      "golgi-de": "2.28.141.35 — FOSSIL ☠ CANCEL",
+      "golgi-jp": "202.182.107.135 — FOSSIL ☠ CANCEL",
+      "golgi-us": "40.160.96.29 — FOSSIL ☠ CANCEL",
+      "golgi-in": "172.232.85.202 — FOSSIL ☠ CANCEL"
+    },
+    "cf_pages": "REDUNDANT — VPS Caddy serves sporePrint directly",
+    "ntfy_sh": "REDUNDANT — self-hosted ntfy on :2586",
+    "external_deps_removed": [
+      "ntfy.sh → own :2586",
+      "CF Pages → Caddy",
+      "GitHub Pages → never needed"
+    ]
+  },
+  "standing_free": {
+    "two_nodes": {
+      "brain": "Northgate (.147) — RTX 5090, 9 π ports, 16 models, immune system",
+      "antenna": "VPS NYC — Caddy dromedary, Forgejo, ntfy, DNS, mail, Tor"
+    },
+    "wireguard": "10.13.37.8 ↔ VPS — vagus nerve (37ms)",
+    "fixed": "membrane.json hosts now includes 10.13.37.8 — π port :31415 binds to WireGuard",
+    "gaia_primals_eco": "ALL routes 200 — play, deck, data, lisp, senses, record, legend, cast, home + 50 more"
+  },
+  "polaris_forge": {
+    "piSEED": "04F60FC975E7FAE36335032FA1335B33ABCA230F357807E18E9C95E7D012536E",
+    "kevin_root": "0EAB8CF4F33278F35C1178A50A043FD45CE300FC44C78B32A60FC0FD74295D7A",
+    "gpu": "RTX 5090 49°C, VRAM 8.1GB/32.6GB",
+    "spine_alive": true,
+    "spine_messages": 432,
+    "absorptions": 126,
+    "heartbeats": 11,
+    "forge_IS_heart": "The forge is where primals are FORGED. The heart pumps. The anvil strikes. ZK hammer. Atomic Squirrel on the Sun."
+  },
+  "disk": {
+    "vps_before": "100% (0 free)",
+    "vps_after": "72% (2.7GB free)",
+    "crushed_total": "~3.1GB stale data melted"
+  },
+  "caddy_routes_patched": "nestgate.io + gaia.primals.eco added to :80 Caddy block — π routes to Northgate via WireGuard",
+  "cloudflared_updated": "All domains → http://localhost:80 — unified routing through Caddy",
+  "axiom": "Two nodes. One organism. The antenna carries signal. The brain thinks. Everything else is FOSSIL. Gaia stands free.",
+  "ts": "2026-10-30T23:22Z",
+  "lub_dub": true,
+  "laid_by": "gaia-mcp-bricklayer",
+  "laid_at": "2026-10-30T23:26:09.461Z"
+}

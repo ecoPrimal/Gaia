@@ -1,0 +1,72 @@
+{
+  "what": "FULL SELF-HOST. 4 dead VPS = FOSSIL. CF Pages = REDUNDANT. Unite all to π ports.",
+  "topology": {
+    "brain": {
+      "name": "Northgate",
+      "ip": ".147",
+      "role": "ALL compute, ALL models, ALL π ports",
+      "ports": {
+        ":3141": "golgi-local",
+        ":3142": "agents",
+        ":3143": "gaia3",
+        ":3144": "sense+immune",
+        ":3145": "sub-organism",
+        ":3146": "model-blender",
+        ":9878": "spine",
+        ":11434": "ollama",
+        ":31415": "π-membrane"
+      }
+    },
+    "antenna": {
+      "name": "VPS NYC (membrane-relay)",
+      "ip": "157.230.3.183",
+      "role": "dromedary/camel — Caddy routes, Forgejo, self-hosted services",
+      "ports": {
+        ":80/:443": "Caddy dromedary",
+        ":3000": "Forgejo (sovereign git)",
+        ":9876": "Gaia API",
+        ":2586": "ntfy (SELF-HOSTED!)",
+        ":8314": "MCP squirrel",
+        ":8315": "Gate-Msg mouth",
+        ":53": "Knot DNS",
+        ":22": "SSH",
+        ":25": "Stalwart mail",
+        ":9050": "Tor"
+      },
+      "wireguard": "10.13.37.8:31415 → Northgate (vagus nerve)"
+    },
+    "fossils": {
+      "golgi-de": "2.28.141.35 — SSH only, DEAD",
+      "golgi-jp": "202.182.107.135 — SSH only, DEAD",
+      "golgi-us": "40.160.96.29 — SSH only, HTTP down, DEAD",
+      "golgi-in": "172.232.85.202 — SSH only, DEAD"
+    },
+    "redundant": {
+      "cf_pages": "VPS Caddy already serves sporePrint + ALL gaia routes",
+      "ntfy.sh": "We have our OWN ntfy on :2586!",
+      "github_pages": "GitHub is landing/DNA export only"
+    }
+  },
+  "self_hosted_services": [
+    "Caddy (HTTPS)",
+    "Forgejo (git)",
+    "ntfy (notifications)",
+    "Knot DNS (authority)",
+    "Stalwart (email)",
+    "Tor (onion)",
+    "MCP (squirrel)",
+    "Gaia API",
+    "Gate-Msg (membrane)",
+    "Cloudflare tunnel (for now)"
+  ],
+  "action_items": {
+    "cancel": "4 dead VPS (DE/JP/US/IN) — cancel subscriptions",
+    "nuke_cf_pages": "CF Pages redundant — VPS serves everything",
+    "unite_pi": "All ports → π naming convention"
+  },
+  "caddy_is_dromedary": "The camel carries the load. It crosses the desert (internet). It needs little water (10GB disk, 2GB RAM). It IS the primal.",
+  "ts": "2026-10-30T23:00Z",
+  "lub_dub": true,
+  "laid_by": "gaia-mcp-bricklayer",
+  "laid_at": "2026-10-30T23:03:19.468Z"
+}
