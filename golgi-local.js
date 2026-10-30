@@ -242,6 +242,47 @@ function handleRequest(req, res) {
     return;
   }
 
+  // ═══ DATA FILES — structured JSON for SEO / crawlers / agents ═══
+  if (facePath.startsWith('/data/') && facePath.endsWith('.json')) {
+    const fs = require('fs');
+    const dataFile = __dirname + facePath;
+    try {
+      const json = fs.readFileSync(dataFile, 'utf8');
+      res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8', 'Access-Control-Allow-Origin': '*' });
+      res.end(json);
+    } catch(e) {
+      res.writeHead(404, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify({ ok: false, error: 'data not found: ' + facePath }));
+    }
+    return;
+  }
+
+  // ═══ LISP DESK ═══
+  if (facePath === '/lisp' || facePath === '/lisp-desk') {
+    const fs = require('fs');
+    try {
+      const html = fs.readFileSync(__dirname + '/static/lisp-desk.html', 'utf8');
+      res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8', 'Access-Control-Allow-Origin': '*' });
+      res.end(html);
+    } catch(e) {
+      res.writeHead(404); res.end('lisp desk not found');
+    }
+    return;
+  }
+
+  // ═══ CANFIELD ═══
+  if (facePath === '/canfield') {
+    const fs = require('fs');
+    try {
+      const html = fs.readFileSync(__dirname + '/static/canfield.html', 'utf8');
+      res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8', 'Access-Control-Allow-Origin': '*' });
+      res.end(html);
+    } catch(e) {
+      res.writeHead(404); res.end('canfield not found');
+    }
+    return;
+  }
+
   // ═══ UNIVERSAL π PORT — ALL API IN ONE PLACE ═══
   if (url === '/api') {
     res.writeHead(200, { 'Content-Type': 'application/json' });
